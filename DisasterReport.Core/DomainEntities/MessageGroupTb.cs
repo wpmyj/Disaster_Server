@@ -9,12 +9,24 @@ using System.Threading.Tasks;
 namespace DisasterReport.DomainEntities
 {
     [Table("DR_MessageGroupTb")]
-    public class MessageGroupTb: Entity<Guid>
+    public class MessageGroupTb : Entity<Guid>
     {
         /// <summary>
         /// 消息组名称
         /// </summary>
         public virtual string GroupName { get; set; }
+        /// <summary>
+        /// 消息组介绍
+        /// </summary>
+        public virtual string Remark { get; set; }
+        /// <summary>
+        /// 消息组的头像
+        /// </summary>
+        public virtual string Photo { get; set; }
+        /// <summary>
+        /// 消息组标签-区分灾情类型
+        /// </summary>
+        public virtual string Lable { get; set; }
         /// <summary>
         /// 创建时间
         /// </summary>
@@ -27,17 +39,9 @@ namespace DisasterReport.DomainEntities
         /// 1）救援队 2）个人团队  两类节点
         /// </summary>
         public virtual int type { get; set; }
-        ///// <summary>
-        ///// 组创建者
-        ///// </summary>
-        //public virtual ReporterInfoTb GroupOwner { get; set; }
-        ///// <summary>
-        ///// 管理员组
-        ///// </summary>
-        //public virtual ICollection<ReporterInfoTb> GroupAdmins { get; set; }
-        ///// <summary>
-        ///// 消息组成员
-        ///// </summary>
-        //public virtual ICollection<ReporterInfoTb> GroupMembers { get; set; }
+        /// <summary>
+        /// 关联的Reporter
+        /// </summary>
+        public virtual ICollection<ReporterInfoTb> Reporter { get; set; }
     }
 }

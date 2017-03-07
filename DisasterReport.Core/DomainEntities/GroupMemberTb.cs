@@ -11,8 +11,17 @@ namespace DisasterReport.DomainEntities
     [Table("DR_GroupMemberTb")]
     public class GroupMemberTb : Entity<Guid>
     {
+        /// <summary>
+        /// 关联的群
+        /// </summary>
         public virtual MessageGroupTb MessageGroup { get; set; }
-
-        public virtual ICollection<ReporterInfoTb> GroupMembers { get; set; }
+        /// <summary>
+        /// 上报人员
+        /// </summary>
+        public virtual ReporterInfoTb Reporter { get; set; }
+        /// <summary>
+        /// 群主 管理员 成员
+        /// </summary>
+        public virtual int Type { get; set; }
     }
 }

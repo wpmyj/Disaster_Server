@@ -94,6 +94,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainEntities\CityCodeTb.cs" />
+    <Compile Include="DomainEntities\CommunityCodeTb.cs" />
     <Compile Include="DomainEntities\DeviceInfoTb.cs" />
     <Compile Include="DisasterReportConsts.cs" />
     <Compile Include="DisasterReportCoreModule.cs" />
@@ -105,9 +107,8 @@
     <Compile Include="Authorization\Roles\StaticRoleNames.cs" />
     <Compile Include="DomainEntities\DisasterInfoTb.cs" />
     <Compile Include="DomainEntities\DisasterKindTb.cs" />
-    <Compile Include="DomainEntities\GroupAdminTb.cs" />
+    <Compile Include="DomainEntities\DevBindReporterTb.cs" />
     <Compile Include="DomainEntities\GroupMemberTb.cs" />
-    <Compile Include="DomainEntities\GroupOwnerTb.cs" />
     <Compile Include="DomainEntities\MessageGroupTb.cs" />
     <Compile Include="DomainEntities\MessageNoteTb.cs" />
     <Compile Include="DomainEntities\ReporterInfoTb.cs" />

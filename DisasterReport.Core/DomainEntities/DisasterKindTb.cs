@@ -20,13 +20,8 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual String KindCode { get; set; }
         /// <summary>
-        /// 父级Id
+        /// 灾情种类父级Id
         /// </summary>
-        public virtual Guid ParentId { get; set; }
-        /// <summary>
-        /// 参考外键
-        /// </summary>
-        [ForeignKey("ParentId")]
-        public virtual DisasterKindTb Parent { get; set; }
+        public virtual String Pid { get; set; }
     }
 }

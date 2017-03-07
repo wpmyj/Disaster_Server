@@ -117,7 +117,7 @@
             上报时间
             </summary>
         </member>
-        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.ReporterId">
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Reporter">
             <summary>
             上报人员Id
             </summary>
@@ -157,6 +157,21 @@
             灾情是否已处理 0-没有处理 1-正在处理 2-已处理 9-全部
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.DisasterInfoId">
+            <summary>
+            上报灾情信息的id值
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.Path">
+            <summary>
+            文件存储的路径
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Event.DisasterReportEventData.DisasterInfoId">
             <summary>
             灾情信息Id
@@ -185,6 +200,13 @@
         <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterById(System.Guid)">
             <summary>
             根据灾情Id查询灾情详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterFilePicById(System.Guid)">
+            <summary>
+            获取灾情图片信息
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -275,6 +297,13 @@
             上报人员解除账号绑定
             </summary>
             <param name="input"></param>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetReporterById(DisasterReport.ReporterService.Dto.ReporterUnBindInput)">
+            <summary>
+            根据上报人员id获取详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
         </member>
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountAddUserInput.UserCode">
             <summary>

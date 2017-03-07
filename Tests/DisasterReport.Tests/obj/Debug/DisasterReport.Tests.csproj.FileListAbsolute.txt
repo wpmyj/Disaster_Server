@@ -85,3 +85,6 @@ C:\Users\zxt\Documents\GitHub\DisasterReport\Tests\DisasterReport.Tests\obj\Debu
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.csprojResolveAssemblyReference.cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.csprojResolveAssemblyReference.cache
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\Tests\DisasterReport.Tests\obj\Debug\DisasterReport.Tests.pdb

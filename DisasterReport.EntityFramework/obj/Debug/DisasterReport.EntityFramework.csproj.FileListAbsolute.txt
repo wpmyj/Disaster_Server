@@ -112,20 +112,8 @@ C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\Disaster
 C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Debug\System.Collections.Immutable.xml
 C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.AbpZero_Initial.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.deviceInfo.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.uploadFiletb.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfo.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfodisasterAddress.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterKindinit.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.userinit.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.updateMessage.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.dll
 C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.pdb
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.updatefield.resources
-C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfoTb_update.resources
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Debug\DisasterReport.EntityFramework.dll.config
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Debug\DisasterReport.EntityFramework.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Debug\DisasterReport.EntityFramework.pdb
@@ -191,18 +179,10 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\Disaster
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.pdb
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.AbpZero_Initial.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.deviceInfo.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.uploadFiletb.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfo.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfodisasterAddress.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterKindinit.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.userinit.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.updateMessage.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.updatefield.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.disasterInfoTb_update.resources
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.dll
-C:\Users\zxt\Documents\GitHub\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.Init.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.Init1.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init2.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init3.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init4.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init5.resources

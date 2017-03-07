@@ -18,13 +18,13 @@ namespace DisasterReport.DomainEntities
         /// <summary>
         /// 接收者
         /// </summary>
-        public virtual ICollection<ReporterInfoTb> ToReporter { get; set; }
+        public virtual ReporterInfoTb ToReporter { get; set; }
         /// <summary>
         /// 发送的消息
         /// </summary>
         public virtual string Text { get; set; }
         /// <summary>
-        /// 发生的时间
+        /// 发送的时间
         /// </summary>
         public virtual DateTime Date { get; set; }
         /// <summary>

@@ -138,49 +138,29 @@
   <ItemGroup>
     <Compile Include="EntityFramework\DisasterReportDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\DisasterReportRepositoryBase.cs" />
-    <Compile Include="Migrations\201701271145151_AbpZero_Initial.cs" />
-    <Compile Include="Migrations\201701271145151_AbpZero_Initial.Designer.cs">
-      <DependentUpon>201701271145151_AbpZero_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201703060800470_Init.cs" />
+    <Compile Include="Migrations\201703060800470_Init.Designer.cs">
+      <DependentUpon>201703060800470_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702140326061_init.cs" />
-    <Compile Include="Migrations\201702140326061_init.Designer.cs">
-      <DependentUpon>201702140326061_init.cs</DependentUpon>
+    <Compile Include="Migrations\201703060821381_Init1.cs" />
+    <Compile Include="Migrations\201703060821381_Init1.Designer.cs">
+      <DependentUpon>201703060821381_Init1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702141002596_deviceInfo.cs" />
-    <Compile Include="Migrations\201702141002596_deviceInfo.Designer.cs">
-      <DependentUpon>201702141002596_deviceInfo.cs</DependentUpon>
+    <Compile Include="Migrations\201703070550091_init2.cs" />
+    <Compile Include="Migrations\201703070550091_init2.Designer.cs">
+      <DependentUpon>201703070550091_init2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702160210311_uploadFiletb.cs" />
-    <Compile Include="Migrations\201702160210311_uploadFiletb.Designer.cs">
-      <DependentUpon>201702160210311_uploadFiletb.cs</DependentUpon>
+    <Compile Include="Migrations\201703070555096_init3.cs" />
+    <Compile Include="Migrations\201703070555096_init3.Designer.cs">
+      <DependentUpon>201703070555096_init3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702160638145_disasterInfo.cs" />
-    <Compile Include="Migrations\201702160638145_disasterInfo.Designer.cs">
-      <DependentUpon>201702160638145_disasterInfo.cs</DependentUpon>
+    <Compile Include="Migrations\201703070600107_init4.cs" />
+    <Compile Include="Migrations\201703070600107_init4.Designer.cs">
+      <DependentUpon>201703070600107_init4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702160801545_disasterInfo-disasterAddress.cs" />
-    <Compile Include="Migrations\201702160801545_disasterInfo-disasterAddress.Designer.cs">
-      <DependentUpon>201702160801545_disasterInfo-disasterAddress.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702170119391_disasterKind-init.cs" />
-    <Compile Include="Migrations\201702170119391_disasterKind-init.Designer.cs">
-      <DependentUpon>201702170119391_disasterKind-init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702170306137_user-init.cs" />
-    <Compile Include="Migrations\201702170306137_user-init.Designer.cs">
-      <DependentUpon>201702170306137_user-init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702240513372_updateMessage.cs" />
-    <Compile Include="Migrations\201702240513372_updateMessage.Designer.cs">
-      <DependentUpon>201702240513372_updateMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702270712162_update field.cs" />
-    <Compile Include="Migrations\201702270712162_update field.Designer.cs">
-      <DependentUpon>201702270712162_update field.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702270935435_disasterInfoTb_update.cs" />
-    <Compile Include="Migrations\201702270935435_disasterInfoTb_update.Designer.cs">
-      <DependentUpon>201702270935435_disasterInfoTb_update.cs</DependentUpon>
+    <Compile Include="Migrations\201703070637317_init5.cs" />
+    <Compile Include="Migrations\201703070637317_init5.Designer.cs">
+      <DependentUpon>201703070637317_init5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -207,38 +187,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701271145151_AbpZero_Initial.resx">
-      <DependentUpon>201701271145151_AbpZero_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703060800470_Init.resx">
+      <DependentUpon>201703060800470_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702140326061_init.resx">
-      <DependentUpon>201702140326061_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703060821381_Init1.resx">
+      <DependentUpon>201703060821381_Init1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702141002596_deviceInfo.resx">
-      <DependentUpon>201702141002596_deviceInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703070550091_init2.resx">
+      <DependentUpon>201703070550091_init2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702160210311_uploadFiletb.resx">
-      <DependentUpon>201702160210311_uploadFiletb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703070555096_init3.resx">
+      <DependentUpon>201703070555096_init3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702160638145_disasterInfo.resx">
-      <DependentUpon>201702160638145_disasterInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703070600107_init4.resx">
+      <DependentUpon>201703070600107_init4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702160801545_disasterInfo-disasterAddress.resx">
-      <DependentUpon>201702160801545_disasterInfo-disasterAddress.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702170119391_disasterKind-init.resx">
-      <DependentUpon>201702170119391_disasterKind-init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702170306137_user-init.resx">
-      <DependentUpon>201702170306137_user-init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702240513372_updateMessage.resx">
-      <DependentUpon>201702240513372_updateMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702270712162_update field.resx">
-      <DependentUpon>201702270712162_update field.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702270935435_disasterInfoTb_update.resx">
-      <DependentUpon>201702270935435_disasterInfoTb_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703070637317_init5.resx">
+      <DependentUpon>201703070637317_init5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

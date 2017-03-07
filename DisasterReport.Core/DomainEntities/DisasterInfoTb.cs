@@ -20,6 +20,10 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual DateTime ReportDate { get; set; }
         /// <summary>
+        /// 上报人员Id
+        /// </summary>
+        public virtual ReporterInfoTb Reporter { get; set; }
+        /// <summary>
         /// 上报灾情类型编码
         /// </summary>
         public virtual String DisasterKindCode { get; set; }
@@ -47,13 +51,5 @@ namespace DisasterReport.DomainEntities
         /// 灾情是否已处理 0-没有处理 1-正在处理 2-已处理
         /// </summary>
         public virtual int Status { get; set; }
-        /// <summary>
-        /// 上报人员
-        /// </summary>
-        public virtual ReporterInfoTb Reporter { get; set; }
-        /// <summary>
-        /// 上传的文件信息
-        /// </summary>
-        public virtual ICollection<UploadsFileTb> Uploads { get; set; }
     }
 }

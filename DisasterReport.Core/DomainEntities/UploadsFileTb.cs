@@ -14,7 +14,7 @@ namespace DisasterReport.DomainEntities
         /// <summary>
         /// 上报灾情信息的id值
         /// </summary>
-        public virtual Guid DisasterInfoId { get; set; }
+        public virtual Guid OtherRowId { get; set; }
 
         /// <summary>
         /// 文件存储的路径

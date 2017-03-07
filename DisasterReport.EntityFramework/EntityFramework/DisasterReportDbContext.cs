@@ -47,24 +47,16 @@ namespace DisasterReport.EntityFramework
         public DbSet<ReporterInfoTb> reporterInfo { get; set; }
         public DbSet<UserTb> userInfo { get; set; }
         public DbSet<MessageNoteTb> messageNote { get; set; }
+        public DbSet<DevBindReporterTb> devbindReporter { get; set; }
         public DbSet<MessageGroupTb> messageGroup { get; set; }
-        public DbSet<GroupOwnerTb> groupOwner { get; set; }
-        public DbSet<GroupAdminTb> groupAdmins { get; set; }
         public DbSet<GroupMemberTb> groupMember { get; set; }
+        public DbSet<CityCodeTb> cityCode { get; set; }
+        public DbSet<CommunityCodeTb> commCode { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
-            modelBuilder.Entity<DisasterInfoTb>().HasRequired(d => d.Reporter);
-            modelBuilder.Entity<DisasterInfoTb>().HasMany(d => d.Uploads);
-            modelBuilder.Entity<DisasterKindTb>().HasOptional(d => d.Parent).WithMany().HasForeignKey(d => d.ParentId);
-            modelBuilder.Entity<MessageNoteTb>().HasRequired(m => m.FromReporter);
-            modelBuilder.Entity<MessageNoteTb>().HasRequired(m => m.ToReporter);
-            modelBuilder.Entity<GroupOwnerTb>().HasRequired(m => m.GroupOwner).WithMany(r => r.GroupOwner).WillCascadeOnDelete(true);
-            modelBuilder.Entity<GroupAdminTb>().HasMany(m => m.GroupAdmins).WithMany(r => r.GroupAdmin);
-            modelBuilder.Entity<GroupMemberTb>().HasMany(m => m.GroupMembers).WithMany(r => r.GroupMember);
-
+            modelBuilder.Entity<MessageGroupTb>().HasMany(r => r.Reporter).WithMany(r => r.MessageGroup);
         }
     }
 }

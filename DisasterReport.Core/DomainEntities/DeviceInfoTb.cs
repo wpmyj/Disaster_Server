@@ -20,8 +20,20 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual int DeviceCode { get; set; }
         /// <summary>
-        /// 上报人员
+        /// 上报人员Id
         /// </summary>
-        public virtual ReporterInfoTb Reporter { get; set; }
+        public virtual Guid ReporterId { get; set; }
+        /// <summary>
+        /// 设备类型
+        /// </summary>
+        public virtual int Type { get; set; }
+        /// <summary>
+        /// 设备生产日期
+        /// </summary>
+        public virtual DateTime ProduceDate { get; set; }
+        /// <summary>
+        /// 设备生产地址
+        /// </summary>
+        public virtual string ProduceAddress { get; set; }
     }
 }

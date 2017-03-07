@@ -1,6 +1,7 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using DisasterReport.DomainEntities;
+using DisasterReport.ReporterService.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace DisasterReport.DisasterService.Dto
         /// <summary>
         /// 上报人员Id
         /// </summary>
-        public virtual Guid ReporterId { get; set; }
+        public virtual ReporterOutput Reporter { get; set; }
         /// <summary>
         /// 上报灾情类型编码
         /// </summary>

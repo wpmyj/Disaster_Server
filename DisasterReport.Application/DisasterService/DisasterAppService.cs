@@ -89,7 +89,7 @@ namespace DisasterAppService.DisasterService
                 var fileInsertInfo = new UploadsFileTb
                 {
                     Id = Guid.NewGuid(),
-                    DisasterInfoId = id,
+                    OtherRowId = id,
                     FileName = uploads[i].FileName,
                     Path = uploads[i].FilePath
                 };
@@ -114,7 +114,7 @@ namespace DisasterAppService.DisasterService
         {
             List<UploadsFileTb> result;
 
-            result = _uploadsFileTbRespository.GetAllList(u=>u.DisasterInfoId == id);
+            result = _uploadsFileTbRespository.GetAllList(u=>u.OtherRowId == id);
 
             return result.MapTo<List<UploadsFileTbOutput>>();
         }
