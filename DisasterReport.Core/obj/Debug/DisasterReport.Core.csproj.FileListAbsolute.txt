@@ -119,6 +119,6 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\bin\Debug\Nito
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Concurrent.xml
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\bin\Debug\System.Collections.Immutable.xml
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache

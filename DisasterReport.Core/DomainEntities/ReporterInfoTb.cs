@@ -40,7 +40,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual Guid UserId { get; set; }
         /// <summary>
-        /// 1）救援队 2）个人团队  两类节点
+        /// 1）上报人员 2）后台管理人员  两类节点
         /// </summary>
         public virtual int Type { get; set; }
         /// <summary>

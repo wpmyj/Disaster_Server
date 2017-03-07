@@ -34,7 +34,10 @@ namespace DisasterReport.ReporterService
                 AreaCode = input.AreaCode,
                 Name = input.Name,
                 Phone = input.Phone,
-                UserId = input.UserId
+                UserId = input.UserId,
+                Age = input.Age,
+                Remark = input.Remark,
+                Type = input.Type
             };
 
             var id = await _reporterInfoTbRepo.InsertAndGetIdAsync(addReoirterObj);

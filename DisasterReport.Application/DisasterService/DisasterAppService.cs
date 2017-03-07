@@ -140,5 +140,35 @@ namespace DisasterAppService.DisasterService
 
             return result.MapTo<List<UploadsFileTbOutput>>();
         }
+
+        public RuimapPageResultDto<ReportDisasterOutput> GetPageDisasterByReporterId(Guid id, int pageIndex = 1, int pageSize = 9999, int type = 9, int status = 9)
+        {
+            var count = 0;
+            List<DisasterInfoTb> result;
+            if (type == 9 && status == 9)
+            {
+                count = _disasterInfoTbRepository.Count();
+                result = _disasterInfoTbRepository.GetAll().Where(d => d.Reporter.Id == id).OrderByDescending(d => d.ReportDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            }
+            else if (type == 9 && status != 9)
+            {
+                count = _disasterInfoTbRepository.Count(d => d.Status == status);
+                result = _disasterInfoTbRepository.GetAll().Where(d => d.Status == status && d.Reporter.Id == id).OrderByDescending(d => d.ReportDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            }
+            else if (type != 9 && status == 9)
+            {
+                count = _disasterInfoTbRepository.Count(d => d.Type == type);
+                result = _disasterInfoTbRepository.GetAll().Where(d => d.Type == type && d.Reporter.Id == id).OrderByDescending(d => d.ReportDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            }
+            else
+            {
+                count = _disasterInfoTbRepository.Count(d => d.Type == type && d.Status == status);
+                result = _disasterInfoTbRepository.GetAll().Where(d => d.Type == type && d.Status == status && d.Reporter.Id == id).OrderByDescending(d => d.ReportDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            }
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<ReportDisasterOutput>(count, currPage, totalPage, result.MapTo<List<ReportDisasterOutput>>());
+        }
     }
 }

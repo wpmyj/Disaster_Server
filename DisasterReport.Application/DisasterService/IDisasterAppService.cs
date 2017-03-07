@@ -44,5 +44,16 @@ namespace DisasterReport.DisasterService
         /// <returns></returns>
         [HttpGet]
         List<UploadsFileTbOutput> GetDisasterFilePicById(Guid id);
+        /// <summary>
+        /// 分页获取指定用户最近上报的灾情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pageIndex">默认 1</param>
+        /// <param name="pageSize">默认 9999</param>
+        /// <param name="type">默认 9</param>
+        /// <param name="status">默认 9</param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<ReportDisasterOutput> GetPageDisasterByReporterId(Guid id, int pageIndex = 1, int pageSize = 9999, int type = 9, int status = 9);
     }
 }

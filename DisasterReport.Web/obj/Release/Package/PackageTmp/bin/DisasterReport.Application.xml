@@ -62,6 +62,21 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Name">
+            <summary>
+            灾情种类名称
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.KindCode">
+            <summary>
+            灾情种类编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Pid">
+            <summary>
+            灾情种类父级Id
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DeviceCode">
             <summary>
             设备编号
@@ -122,7 +137,7 @@
             上报人员Id
             </summary>
         </member>
-        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterKindCode">
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterKind">
             <summary>
             上报灾情类型编码
             </summary>
@@ -261,6 +276,31 @@
             所在地址
             </summary>
         </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Photo">
+            <summary>
+            头像图片
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastAddress">
+            <summary>
+            最后一次上报的位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastLng">
+            <summary>
+            最后一次上报的经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastLat">
+            <summary>
+            最后一次上报的维度
+            </summary>
+        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.UserId">
             <summary>
             上报人员所关联的用户Id
@@ -386,7 +426,7 @@
             <param name="input">Role： 0-普通用户，1-管理员用户</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid})">
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid})">
             <summary>
             构造函数
             </summary>

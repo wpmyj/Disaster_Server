@@ -20,7 +20,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual DateTime ReportDate { get; set; }
         /// <summary>
-        /// 上报人员Id
+        /// 上报人员
         /// </summary>
         public virtual ReporterInfoTb Reporter { get; set; }
         /// <summary>

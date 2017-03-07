@@ -226,6 +226,17 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetPageDisasterByReporterId(System.Guid,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页获取指定用户最近上报的灾情
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex">默认 1</param>
+            <param name="pageSize">默认 9999</param>
+            <param name="type">默认 9</param>
+            <param name="status">默认 9</param>
+            <returns></returns>
+        </member>
         <member name="T:DisasterReport.DisasterReportAppServiceBase">
             <summary>
             Derive your application services from this class.
@@ -246,6 +257,11 @@
             所属区域编码
             </summary>
         </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Address">
             <summary>
             所在地址
@@ -254,6 +270,16 @@
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.UserId">
             <summary>
             上报人员所关联的用户Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Type">
+            <summary>
+            1）上报人员 2）后台管理人员  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Remark">
+            <summary>
+            人员备注
             </summary>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Name">
@@ -274,6 +300,31 @@
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Address">
             <summary>
             所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Photo">
+            <summary>
+            头像图片
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastAddress">
+            <summary>
+            最后一次上报的位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastLng">
+            <summary>
+            最后一次上报的经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.LastLat">
+            <summary>
+            最后一次上报的维度
             </summary>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.UserId">
