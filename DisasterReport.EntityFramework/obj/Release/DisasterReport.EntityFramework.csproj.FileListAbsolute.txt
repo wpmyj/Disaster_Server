@@ -1,0 +1,190 @@
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll.config
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\EntityFramework.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\EntityFramework.DynamicFilters.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\MySql.Data.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Core.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\EntityFramework.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.AbpZero_Initial.resources
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init.resources
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.deviceInfo.resources
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.uploadFiletb.resources
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfo.resources
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfodisasterAddress.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll.config
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.DynamicFilters.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\MySql.Data.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Core.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.AbpZero_Initial.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.deviceInfo.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.uploadFiletb.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfo.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfodisasterAddress.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterKindinit.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.userinit.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.updateMessage.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.updatefield.resources
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfoTb_update.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll.config
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.DynamicFilters.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\MySql.Data.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.EntityFramework.Common.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Abp.Zero.EntityFramework.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Castle.Windsor.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Google.Protobuf.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.AbpZero_Initial.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.deviceInfo.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.uploadFiletb.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfo.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfodisasterAddress.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterKindinit.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.userinit.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.updateMessage.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.updatefield.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.disasterInfoTb_update.resources
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb

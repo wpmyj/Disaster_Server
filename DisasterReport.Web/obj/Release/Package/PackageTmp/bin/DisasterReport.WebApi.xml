@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DisasterReport.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:DisasterReport.Api.Controllers.FileUploadController">
+            <summary>
+            文件上传通用接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.Api.Controllers.FileUploadController.UploadFile">
+            <summary>
+            文件上传通用接口
+            </summary>
+        </member>
+        <member name="T:DisasterReport.Api.Controllers.AccountController">
+            <summary>
+            用户认证
+            </summary>
+        </member>
+        <member name="M:DisasterReport.Api.Controllers.AccountController.Authenticate(DisasterReport.Api.Models.LoginModel)">
+            <summary>
+            不记名令牌认证
+            </summary>
+            <param name="loginModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.Api.SwaggerExtensions.CachingSwaggerProvider.GetControllerDesc">
+            <summary>
+            从API文档中读取控制器描述
+            </summary>
+            <returns>所有控制器描述</returns>
+        </member>
+    </members>
+</doc>

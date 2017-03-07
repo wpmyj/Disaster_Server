@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DisasterReport.Application</name>
+    </assembly>
+    <members>
+        <member name="T:DisasterReport.DisasterReportAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="T:DisasterReport.Roles.IRoleAppService">
+            <summary>
+            角色管理
+            </summary>
+        </member>
+        <member name="M:DisasterReport.Roles.IRoleAppService.UpdateRolePermissions(DisasterReport.Roles.Dto.UpdateRolePermissionsInput)">
+            <summary>
+            更新角色权限
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

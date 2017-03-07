@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DisasterReport.Application</name>
+    </assembly>
+    <members>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaCode">
+            <summary>
+            设备所属区域编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.AreaCode">
+            <summary>
+            所属区域编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.Reporter">
+            <summary>
+            上报人员Id
+            </summary>
+        </member>
+        <member name="T:DisasterReport.DeviceService.IDeviceAppService">
+            <summary>
+            设备接口服务
+            </summary>
+        </member>
+        <member name="M:DisasterReport.DeviceService.IDeviceAppService.GetDeviceByReporterId(System.Guid)">
+            <summary>
+            查询用户所绑定的设备
+            </summary>
+            <param name="id">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DeviceService.IDeviceAppService.BindReporter(DisasterReport.DeviceService.Dto.DeviceBindInput)">
+            <summary>
+            设备绑定到指定的上报人员
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:DisasterReport.DeviceService.IDeviceAppService.GetPageDevice(System.Int32,System.Int32)">
+            <summary>
+            分页得到终端设备
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认10</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DeviceService.IDeviceAppService.AddDevice(DisasterReport.DeviceService.Dto.DeviceAddInput)">
+            <summary>
+            新增手持终端设备
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.ReporterId">
+            <summary>
+            上报人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DisasterKindCode">
+            <summary>
+            上报灾情类型编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DisasterAddress">
+            <summary>
+            灾情位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.Lng">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.Lat">
+            <summary>
+            维度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.Type">
+            <summary>
+            上报类型 1-移动网络 2-北斗短报文
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.UploadFiles">
+            <summary>
+            上传灾情附件-图片
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DeviceCode">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.ReportDate">
+            <summary>
+            上报时间
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.ReporterId">
+            <summary>
+            上报人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterKindCode">
+            <summary>
+            上报灾情类型编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterAddress">
+            <summary>
+            灾情位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Lng">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Lat">
+            <summary>
+            维度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Type">
+            <summary>
+            上报类型 1-移动网络 2-北斗短报文
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Status">
+            <summary>
+            灾情是否已处理 0-没有处理 1-正在处理 2-已处理 9-全部
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Event.DisasterReportEventData.DisasterInfoId">
+            <summary>
+            灾情信息Id
+            </summary>
+        </member>
+        <member name="T:DisasterReport.DisasterService.IDisasterAppService">
+            <summary>
+            灾情管理接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.ReportDisaster(DisasterReport.DisasterService.Dto.ReportDisasterInput)">
+            <summary>
+            手持终端上报灾情
+            </summary>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetPageDisaster(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页获取灾情
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认9999</param>
+            <param name="type">上报类型 1-移动网络 2-北斗短报文 9-全部</param>
+            <param name="status">灾情是否已处理 0-没有处理 1-正在处理 2-已处理 9-全部</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterById(System.Guid)">
+            <summary>
+            根据灾情Id查询灾情详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DisasterReport.DisasterReportAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.AreaCode">
+            <summary>
+            所属区域编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Address">
+            <summary>
+            所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.UserId">
+            <summary>
+            上报人员所关联的用户Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.AreaCode">
+            <summary>
+            所属区域编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Address">
+            <summary>
+            所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.UserId">
+            <summary>
+            上报人员所关联的用户Id
+            </summary>
+        </member>
+        <member name="T:DisasterReport.ReporterService.IReporterAppService">
+            <summary>
+            上报人员接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.AddReporter(DisasterReport.ReporterService.Dto.ReporterAddInput)">
+            <summary>
+            新增上报人
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32)">
+            <summary>
+            分页得到上报人员
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认9999</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.BindUserAccount(DisasterReport.ReporterService.Dto.ReporterBindInput)">
+            <summary>
+            上报人员绑定用户账号
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.UnBindUserAccoutn(DisasterReport.ReporterService.Dto.ReporterUnBindInput)">
+            <summary>
+            上报人员解除账号绑定
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountAddUserInput.UserCode">
+            <summary>
+            用户登陆账号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountAddUserInput.Password">
+            <summary>
+            用户登陆密码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountLoginInput.UserCode">
+            <summary>
+            用户登陆账号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountLoginInput.Password">
+            <summary>
+            用户登陆密码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.AreaCode">
+            <summary>
+            所属区域编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Address">
+            <summary>
+            所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.User">
+            <summary>
+            用户账号信息
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserTbOutputDto.UserCode">
+            <summary>
+            用户登陆账号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserTbOutputDto.Enable">
+            <summary>
+            账号是否已经启用
+            </summary>
+        </member>
+        <member name="T:DisasterReport.UserAccount.IUserAccountAppService">
+            <summary>
+            账户接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.UserAccount.IUserAccountAppService.Login(DisasterReport.UserAccount.Dto.UserAccountLoginInput)">
+            <summary>
+            用户登录验证
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.UserAccount.IUserAccountAppService.GetUserAccountById(System.Guid)">
+            <summary>
+            根据用户id返回用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.UserAccount.IUserAccountAppService.AddUserAccount(DisasterReport.UserAccount.Dto.UserAccountAddUserInput)">
+            <summary>
+            添加用户账号密码
+            </summary>
+            <param name="input">Role： 0-普通用户，1-管理员用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.GetPageDisaster(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页获取灾情
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="type">上报类型 1-移动网络 2-北斗短报文 9-全部</param>
+            <param name="status">灾情是否已处理 0-没有处理 1-正在处理 2-已处理 9-全部</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.ReportDisaster(DisasterReport.DisasterService.Dto.ReportDisasterInput)">
+            <summary>
+            手持终端上报灾情
+            </summary>
+            <param name="input"></param>
+        </member>
+    </members>
+</doc>

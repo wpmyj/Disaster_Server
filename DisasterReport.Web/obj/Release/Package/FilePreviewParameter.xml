@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/disaster" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\zxy\\Documents\\Visual\ Studio\ 2017\\Projects\\DisasterReportServer\\DisasterReport\.Web\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\zxy\\Documents\\Visual\ Studio\ 2017\\Projects\\DisasterReportServer\\DisasterReport\.Web\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Default-Web.config Connection String" description="" value="server=localhost;port=3306;database=DiasterReport;uid=root;password=mysql" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\zxy\\Documents\\Visual\ Studio\ 2017\\Projects\\DisasterReportServer\\DisasterReport\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Default']/@connectionString" />
+  </parameter>
+  <parameter name="DisasterReport.EntityFramework.DisasterReportDbContext-Web.config Connection String" description="" value="DisasterReport.EntityFramework.DisasterReportDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\zxy\\Documents\\Visual\ Studio\ 2017\\Projects\\DisasterReportServer\\DisasterReport\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DisasterReport.EntityFramework.DisasterReportDbContext']/@connectionString" />
+  </parameter>
+</parameters>

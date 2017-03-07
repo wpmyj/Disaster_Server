@@ -1,0 +1,93 @@
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.Zero.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Windsor.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.Zero.pdb
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Abp.Zero.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Core.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Castle.Windsor.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\obj\Release\DisasterReport.Core.csprojResolveAssemblyReference.cache
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\obj\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\GitHub\DisasterReport\DisasterReport.Core\obj\Release\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Windsor.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.pdb
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Core.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Windsor.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.csprojResolveAssemblyReference.cache
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.dll
+C:\Users\zxt\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.dll.config
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\DisasterReport.Core.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Windsor.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Collections.Immutable.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Linq.Dynamic.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Abp.Zero.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Facilities.Logging.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Castle.Windsor.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\bin\Release\System.Collections.Immutable.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.csprojResolveAssemblyReference.cache
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\DisasterReportServer\DisasterReport.Core\obj\Release\DisasterReport.Core.pdb
