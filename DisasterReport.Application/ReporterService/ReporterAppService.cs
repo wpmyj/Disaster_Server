@@ -97,5 +97,36 @@ namespace DisasterReport.ReporterService
         {
             throw new NotImplementedException();
         }
+
+        public async Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input)
+        {
+            // 先找到对应的用户记录Row
+            var existReporter = await _reporterInfoTbRepo.FirstOrDefaultAsync(r => r.Id == input.ReporterId);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有相应的人员");
+            }
+            existReporter.Name = input.Name;
+            existReporter.Phone = input.Phone;
+            existReporter.Photo = input.Photo;
+            existReporter.Type = input.Type;
+            existReporter.Age = input.Age;
+            existReporter.Address = input.Address;
+
+            // 找到对应的用户账号
+            var existUser = await _userTbRepo.FirstOrDefaultAsync(u => u.Id == existReporter.UserId);
+            if(existUser == null)
+            {
+                throw new UserFriendlyException("没有相应的账号");
+            }
+
+            existUser.Password = input.Password;
+
+            _reporterInfoTbRepo.Update(existReporter);
+            _userTbRepo.Update(existUser);
+
+            var newReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
+            return newReporter.MapTo<ReporterOutput>();
+        }
     }
 }

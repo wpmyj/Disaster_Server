@@ -43,11 +43,17 @@ namespace DisasterReport.ReporterService
         [HttpPost]
         void UnBindUserAccoutn(ReporterUnBindInput input);
         /// <summary>
-        /// 根据上报人员id获取详情
+        /// 根据人员id获取详情
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpGet]
         Task<ReporterOutput> GetReporterById(ReporterUnBindInput input);
+        /// <summary>
+        /// 修改人员信息
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input);
     }
 }

@@ -135,6 +135,7 @@
     <Compile Include="ReporterService\Dto\ReporterBindInput.cs" />
     <Compile Include="ReporterService\Dto\ReporterOutput.cs" />
     <Compile Include="ReporterService\Dto\ReporterUnBindInput.cs" />
+    <Compile Include="ReporterService\Dto\ReporterUpdateInput.cs" />
     <Compile Include="ReporterService\IReporterAppService.cs" />
     <Compile Include="ReporterService\ReporterAppService.cs" />
     <Compile Include="UserAccount\Dto\UserAccountAddUserInput.cs" />

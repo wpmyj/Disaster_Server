@@ -17,6 +17,10 @@ namespace DisasterReport.UserAccount.Dto
         /// </summary>
         public virtual String Name { get; set; }
         /// <summary>
+        /// 年龄
+        /// </summary>
+        public virtual int Age { get; set; }
+        /// <summary>
         /// 电话
         /// </summary>
         public virtual String Phone { get; set; }
@@ -28,6 +32,18 @@ namespace DisasterReport.UserAccount.Dto
         /// 所在地址
         /// </summary>
         public virtual String Address { get; set; }
+        /// <summary>
+        /// 头像地址
+        /// </summary>
+        public virtual string Photo { get; set; }
+        /// <summary>
+        /// 1）上报人员 2）后台管理人员  两类节点
+        /// </summary>
+        public virtual int Type { get; set; }
+        /// <summary>
+        /// 人员备注
+        /// </summary>
+        public virtual string Remark { get; set; }
         /// <summary>
         /// 用户账号信息
         /// </summary>

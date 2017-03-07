@@ -332,6 +332,46 @@
             上报人员所关联的用户Id
             </summary>
         </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.ReporterId">
+            <summary>
+            人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Photo">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Address">
+            <summary>
+            所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Type">
+            <summary>
+            1）上报人员 2）后台管理人员  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Password">
+            <summary>
+            所关联的用户密码
+            </summary>
+        </member>
         <member name="T:DisasterReport.ReporterService.IReporterAppService">
             <summary>
             上报人员接口
@@ -366,7 +406,14 @@
         </member>
         <member name="M:DisasterReport.ReporterService.IReporterAppService.GetReporterById(DisasterReport.ReporterService.Dto.ReporterUnBindInput)">
             <summary>
-            根据上报人员id获取详情
+            根据人员id获取详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.UpdateReporter(DisasterReport.ReporterService.Dto.ReporterUpdateInput)">
+            <summary>
+            修改人员信息
             </summary>
             <param name="input"></param>
             <returns></returns>
@@ -396,6 +443,11 @@
             姓名
             </summary>
         </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Phone">
             <summary>
             电话
@@ -409,6 +461,21 @@
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Address">
             <summary>
             所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Photo">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Type">
+            <summary>
+            1）上报人员 2）后台管理人员  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.Remark">
+            <summary>
+            人员备注
             </summary>
         </member>
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountOutput.User">
