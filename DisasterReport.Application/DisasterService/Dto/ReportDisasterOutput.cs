@@ -28,7 +28,7 @@ namespace DisasterReport.DisasterService.Dto
         /// <summary>
         /// 上报灾情类型编码
         /// </summary>
-        public virtual String DisasterKindCode { get; set; }
+        public virtual DisasterKindOutput DisasterKind { get; set; }
         /// <summary>
         /// 灾情位置
         /// </summary>

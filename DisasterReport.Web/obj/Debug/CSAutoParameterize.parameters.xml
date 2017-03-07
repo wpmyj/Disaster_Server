@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Default-Web.config Connection String" description="Default 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="server=localhost;port=3306;database=DiasterReport;uid=root;password=mysql" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\zxt\\Documents\\GitHub\\Disaster_Server\\DisasterReport\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Default']/@connectionString" />
+  </parameter>
+  <parameter name="DisasterReport.EntityFramework.DisasterReportDbContext-Web.config Connection String" description="DisasterReport.EntityFramework.DisasterReportDbContext 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="DisasterReport.EntityFramework.DisasterReportDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\zxt\\Documents\\GitHub\\Disaster_Server\\DisasterReport\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DisasterReport.EntityFramework.DisasterReportDbContext']/@connectionString" />
+  </parameter>
+</parameters>

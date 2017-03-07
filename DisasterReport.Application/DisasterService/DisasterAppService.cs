@@ -20,6 +20,8 @@ namespace DisasterAppService.DisasterService
     {
         private readonly IRepository<DisasterInfoTb, Guid> _disasterInfoTbRepository;
         private readonly IRepository<UploadsFileTb, Guid> _uploadsFileTbRespository;
+        private readonly IRepository<ReporterInfoTb, Guid> _reporterInfoRespository;
+        private readonly IRepository<DisasterKindTb, Guid> _disasterKindTbRespository;
 
         public IEventBus EventBus { get; set; }
 
@@ -28,12 +30,16 @@ namespace DisasterAppService.DisasterService
         /// </summary>
         public DisasterAppService(
                 IRepository<DisasterInfoTb, Guid> disasterInfoTbRepository,
-                IRepository<UploadsFileTb, Guid> uploadsFileTbRespository
+                IRepository<UploadsFileTb, Guid> uploadsFileTbRespository,
+                IRepository<ReporterInfoTb, Guid> reporterInfoRespository,
+                IRepository<DisasterKindTb, Guid> disasterKindTbRespository
             )
         {
             EventBus = NullEventBus.Instance;
             _disasterInfoTbRepository = disasterInfoTbRepository;
             _uploadsFileTbRespository = uploadsFileTbRespository;
+            _reporterInfoRespository = reporterInfoRespository;
+            _disasterKindTbRespository = disasterKindTbRespository;
         }
 
         /// <summary>
@@ -81,6 +87,22 @@ namespace DisasterAppService.DisasterService
             var disaster = input.MapTo<DisasterInfoTb>();
             disaster.Status = 0;    // 没有处理
             disaster.ReportDate = DateTime.Now;
+
+            var existReporter = _reporterInfoRespository.FirstOrDefault(r => r.Id == input.ReporterId);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有对应的上报人员");
+            }
+
+            disaster.Reporter = existReporter;
+
+            var existDisasterKind = _disasterKindTbRespository.FirstOrDefault(d => d.KindCode == input.DisasterKindCode);
+            if(existDisasterKind == null)
+            {
+                throw new UserFriendlyException("没有对应的灾情类型");
+            }
+
+            disaster.DisasterKind = existDisasterKind;
 
             var id = _disasterInfoTbRepository.InsertAndGetId(disaster);
 

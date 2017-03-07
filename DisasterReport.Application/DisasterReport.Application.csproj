@@ -122,6 +122,7 @@
     <Compile Include="DeviceService\Dto\DeviceOutput.cs" />
     <Compile Include="DeviceService\IDeviceAppService.cs" />
     <Compile Include="DisasterService\DisasterAppService.cs" />
+    <Compile Include="DisasterService\Dto\DisasterKindOutput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterInput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterOutput.cs" />
     <Compile Include="DisasterService\Dto\UploadsFileTbOutput.cs" />

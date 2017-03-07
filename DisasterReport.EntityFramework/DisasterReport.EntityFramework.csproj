@@ -162,6 +162,10 @@
     <Compile Include="Migrations\201703070637317_init5.Designer.cs">
       <DependentUpon>201703070637317_init5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703070745059_init6.cs" />
+    <Compile Include="Migrations\201703070745059_init6.Designer.cs">
+      <DependentUpon>201703070745059_init6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DisasterReportDataModule.cs" />
@@ -204,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703070637317_init5.resx">
       <DependentUpon>201703070637317_init5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703070745059_init6.resx">
+      <DependentUpon>201703070745059_init6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

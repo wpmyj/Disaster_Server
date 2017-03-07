@@ -24,9 +24,9 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual ReporterInfoTb Reporter { get; set; }
         /// <summary>
-        /// 上报灾情类型编码
+        /// 上报灾情类型
         /// </summary>
-        public virtual String DisasterKindCode { get; set; }
+        public virtual DisasterKindTb DisasterKind { get; set; }
         /// <summary>
         /// 灾情位置
         /// </summary>
