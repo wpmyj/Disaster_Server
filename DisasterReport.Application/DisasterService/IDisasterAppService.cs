@@ -55,5 +55,30 @@ namespace DisasterReport.DisasterService
         /// <returns></returns>
         [HttpGet]
         RuimapPageResultDto<ReportDisasterOutput> GetPageDisasterByReporterId(Guid id, int pageIndex = 1, int pageSize = 9999, int type = 9, int status = 9);
+        /// <summary>
+        /// 统计各类灾情上报个数
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        List<DisasterKindDetailOutput> GetDisasterKindCount();
+        /// <summary>
+        /// 移动端和北斗端的上报数
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        List<DisasterKindNetWorkOutput> GetDisasterNetworkCount();
+        /// <summary>
+        /// 得到最近的灾情趋势结果
+        /// </summary>
+        /// <param name="type">1-（1年以内） 2-（1月以内30天）</param>
+        /// <returns></returns>
+        [HttpGet]
+        List<DisasterTrendOutput> GetDisasterTrend(int type = 1);
+        /// <summary>
+        /// 统计灾情总数、已销结数、未解决数、今日上报数
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        DisasterResultSumOutput GetDisasterResultSum();
     }
 }

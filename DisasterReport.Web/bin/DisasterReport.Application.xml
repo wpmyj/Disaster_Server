@@ -62,6 +62,26 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindDetailOutput.KindName">
+            <summary>
+            灾情种类
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindDetailOutput.KindCount">
+            <summary>
+            灾情总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindNetWorkOutput.Type">
+            <summary>
+            上报类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindNetWorkOutput.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Name">
             <summary>
             灾情种类名称
@@ -75,6 +95,41 @@
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Pid">
             <summary>
             灾情种类父级Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.DisasterCount">
+            <summary>
+            灾情总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.FinishCount">
+            <summary>
+            解决总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.RemainderCount">
+            <summary>
+            剩余总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.TodayCount">
+            <summary>
+            今日总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Count">
+            <summary>
+            上报数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.SolveCount">
+            <summary>
+            解决总数
             </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DeviceCode">
@@ -235,6 +290,31 @@
             <param name="pageSize">默认 9999</param>
             <param name="type">默认 9</param>
             <param name="status">默认 9</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterKindCount">
+            <summary>
+            统计各类灾情上报个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterNetworkCount">
+            <summary>
+            移动端和北斗端的上报数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterTrend(System.Int32)">
+            <summary>
+            得到最近的灾情趋势结果
+            </summary>
+            <param name="type">1-（1年以内） 2-（1月以内30天）</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterResultSum">
+            <summary>
+            统计灾情总数、已销结数、未解决数、今日上报数
+            </summary>
             <returns></returns>
         </member>
         <member name="T:DisasterReport.DisasterReportAppServiceBase">
