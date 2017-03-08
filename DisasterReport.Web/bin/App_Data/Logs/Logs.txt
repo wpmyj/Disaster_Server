@@ -4208,3 +4208,7 @@ DEBUG 2017-03-08 09:26:42,182 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2017-03-08 09:26:42,182 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
 DEBUG 2017-03-08 09:26:42,182 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
 DEBUG 2017-03-08 09:26:42,182 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-08 09:28:12,457 [10   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-08 09:28:12,457 [10   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-08 09:28:12,457 [10   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-08 09:28:12,457 [10   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

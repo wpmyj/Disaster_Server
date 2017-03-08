@@ -122,3 +122,34 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\bin\Debug\Syst
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.pdb
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\DisasterReport.Core.dll.config
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\DisasterReport.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\DisasterReport.Core.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.Zero.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Facilities.Logging.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Windsor.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Concurrent.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\System.Collections.Immutable.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.Zero.pdb
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Abp.Zero.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Facilities.Logging.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Castle.Windsor.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Concurrent.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\bin\Debug\System.Collections.Immutable.xml
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.dll
+C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.pdb
