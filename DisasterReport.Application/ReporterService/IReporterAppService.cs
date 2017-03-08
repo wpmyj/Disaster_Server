@@ -55,5 +55,14 @@ namespace DisasterReport.ReporterService
         /// <param name="input"></param>
         /// <returns></returns>
         Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input);
+        /// <summary>
+        /// 上报人员按姓名、手机模糊查找
+        /// </summary>
+        /// <param name="nameOrPhone"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<ReporterOutput> GetReporterByNameOrPhone(string nameOrPhone, int pageIndex = 1, int pageSize = 9999);
     }
 }

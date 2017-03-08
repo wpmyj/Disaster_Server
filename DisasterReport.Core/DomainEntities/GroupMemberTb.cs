@@ -20,7 +20,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual ReporterInfoTb Reporter { get; set; }
         /// <summary>
-        /// 群主 管理员 成员
+        /// 群主1 管理员2 成员3
         /// </summary>
         public virtual int Type { get; set; }
     }

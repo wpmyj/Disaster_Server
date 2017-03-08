@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DisasterReport.DisasterService.Dto;
 using Abp.Domain.Repositories;
@@ -273,6 +272,21 @@ namespace DisasterAppService.DisasterService
             outResult.TodayCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day);
 
             return outResult;
+        }
+
+        public ReportDisasterOutput SetDisasterStatus(SetDisasterStatusInput input)
+        {
+            var existDisaster = _disasterInfoTbRepository.FirstOrDefault(d => d.Id == input.DisasterId);
+            if(existDisaster == null)
+            {
+                throw new UserFriendlyException("没有相应的灾情");
+            }
+
+            existDisaster.Status = input.Status;
+
+            _disasterInfoTbRepository.InsertOrUpdate(existDisaster);
+
+            return existDisaster.MapTo<ReportDisasterOutput>();
         }
     }
 }

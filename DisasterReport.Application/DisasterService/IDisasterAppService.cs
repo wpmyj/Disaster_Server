@@ -80,5 +80,12 @@ namespace DisasterReport.DisasterService
         /// <returns></returns>
         [HttpGet]
         DisasterResultSumOutput GetDisasterResultSum();
+        /// <summary>
+        /// 灾情状态的流转
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        ReportDisasterOutput SetDisasterStatus(SetDisasterStatusInput input);
     }
 }

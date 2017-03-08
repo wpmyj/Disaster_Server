@@ -116,6 +116,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CityService\CityAppService.cs" />
+    <Compile Include="CityService\Dto\CityOutput.cs" />
+    <Compile Include="CityService\Dto\CommunityOutput.cs" />
+    <Compile Include="CityService\ICityAppService.cs" />
     <Compile Include="DeviceService\DeviceAppService.cs" />
     <Compile Include="DeviceService\Dto\DeviceAddInput.cs" />
     <Compile Include="DeviceService\Dto\DeviceBindInput.cs" />
@@ -129,11 +133,19 @@
     <Compile Include="DisasterService\Dto\DisasterTrendOutput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterInput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterOutput.cs" />
+    <Compile Include="DisasterService\Dto\SetDisasterStatusInput.cs" />
     <Compile Include="DisasterService\Dto\UploadsFileTbOutput.cs" />
     <Compile Include="DisasterService\Event\DisasterReportEventData.cs" />
     <Compile Include="DisasterService\IDisasterAppService.cs" />
     <Compile Include="DisasterReportApplicationModule.cs" />
     <Compile Include="DisasterReportAppServiceBase.cs" />
+    <Compile Include="MessageGroupService\Dto\GroupMemberAddInput.cs" />
+    <Compile Include="MessageGroupService\Dto\MessageGroupAddInput.cs" />
+    <Compile Include="MessageGroupService\Dto\MessageGroupOutput.cs" />
+    <Compile Include="MessageGroupService\Dto\ReporterGroupOutput.cs" />
+    <Compile Include="MessageGroupService\Dto\ReporterMemberOutput.cs" />
+    <Compile Include="MessageGroupService\IMessageGroupAppService.cs" />
+    <Compile Include="MessageGroupService\MessageGroupAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporterService\Dto\ReporterAddInput.cs" />
     <Compile Include="ReporterService\Dto\ReporterBindInput.cs" />
