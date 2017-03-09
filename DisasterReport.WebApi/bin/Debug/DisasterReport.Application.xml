@@ -598,6 +598,11 @@
             头像图片
             </summary>
         </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Type">
+            <summary>
+            类型1-上报人员 2-后台管理者
+            </summary>
+        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Remark">
             <summary>
             备注
@@ -675,10 +680,11 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32)">
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32,System.Int32)">
             <summary>
             分页得到上报人员
             </summary>
+            <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
             <param name="pageIndex"></param>
             <param name="pageSize">默认9999</param>
             <returns></returns>

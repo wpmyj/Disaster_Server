@@ -5,7 +5,7 @@ namespace DisasterReport.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class Init : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -107,46 +107,20 @@ namespace DisasterReport.Migrations
                         Id = c.Guid(nullable: false),
                         DeviceCode = c.String(unicode: false),
                         ReportDate = c.DateTime(nullable: false, precision: 0),
-                        DisasterKindCode = c.String(unicode: false),
                         DisasterAddress = c.String(unicode: false),
                         Lng = c.Double(nullable: false),
                         Lat = c.Double(nullable: false),
                         Remark = c.String(unicode: false),
                         Type = c.Int(nullable: false),
                         Status = c.Int(nullable: false),
+                        DisasterKind_Id = c.Guid(),
                         Reporter_Id = c.Guid(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.DR_DisasterKindTb", t => t.DisasterKind_Id)
                 .ForeignKey("dbo.DR_ReporterInfoTb", t => t.Reporter_Id)
+                .Index(t => t.DisasterKind_Id)
                 .Index(t => t.Reporter_Id);
-            
-            CreateTable(
-                "dbo.DR_ReporterInfoTb",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        Name = c.String(unicode: false),
-                        Phone = c.String(unicode: false),
-                        AreaCode = c.String(unicode: false),
-                        Age = c.Int(nullable: false),
-                        Address = c.String(unicode: false),
-                        UserId = c.Guid(nullable: false),
-                        Type = c.Int(nullable: false),
-                        Remark = c.String(unicode: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.DR_MessageGroupTb",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        GroupName = c.String(unicode: false),
-                        CreateTime = c.DateTime(nullable: false, precision: 0),
-                        GroupTotalNum = c.Int(nullable: false),
-                        type = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.DR_DisasterKindTb",
@@ -158,6 +132,44 @@ namespace DisasterReport.Migrations
                         Pid = c.String(unicode: false),
                     })
                 .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.DR_ReporterInfoTb",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        Name = c.String(unicode: false),
+                        Phone = c.String(unicode: false),
+                        AreaCode = c.String(unicode: false),
+                        Age = c.Int(nullable: false),
+                        Address = c.String(unicode: false),
+                        Photo = c.String(unicode: false),
+                        UserId = c.Guid(nullable: false),
+                        Type = c.Int(nullable: false),
+                        Remark = c.String(unicode: false),
+                        LastAddress = c.String(unicode: false),
+                        LastLng = c.Double(nullable: false),
+                        LastLat = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.DR_MessageGroupTb",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        GroupName = c.String(unicode: false),
+                        Remark = c.String(unicode: false),
+                        Photo = c.String(unicode: false),
+                        Lable = c.String(unicode: false),
+                        CreateTime = c.DateTime(nullable: false, precision: 0),
+                        GroupTotalNum = c.Int(nullable: false),
+                        type = c.Int(nullable: false),
+                        Disaster_Id = c.Guid(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.DR_DisasterInfoTb", t => t.Disaster_Id)
+                .Index(t => t.Disaster_Id);
             
             CreateTable(
                 "dbo.AbpFeatures",
@@ -586,7 +598,7 @@ namespace DisasterReport.Migrations
                 c => new
                     {
                         Id = c.Guid(nullable: false),
-                        DisasterInfoId = c.Guid(nullable: false),
+                        OtherRowId = c.Guid(nullable: false),
                         Path = c.String(unicode: false),
                         FileName = c.String(unicode: false),
                     })
@@ -728,6 +740,8 @@ namespace DisasterReport.Migrations
             DropForeignKey("dbo.DR_DisasterInfoTb", "Reporter_Id", "dbo.DR_ReporterInfoTb");
             DropForeignKey("dbo.MessageGroupTbReporterInfoTbs", "ReporterInfoTb_Id", "dbo.DR_ReporterInfoTb");
             DropForeignKey("dbo.MessageGroupTbReporterInfoTbs", "MessageGroupTb_Id", "dbo.DR_MessageGroupTb");
+            DropForeignKey("dbo.DR_MessageGroupTb", "Disaster_Id", "dbo.DR_DisasterInfoTb");
+            DropForeignKey("dbo.DR_DisasterInfoTb", "DisasterKind_Id", "dbo.DR_DisasterKindTb");
             DropIndex("dbo.MessageGroupTbReporterInfoTbs", new[] { "ReporterInfoTb_Id" });
             DropIndex("dbo.MessageGroupTbReporterInfoTbs", new[] { "MessageGroupTb_Id" });
             DropIndex("dbo.AbpUserNotifications", new[] { "UserId", "State", "CreationTime" });
@@ -756,7 +770,9 @@ namespace DisasterReport.Migrations
             DropIndex("dbo.DR_GroupMemberTb", new[] { "Reporter_Id" });
             DropIndex("dbo.DR_GroupMemberTb", new[] { "MessageGroup_Id" });
             DropIndex("dbo.AbpFeatures", new[] { "EditionId" });
+            DropIndex("dbo.DR_MessageGroupTb", new[] { "Disaster_Id" });
             DropIndex("dbo.DR_DisasterInfoTb", new[] { "Reporter_Id" });
+            DropIndex("dbo.DR_DisasterInfoTb", new[] { "DisasterKind_Id" });
             DropIndex("dbo.AbpBackgroundJobs", new[] { "IsAbandoned", "NextTryTime" });
             DropTable("dbo.MessageGroupTbReporterInfoTbs");
             DropTable("dbo.AbpUserOrganizationUnits",
@@ -865,9 +881,9 @@ namespace DisasterReport.Migrations
                 {
                     { "DynamicFilter_TenantFeatureSetting_MustHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
-            DropTable("dbo.DR_DisasterKindTb");
             DropTable("dbo.DR_MessageGroupTb");
             DropTable("dbo.DR_ReporterInfoTb");
+            DropTable("dbo.DR_DisasterKindTb");
             DropTable("dbo.DR_DisasterInfoTb");
             DropTable("dbo.DR_DeviceInfoTb");
             DropTable("dbo.DR_DevBindReporterTb");

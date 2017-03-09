@@ -42,13 +42,13 @@ namespace DisasterReport.EntityFramework
 
         public DbSet<DeviceInfoTb> deviceInfo { get; set; }
         public DbSet<UploadsFileTb> uploadsFile { get; set; }
+        public DbSet<ReporterInfoTb> reporterInfo { get; set; }
+        public DbSet<MessageGroupTb> messageGroup { get; set; }
         public DbSet<DisasterInfoTb> disasterInfo { get; set; }
         public DbSet<DisasterKindTb> disasterKind { get; set; }
-        public DbSet<ReporterInfoTb> reporterInfo { get; set; }
         public DbSet<UserTb> userInfo { get; set; }
         public DbSet<MessageNoteTb> messageNote { get; set; }
         public DbSet<DevBindReporterTb> devbindReporter { get; set; }
-        public DbSet<MessageGroupTb> messageGroup { get; set; }
         public DbSet<GroupMemberTb> groupMember { get; set; }
         public DbSet<CityCodeTb> cityCode { get; set; }
         public DbSet<CommunityCodeTb> commCode { get; set; }
