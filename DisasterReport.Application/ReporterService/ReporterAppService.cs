@@ -82,16 +82,30 @@ namespace DisasterReport.ReporterService
             _reporterInfoTbRepo.Update(existReporter);
         }
 
-        public RuimapPageResultDto<ReporterOutput> GetPageReporter(int pageIndex = 1, int pageSize = 9999)
+        public RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999)
         {
-            var count = _reporterInfoTbRepo.Count();
+            if(type == 9)
+            {
+                var count = _reporterInfoTbRepo.Count();
 
-            var result = _reporterInfoTbRepo.GetAll().OrderBy(e => e.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+                var result = _reporterInfoTbRepo.GetAll().OrderBy(e => e.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
 
-            int currPage = pageIndex;
-            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+                int currPage = pageIndex;
+                int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 
-            return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
+                return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
+            }
+            else
+            {
+                var count = _reporterInfoTbRepo.Count(r => r.Type == type);
+
+                var result = _reporterInfoTbRepo.GetAll().Where(r => r.Type == type).OrderBy(e => e.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+                int currPage = pageIndex;
+                int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+                return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
+            }
         }
 
         public async Task<ReporterOutput> GetReporterById(ReporterUnBindInput input)

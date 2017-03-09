@@ -21,6 +21,10 @@ namespace DisasterReport.ReporterService.Dto
         /// </summary>
         public virtual String Phone { get; set; }
         /// <summary>
+        /// 年龄
+        /// </summary>
+        public virtual int Age { get; set; }
+        /// <summary>
         /// 所属区域编码
         /// </summary>
         public virtual String AreaCode { get; set; }
@@ -32,6 +36,10 @@ namespace DisasterReport.ReporterService.Dto
         /// 头像图片
         /// </summary>
         public virtual string Photo { get; set; }
+        /// <summary>
+        /// 类型1-上报人员 2-后台管理者
+        /// </summary>
+        public virtual int Type { get; set; }
         /// <summary>
         /// 备注
         /// </summary>

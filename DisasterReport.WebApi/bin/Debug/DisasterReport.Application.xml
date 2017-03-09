@@ -520,6 +520,14 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.GetPageMessageGroup(System.Int32,System.Int32)">
+            <summary>
+            分页得到团队
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
             <summary>
             姓名
@@ -568,6 +576,11 @@
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Phone">
             <summary>
             电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Age">
+            <summary>
+            年龄
             </summary>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.AreaCode">

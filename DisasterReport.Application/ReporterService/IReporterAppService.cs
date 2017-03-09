@@ -25,11 +25,12 @@ namespace DisasterReport.ReporterService
         /// <summary>
         /// 分页得到上报人员
         /// </summary>
+        /// <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
         /// <param name="pageIndex"></param>
         /// <param name="pageSize">默认9999</param>
         /// <returns></returns>
         [HttpGet]
-        RuimapPageResultDto<ReporterOutput> GetPageReporter(int pageIndex = 1, int pageSize = 9999);
+        RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999);
         /// <summary>
         /// 上报人员绑定用户账号
         /// </summary>
