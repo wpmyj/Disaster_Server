@@ -4,6 +4,43 @@
         <name>DisasterReport.Application</name>
     </assembly>
     <members>
+        <member name="P:DisasterReport.CityService.Dto.CityOutput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:DisasterReport.CityService.Dto.CityOutput.Id">
+            <summary>
+            区域代码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.CityService.Dto.CityOutput.Type">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:DisasterReport.CityService.Dto.CommunityOutput.Name">
+            <summary>
+            社区名称
+            </summary>
+        </member>
+        <member name="P:DisasterReport.CityService.Dto.CommunityOutput.Parent">
+            <summary>
+            父节点Id
+            </summary>
+        </member>
+        <member name="T:DisasterReport.CityService.ICityAppService">
+            <summary>
+            城市查询服务
+            </summary>
+        </member>
+        <member name="M:DisasterReport.CityService.ICityAppService.GetCommunityInfoByName(System.String)">
+            <summary>
+            根据社区名称返回信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaCode">
             <summary>
             设备所属区域编号
@@ -62,6 +99,26 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindDetailOutput.KindName">
+            <summary>
+            灾情种类
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindDetailOutput.KindCount">
+            <summary>
+            灾情总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindNetWorkOutput.Type">
+            <summary>
+            上报类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindNetWorkOutput.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Name">
             <summary>
             灾情种类名称
@@ -75,6 +132,41 @@
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Pid">
             <summary>
             灾情种类父级Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.DisasterCount">
+            <summary>
+            灾情总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.FinishCount">
+            <summary>
+            解决总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.RemainderCount">
+            <summary>
+            剩余总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.TodayCount">
+            <summary>
+            今日总数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Count">
+            <summary>
+            上报数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.SolveCount">
+            <summary>
+            解决总数
             </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DeviceCode">
@@ -172,6 +264,16 @@
             灾情是否已处理 0-没有处理 1-正在处理 2-已处理 9-全部
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.SetDisasterStatusInput.DisasterId">
+            <summary>
+            灾情Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.SetDisasterStatusInput.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.DisasterInfoId">
             <summary>
             上报灾情信息的id值
@@ -237,10 +339,186 @@
             <param name="status">默认 9</param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterKindCount">
+            <summary>
+            统计各类灾情上报个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterNetworkCount">
+            <summary>
+            移动端和北斗端的上报数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterTrend(System.Int32)">
+            <summary>
+            得到最近的灾情趋势结果
+            </summary>
+            <param name="type">1-（1年以内） 2-（1月以内30天）</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterResultSum">
+            <summary>
+            统计灾情总数、已销结数、未解决数、今日上报数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.SetDisasterStatus(DisasterReport.DisasterService.Dto.SetDisasterStatusInput)">
+            <summary>
+            灾情状态的流转
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
         <member name="T:DisasterReport.DisasterReportAppServiceBase">
             <summary>
             Derive your application services from this class.
             </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
+            <summary>
+            消息组Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.ReporterId">
+            <summary>
+            上报人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.GroupName">
+            <summary>
+            消息组名称
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.Remark">
+            <summary>
+            消息组介绍
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.type">
+            <summary>
+            1）救援队 2）个人团队  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.ReporterId">
+            <summary>
+            负责人Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.GroupName">
+            <summary>
+            消息组名称
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Remark">
+            <summary>
+            消息组介绍
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Photo">
+            <summary>
+            消息组的头像
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.GroupTotalNum">
+            <summary>
+            消息组总人数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.type">
+            <summary>
+            1）救援队 2）个人团队  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Member">
+            <summary>
+            关联的成员
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.AreaCode">
+            <summary>
+            所属区域编码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Address">
+            <summary>
+            所在地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Photo">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.Remark">
+            <summary>
+            人员备注
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.LastAddress">
+            <summary>
+            最后一次上报的位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.LastLng">
+            <summary>
+            最后一次上报的经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterGroupOutput.LastLat">
+            <summary>
+            最后一次上报的维度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterMemberOutput.Type">
+            <summary>
+            成员类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.ReporterMemberOutput.Reporter">
+            <summary>
+            上报人员
+            </summary>
+        </member>
+        <member name="T:DisasterReport.MessageGroupService.IMessageGroupAppService">
+            <summary>
+            团队接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.AddMessageGroup(DisasterReport.MessageGroupService.Dto.MessageGroupAddInput)">
+            <summary>
+            增加团队
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.AddGroupMember(DisasterReport.MessageGroupService.Dto.GroupMemberAddInput)">
+            <summary>
+            给团队添加成员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
             <summary>
@@ -416,6 +694,15 @@
             修改人员信息
             </summary>
             <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetReporterByNameOrPhone(System.String,System.Int32,System.Int32)">
+            <summary>
+            上报人员按姓名、手机模糊查找
+            </summary>
+            <param name="nameOrPhone"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
             <returns></returns>
         </member>
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountAddUserInput.UserCode">

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DisasterReport.DisasterService.Dto;
 using Abp.Domain.Repositories;
@@ -169,6 +168,125 @@ namespace DisasterAppService.DisasterService
             int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 
             return new RuimapPageResultDto<ReportDisasterOutput>(count, currPage, totalPage, result.MapTo<List<ReportDisasterOutput>>());
+        }
+
+        public List<DisasterKindDetailOutput> GetDisasterKindCount()
+        {
+            // 先找出有多少个子类灾情种类
+            var existKinds = _disasterKindTbRespository.GetAll().Where(d => d.Pid != "0").ToList();
+            if(existKinds == null)
+            {
+                throw new UserFriendlyException("没有灾情种类");
+            }
+
+            List<DisasterKindDetailOutput> outList = new List<DisasterKindDetailOutput>();
+            // 分别查找出对应的灾情个数
+            foreach (var i in existKinds)
+            {
+                var _count = _disasterInfoTbRepository.Count(d => d.DisasterKind.Id == i.Id);
+                outList.Add(new DisasterKindDetailOutput()
+                {
+                    KindName = i.Name,
+                    KindCount = _count
+                });
+            }
+
+            return outList;
+        }
+
+        public List<DisasterKindNetWorkOutput> GetDisasterNetworkCount()
+        {
+            // 上报类型 1-移动网络 2-北斗短报文
+            List<DisasterKindNetWorkOutput> outList = new List<DisasterKindNetWorkOutput>();
+
+            // 移动
+            var _count = _disasterInfoTbRepository.Count(d => d.Type == 1);
+            outList.Add(new DisasterKindNetWorkOutput()
+            {
+                Type = "移动上报",
+                Count = _count
+            });
+
+            _count = _disasterInfoTbRepository.Count(d => d.Type == 2);
+            outList.Add(new DisasterKindNetWorkOutput()
+            {
+                Type = "北斗上报",
+                Count = _count
+            });
+
+            return outList;
+        }
+
+        public List<DisasterTrendOutput> GetDisasterTrend(int type = 1)
+        {
+            // 默认得到1年以内的灾情趋势
+            var currDate = DateTime.Today;
+            List<DisasterTrendOutput> outList = new List<DisasterTrendOutput>();
+            if(type == 1)
+            {
+                // 获取12个月份的记录
+                for (var i = 0; i < 12; i++)
+                {
+                    // 全部
+                    var tempCurrDate = currDate.AddMonths(-i);
+                    var _count = _disasterInfoTbRepository.Count(d => d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Year == tempCurrDate.Year);
+                    // 已处理
+                    var _solveCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Year == tempCurrDate.Year && d.Status == 2);
+                    outList.Add(new DisasterTrendOutput()
+                    {
+                        Count = _count,
+                        SolveCount = _solveCount,
+                        Date = currDate.AddMonths(-i).Year.ToString() + "年" + currDate.AddMonths(-i).Month.ToString() + "月"
+                    });
+                }
+            }
+            else if(type == 2)
+            {
+                // 获取30天以内的记录
+                for (var i = 0; i < 30; i++)
+                {
+                    // 全部
+                    var tempCurrDate = currDate.AddDays(-i);
+                    var _count = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day);
+                    // 已处理
+                    var _solveCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day && d.Status == 2);
+                    outList.Add(new DisasterTrendOutput()
+                    {
+                        Count = _count,
+                        SolveCount = _solveCount,
+                        Date = currDate.AddDays(-i).Year.ToString() + "年" + currDate.AddDays(-i).Month.ToString() + "月" + currDate.AddDays(-i).Day.ToString() + "日"
+                    });
+                }
+            }
+            return outList;
+        }
+
+        public DisasterResultSumOutput GetDisasterResultSum()
+        {
+            DisasterResultSumOutput outResult = new DisasterResultSumOutput();
+
+            outResult.DisasterCount = _disasterInfoTbRepository.Count();
+            outResult.FinishCount = _disasterInfoTbRepository.Count(d => d.Status == 2);
+            outResult.RemainderCount = _disasterInfoTbRepository.Count(d => d.Status != 2);
+            var tempCurrDate = DateTime.Today;
+            outResult.TodayCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day);
+
+            return outResult;
+        }
+
+        public ReportDisasterOutput SetDisasterStatus(SetDisasterStatusInput input)
+        {
+            var existDisaster = _disasterInfoTbRepository.FirstOrDefault(d => d.Id == input.DisasterId);
+            if(existDisaster == null)
+            {
+                throw new UserFriendlyException("没有相应的灾情");
+            }
+
+            existDisaster.Status = input.Status;
+
+            _disasterInfoTbRepository.InsertOrUpdate(existDisaster);
+
+            return existDisaster.MapTo<ReportDisasterOutput>();
         }
     }
 }

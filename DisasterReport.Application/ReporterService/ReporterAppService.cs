@@ -28,6 +28,13 @@ namespace DisasterReport.ReporterService
 
         public async Task<ReporterOutput> AddReporter(ReporterAddInput input)
         {
+            // 判断用户是否被占用
+            var existUser = _userTbRepo.FirstOrDefault(u => u.Id == input.UserId);
+            if(existUser == null || existUser.Enable == true)
+            {
+                throw new UserFriendlyException("用户不存在、或被占用");
+            }
+
             var addReoirterObj = new ReporterInfoTb()
             {
                 Address = input.Address,
@@ -42,6 +49,10 @@ namespace DisasterReport.ReporterService
 
             var id = await _reporterInfoTbRepo.InsertAndGetIdAsync(addReoirterObj);
             addReoirterObj.Id = id;
+
+            existUser.Enable = true;
+
+            _userTbRepo.Update(existUser);
 
             return addReoirterObj.MapTo<ReporterOutput>();
         }
@@ -91,6 +102,18 @@ namespace DisasterReport.ReporterService
                 throw new UserFriendlyException("没有此上报人员");
             }
             return existReporter.MapTo<ReporterOutput>();
+        }
+
+        public RuimapPageResultDto<ReporterOutput> GetReporterByNameOrPhone(string nameOrPhone, int pageIndex = 1, int pageSize = 9999)
+        {
+            var count = _reporterInfoTbRepo.Count(r => r.Name.Contains(nameOrPhone) || r.Phone.Contains(nameOrPhone));
+
+            var result = _reporterInfoTbRepo.GetAll().Where(r => r.Name.Contains(nameOrPhone) || r.Phone.Contains(nameOrPhone)).OrderBy(e => e.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
         }
 
         public void UnBindUserAccoutn(ReporterUnBindInput input)
