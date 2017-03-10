@@ -41,6 +41,11 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaAddress">
+            <summary>
+            设备所在地址
+            </summary>
+        </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaCode">
             <summary>
             设备所属区域编号
@@ -49,6 +54,31 @@
         <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.DeviceCode">
             <summary>
             设备编号
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.ReporterId">
+            <summary>
+            上报人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.Type">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.ProduceDate">
+            <summary>
+            设备生产日期
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.ProduceAddress">
+            <summary>
+            设备生产地址
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.AreaAddress">
+            <summary>
+            设备所在地址
             </summary>
         </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.AreaCode">
@@ -61,9 +91,24 @@
             设备编号
             </summary>
         </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.Type">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.ProduceDate">
+            <summary>
+            设备生产日期
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.ProduceAddress">
+            <summary>
+            设备生产地址
+            </summary>
+        </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceOutput.Reporter">
             <summary>
-            上报人员Id
+            所关联的上报人员
             </summary>
         </member>
         <member name="T:DisasterReport.DeviceService.IDeviceAppService">

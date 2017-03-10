@@ -26,7 +26,7 @@ namespace DisasterReport.DomainEntities
         /// <summary>
         /// 上报人员Id
         /// </summary>
-        public virtual Guid ReporterId { get; set; }
+        public virtual ReporterInfoTb Reporter { get; set; }
         /// <summary>
         /// 设备类型
         /// </summary>
