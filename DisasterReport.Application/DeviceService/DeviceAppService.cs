@@ -37,8 +37,13 @@ namespace DisasterReport.DeviceService
 
             var addDevice = new DeviceInfoTb()
             {
+                AreaAddress = input.AreaAddress,
                 AreaCode = input.AreaCode,
-                DeviceCode = input.DeviceCode
+                DeviceCode = input.DeviceCode,
+                ProduceAddress = input.ProduceAddress,
+                ProduceDate = input.ProduceDate,
+                ReporterId = input.ReporterId,
+                Type = input.Type
             };
 
             var id = await _deviceInfoTbRepo.InsertAndGetIdAsync(addDevice);
@@ -84,12 +89,17 @@ namespace DisasterReport.DeviceService
             {
                 return new DeviceOutput()
                 {
+                    AreaAddress = result.AreaAddress,
                     AreaCode = result.AreaCode,
                     DeviceCode = result.DeviceCode,
                     Id = result.Id,
-                    Reporter = existReporter.MapTo<ReporterOutput>()
+                    Reporter = existReporter.MapTo<ReporterOutput>(),
+                    ProduceAddress = result.ProduceAddress,
+                    ProduceDate = result.ProduceDate,
+                    Type = result.Type
                 };
-            } else
+            }
+            else
             {
                 throw new UserFriendlyException("此用户没有绑定设备");
             }
