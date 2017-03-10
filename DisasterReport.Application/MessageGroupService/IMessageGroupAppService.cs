@@ -36,5 +36,32 @@ namespace DisasterReport.MessageGroupService
         /// <returns></returns>
         [HttpGet]
         RuimapPageResultDto<MessageGroupOutput> GetPageMessageGroup(int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 通过团队id获取详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pageIndex">所取成员当前页</param>
+        /// <param name="pageSize">所取成员当前个数 默认9999</param>
+        /// <returns></returns>
+        [HttpGet]
+        MessageGroupOutput GetMessageGroupById(Guid id, int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 分页获取消息组成员
+        /// </summary>
+        /// <param name="messageGroupId"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize">默认9999</param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<ReporterMemberOutput> GetPageGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 分页获取不在此消息组里的其他上报人员
+        /// </summary>
+        /// <param name="messageGroupId"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize">默认9999</param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<ReporterGroupOutput> GetOtherNoGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999);
     }
 }

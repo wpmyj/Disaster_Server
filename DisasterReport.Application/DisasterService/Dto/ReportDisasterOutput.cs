@@ -10,6 +10,10 @@ namespace DisasterReport.DisasterService.Dto
     public class ReportDisasterOutput : EntityDto<Guid>
     {
         /// <summary>
+        /// 灾情编号-后台生成
+        /// </summary>
+        public virtual string DisasterCode { get; set; }
+        /// <summary>
         /// 设备编号
         /// </summary>
         public virtual string DeviceCode { get; set; }

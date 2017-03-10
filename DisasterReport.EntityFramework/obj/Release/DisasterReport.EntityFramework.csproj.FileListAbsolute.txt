@@ -234,12 +234,7 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\bin
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.xml
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.Init.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.Init1.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init2.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init3.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init4.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init5.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init6.resources
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init2.resources

@@ -140,6 +140,7 @@
     <Compile Include="DisasterReportApplicationModule.cs" />
     <Compile Include="DisasterReportAppServiceBase.cs" />
     <Compile Include="MessageGroupService\Dto\GroupMemberAddInput.cs" />
+    <Compile Include="MessageGroupService\Dto\MessageDisasterOutput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageGroupAddInput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageGroupOutput.cs" />
     <Compile Include="MessageGroupService\Dto\ReporterGroupOutput.cs" />

@@ -36,7 +36,11 @@ namespace DisasterReport.MessageGroupService.Dto
         /// <summary>
         /// 1）救援队 2）个人团队  两类节点
         /// </summary>
-        public virtual int type { get; set; }
+        public virtual int Type { get; set; }
+        /// <summary>
+        /// 所关联的灾情
+        /// </summary>
+        public virtual MessageDisasterOutput Disaster { get; set; }
         /// <summary>
         /// 关联的成员
         /// </summary>

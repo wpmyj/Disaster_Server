@@ -214,6 +214,11 @@
             上传灾情附件-图片
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterCode">
+            <summary>
+            灾情编号-后台生成
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DeviceCode">
             <summary>
             设备编号
@@ -386,6 +391,46 @@
             上报人员Id
             </summary>
         </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.DisasterCode">
+            <summary>
+            灾情代码
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.ReportDate">
+            <summary>
+            上报时间
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.DisasterKind">
+            <summary>
+            上报灾情类型
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.DisasterAddress">
+            <summary>
+            灾情位置
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.Lng">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.Lat">
+            <summary>
+            维度
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.Status">
+            <summary>
+            灾情是否已处理 0-没有处理 1-正在处理 2-已处理
+            </summary>
+        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.GroupName">
             <summary>
             消息组名称
@@ -396,9 +441,14 @@
             消息组介绍
             </summary>
         </member>
-        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.type">
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.Type">
             <summary>
             1）救援队 2）个人团队  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.DisasterId">
+            <summary>
+            所关联的灾情Id
             </summary>
         </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.ReporterId">
@@ -431,9 +481,14 @@
             消息组总人数
             </summary>
         </member>
-        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.type">
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Type">
             <summary>
             1）救援队 2）个人团队  两类节点
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Disaster">
+            <summary>
+            所关联的灾情
             </summary>
         </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupOutput.Member">
@@ -528,6 +583,33 @@
             <param name="pageSize"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.GetMessageGroupById(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            通过团队id获取详情
+            </summary>
+            <param name="id"></param>
+            <param name="pageIndex">所取成员当前页</param>
+            <param name="pageSize">所取成员当前个数 默认9999</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.GetPageGroupMember(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取消息组成员
+            </summary>
+            <param name="messageGroupId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认9999</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.GetOtherNoGroupMember(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            分页获取不在此消息组里的其他上报人员
+            </summary>
+            <param name="messageGroupId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认9999</param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
             <summary>
             姓名
@@ -596,6 +678,11 @@
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Photo">
             <summary>
             头像图片
+            </summary>
+        </member>
+        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Type">
+            <summary>
+            类型1-上报人员 2-后台管理者
             </summary>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.Remark">
@@ -675,10 +762,11 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32)">
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32,System.Int32)">
             <summary>
             分页得到上报人员
             </summary>
+            <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
             <param name="pageIndex"></param>
             <param name="pageSize">默认9999</param>
             <returns></returns>
