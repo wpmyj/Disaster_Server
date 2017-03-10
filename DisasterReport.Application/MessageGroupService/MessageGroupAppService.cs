@@ -8,6 +8,7 @@ using Abp.Domain.Repositories;
 using DisasterReport.DomainEntities;
 using Abp.UI;
 using Abp.AutoMapper;
+using DisasterReport.DtoTemplate;
 
 namespace DisasterReport.MessageGroupService
 {
@@ -179,6 +180,36 @@ namespace DisasterReport.MessageGroupService
             {
                 throw new UserFriendlyException(e.ToString());
             }
+        }
+
+        public RuimapPageResultDto<MessageGroupOutput> GetPageMessageGroup(int pageIndex = 1, int pageSize = 9999)
+        {
+            var count = _messageGroupRepo.Count();
+
+            var messageGroupResult = _messageGroupRepo.GetAll().OrderByDescending(m => m.CreateTime).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            List<MessageGroupOutput> outResult = new List<MessageGroupOutput>(); 
+            foreach (var messageGroup in messageGroupResult)
+            {
+                var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroup.Id).ToList();
+
+                outResult.Add(new MessageGroupOutput()
+                {
+                    CreateTime = messageGroup.CreateTime,
+                    GroupName = messageGroup.GroupName,
+                    GroupTotalNum = messageGroup.GroupTotalNum,
+                    Id = messageGroup.Id,
+                    Member = Members.MapTo<List<ReporterMemberOutput>>(),
+                    Photo = messageGroup.Photo,
+                    Remark = messageGroup.Remark,
+                    type = messageGroup.type
+                });
+            }
+
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<MessageGroupOutput>(count, currPage, totalPage, outResult);
         }
     }
 }

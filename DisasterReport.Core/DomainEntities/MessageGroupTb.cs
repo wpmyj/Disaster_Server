@@ -43,5 +43,9 @@ namespace DisasterReport.DomainEntities
         /// 关联的Reporter
         /// </summary>
         public virtual ICollection<ReporterInfoTb> Reporter { get; set; }
+        /// <summary>
+        /// 关联的灾情
+        /// </summary>
+        public virtual DisasterInfoTb Disaster { get; set; }
     }
 }

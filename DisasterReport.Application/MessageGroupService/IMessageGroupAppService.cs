@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using DisasterReport.DtoTemplate;
 using DisasterReport.MessageGroupService.Dto;
 using System;
 using System.Collections.Generic;
@@ -27,5 +28,13 @@ namespace DisasterReport.MessageGroupService
         /// <param name="input"></param>
         /// <returns></returns>
         MessageGroupOutput AddGroupMember(GroupMemberAddInput input);
+        /// <summary>
+        /// 分页得到团队
+        /// </summary>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<MessageGroupOutput> GetPageMessageGroup(int pageIndex = 1, int pageSize = 9999);
     }
 }
