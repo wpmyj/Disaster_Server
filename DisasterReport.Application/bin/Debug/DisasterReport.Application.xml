@@ -41,6 +41,24 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.CityService.ICityAppService.GetPageCity(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据行政区域类型获取信息
+            </summary>
+            <param name="type">1 2 3 4 省 市 区 街道</param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认20</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.CityService.ICityAppService.GetCityByPid(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            根据父级行政区域获取信息
+            </summary>
+            <param name="pId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认20</param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaAddress">
             <summary>
             设备所在地址
@@ -480,11 +498,6 @@
             1）救援队 2）个人团队  两类节点
             </summary>
         </member>
-        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.DisasterId">
-            <summary>
-            所关联的灾情Id
-            </summary>
-        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.ReporterId">
             <summary>
             负责人Id
@@ -906,6 +919,13 @@
         <member name="M:DisasterReport.UserAccount.IUserAccountAppService.Login(DisasterReport.UserAccount.Dto.UserAccountLoginInput)">
             <summary>
             用户登录验证
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.UserAccount.IUserAccountAppService.AdminLogin(DisasterReport.UserAccount.Dto.UserAccountLoginInput)">
+            <summary>
+            后台用户登录验证
             </summary>
             <param name="input"></param>
             <returns></returns>

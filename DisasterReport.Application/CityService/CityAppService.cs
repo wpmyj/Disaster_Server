@@ -8,6 +8,7 @@ using DisasterReport.DomainEntities;
 using Abp.Domain.Repositories;
 using Abp.AutoMapper;
 using Abp.UI;
+using DisasterReport.DtoTemplate;
 
 namespace DisasterReport.CityService
 {
@@ -23,6 +24,18 @@ namespace DisasterReport.CityService
         {
             _communityCodeRepo = communityCodeRepo;
             _cityCodeTbRepo = cityCodeTbRepo;
+        }
+
+        public RuimapPageResultDto<CityOutput> GetCityByPid(Int64 pId, int pageIndex = 1, int pageSize = 20)
+        {
+            var count = _cityCodeTbRepo.Count(c => c.Pid == pId);
+
+            var result = _cityCodeTbRepo.GetAll().Where(c => c.Pid == pId).OrderBy(c => c.Id).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<CityOutput>(count, currPage, totalPage, result.MapTo<List<CityOutput>>());
         }
 
         public CommunityOutput GetCommunityInfoByName(string name)
@@ -63,6 +76,18 @@ namespace DisasterReport.CityService
             }
 
             throw new UserFriendlyException("没有对应的社区");
+        }
+
+        public RuimapPageResultDto<CityOutput> GetPageCity(int type, int pageIndex = 1, int pageSize = 20)
+        {
+            var count = _cityCodeTbRepo.Count(c => c.Type == type);
+
+            var result = _cityCodeTbRepo.GetAll().Where(c => c.Type == type).OrderBy(c => c.Id).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<CityOutput>(count, currPage, totalPage, result.MapTo<List<CityOutput>>());
         }
     }
 }

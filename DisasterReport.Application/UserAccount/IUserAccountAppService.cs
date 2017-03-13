@@ -23,6 +23,13 @@ namespace DisasterReport.UserAccount
         [HttpPost]
         Task<UserAccountOutput> Login(UserAccountLoginInput input);
         /// <summary>
+        /// 后台用户登录验证
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        Task<UserAccountOutput> AdminLogin(UserAccountLoginInput input);
+        /// <summary>
         /// 根据用户id返回用户信息
         /// </summary>
         /// <param name="id"></param>

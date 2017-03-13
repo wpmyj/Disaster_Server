@@ -287,3 +287,5 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\bin\Release\
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\obj\Release\DisasterReport.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\obj\Release\DisasterReport.WebApi.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\obj\Release\DisasterReport.WebApi.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\bin\Release\zh-Hans\Microsoft.Owin.resources.dll
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\bin\Release\zh-Hans\Microsoft.Owin.Security.resources.dll

@@ -230,8 +230,8 @@ namespace DisasterReport.MessageGroupService
             //int currPage = pageIndex;
             //int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 
-            var count = _reporterInfoRepo.Count(r => r.MessageGroup == null);
-            var reporterNotHasGroup = _reporterInfoRepo.GetAll().Where(r => r.MessageGroup == null).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            var count = _reporterInfoRepo.Count(r => r.MessageGroup == null && r.Type == 1);
+            var reporterNotHasGroup = _reporterInfoRepo.GetAll().Where(r => r.MessageGroup == null && r.Type == 1).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             int currPage = pageIndex;
             int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 

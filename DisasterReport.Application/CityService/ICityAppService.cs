@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services;
 using DisasterReport.CityService.Dto;
+using DisasterReport.DtoTemplate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,23 @@ namespace DisasterReport.CityService
         /// <returns></returns>
         [HttpGet]
         CommunityOutput GetCommunityInfoByName(string name);
+        /// <summary>
+        /// 根据行政区域类型获取信息
+        /// </summary>
+        /// <param name="type">1 2 3 4 省 市 区 街道</param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize">默认20</param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<CityOutput> GetPageCity(int type, int pageIndex = 1, int pageSize = 20);
+        /// <summary>
+        /// 根据父级行政区域获取信息
+        /// </summary>
+        /// <param name="pId"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize">默认20</param>
+        /// <returns></returns>
+        [HttpGet]
+        RuimapPageResultDto<CityOutput> GetCityByPid(Int64 pId, int pageIndex = 1, int pageSize = 20);
     }
 }
