@@ -110,7 +110,6 @@ namespace DisasterAppService.DisasterService
             {
                 var fileInsertInfo = new UploadsFileTb
                 {
-                    Id = Guid.NewGuid(),
                     OtherRowId = id,
                     FileName = uploads[i].FileName,
                     Path = uploads[i].FilePath
@@ -147,7 +146,7 @@ namespace DisasterAppService.DisasterService
             List<DisasterInfoTb> result;
             if (type == 9 && status == 9)
             {
-                count = _disasterInfoTbRepository.Count();
+                count = _disasterInfoTbRepository.Count(d => d.Reporter.Id == id);
                 result = _disasterInfoTbRepository.GetAll().Where(d => d.Reporter.Id == id).OrderByDescending(d => d.ReportDate).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             }
             else if (type == 9 && status != 9)
@@ -174,7 +173,7 @@ namespace DisasterAppService.DisasterService
         public List<DisasterKindDetailOutput> GetDisasterKindCount()
         {
             // 先找出有多少个子类灾情种类
-            var existKinds = _disasterKindTbRespository.GetAll().Where(d => d.Pid != "0").ToList();
+            var existKinds = _disasterKindTbRespository.GetAll().Where(d => d.Pid.ToString() != "0").ToList();
             if(existKinds == null)
             {
                 throw new UserFriendlyException("没有灾情种类");

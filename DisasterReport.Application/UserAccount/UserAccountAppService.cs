@@ -53,7 +53,7 @@ namespace DisasterReport.UserAccount
             {
                 throw new UserFriendlyException("没有此用户账号信息");
             }
-            var bindReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.UserId == existUser.Id);
+            var bindReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.User.Id == existUser.Id);
 
             if(bindReporter == null)
             {
@@ -69,6 +69,10 @@ namespace DisasterReport.UserAccount
                 Id = bindReporter.Id,
                 Name = bindReporter.Name,
                 Phone = bindReporter.Phone,
+                Photo = bindReporter.Photo,
+                Age = bindReporter.Age,
+                Remark = bindReporter.Remark,
+                Type = bindReporter.Type,
                 User = existUser.MapTo<UserTbOutputDto>()
             };
 
@@ -96,7 +100,7 @@ namespace DisasterReport.UserAccount
 
             // 验证账号密码通过
             // 获取此用户的上报人员信息
-            var existReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.UserId == existUser.Id);
+            var existReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.User.Id == existUser.Id);
             if(existReporter == null)
             {
                 throw new UserFriendlyException("错误，此用户没有绑定上报用员，请联系管理员");
@@ -109,6 +113,10 @@ namespace DisasterReport.UserAccount
                 Phone = existReporter.Phone,
                 Address = existReporter.Address,
                 AreaCode = existReporter.AreaCode,
+                Photo = existReporter.Photo,
+                Age = existReporter.Age,
+                Remark = existReporter.Remark,
+                Type = existReporter.Type,
                 User = existUser.MapTo<UserTbOutputDto>()
             };
             return outResult;

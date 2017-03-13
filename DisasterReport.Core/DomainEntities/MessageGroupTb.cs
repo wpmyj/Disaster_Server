@@ -24,10 +24,6 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual string Photo { get; set; }
         /// <summary>
-        /// 消息组标签-区分灾情类型
-        /// </summary>
-        public virtual string Lable { get; set; }
-        /// <summary>
         /// 创建时间
         /// </summary>
         public virtual DateTime CreateTime { get; set; }
@@ -36,7 +32,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual int GroupTotalNum { get; set; }
         /// <summary>
-        /// 1）救援队 2）个人团队  两类节点
+        /// 1 抢救队 2维护队 3输送队
         /// </summary>
         public virtual int type { get; set; }
         /// <summary>
@@ -46,6 +42,10 @@ namespace DisasterReport.DomainEntities
         /// <summary>
         /// 关联的灾情
         /// </summary>
-        public virtual DisasterInfoTb Disaster { get; set; }
+        public virtual ICollection<DisasterInfoTb> Disaster { get; set; }
+        /// <summary>
+        /// 关联的消息
+        /// </summary>
+        public virtual ICollection<MessageNoteTb> Message { get; set; }
     }
 }

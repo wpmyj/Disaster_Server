@@ -122,9 +122,10 @@
     <Compile Include="CityService\ICityAppService.cs" />
     <Compile Include="DeviceService\DeviceAppService.cs" />
     <Compile Include="DeviceService\Dto\DeviceAddInput.cs" />
-    <Compile Include="DeviceService\Dto\DeviceBindInput.cs" />
     <Compile Include="DeviceService\Dto\DeviceOutput.cs" />
     <Compile Include="DeviceService\IDeviceAppService.cs" />
+    <Compile Include="DisasterReportApplicationModule.cs" />
+    <Compile Include="DisasterReportAppServiceBase.cs" />
     <Compile Include="DisasterService\DisasterAppService.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindDetailOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindNetWorkOutput.cs" />
@@ -137,8 +138,6 @@
     <Compile Include="DisasterService\Dto\UploadsFileTbOutput.cs" />
     <Compile Include="DisasterService\Event\DisasterReportEventData.cs" />
     <Compile Include="DisasterService\IDisasterAppService.cs" />
-    <Compile Include="DisasterReportApplicationModule.cs" />
-    <Compile Include="DisasterReportAppServiceBase.cs" />
     <Compile Include="MessageGroupService\Dto\GroupMemberAddInput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageDisasterOutput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageGroupAddInput.cs" />
@@ -149,9 +148,7 @@
     <Compile Include="MessageGroupService\MessageGroupAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporterService\Dto\ReporterAddInput.cs" />
-    <Compile Include="ReporterService\Dto\ReporterBindInput.cs" />
     <Compile Include="ReporterService\Dto\ReporterOutput.cs" />
-    <Compile Include="ReporterService\Dto\ReporterUnBindInput.cs" />
     <Compile Include="ReporterService\Dto\ReporterUpdateInput.cs" />
     <Compile Include="ReporterService\IReporterAppService.cs" />
     <Compile Include="ReporterService\ReporterAppService.cs" />

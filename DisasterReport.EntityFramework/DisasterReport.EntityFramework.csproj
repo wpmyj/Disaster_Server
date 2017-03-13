@@ -138,13 +138,9 @@
   <ItemGroup>
     <Compile Include="EntityFramework\DisasterReportDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\DisasterReportRepositoryBase.cs" />
-    <Compile Include="Migrations\201703100657461_init.cs" />
-    <Compile Include="Migrations\201703100657461_init.Designer.cs">
-      <DependentUpon>201703100657461_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703100729547_init2.cs" />
-    <Compile Include="Migrations\201703100729547_init2.Designer.cs">
-      <DependentUpon>201703100729547_init2.cs</DependentUpon>
+    <Compile Include="Migrations\201703130220442_init.cs" />
+    <Compile Include="Migrations\201703130220442_init.Designer.cs">
+      <DependentUpon>201703130220442_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -171,11 +167,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703100657461_init.resx">
-      <DependentUpon>201703100657461_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703100729547_init2.resx">
-      <DependentUpon>201703100729547_init2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703130220442_init.resx">
+      <DependentUpon>201703130220442_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

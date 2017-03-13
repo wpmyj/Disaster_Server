@@ -9,9 +9,9 @@ namespace DisasterReport.DisasterService.Dto
     public class UploadsFileTbOutput:EntityDto<Guid>
     {
         /// <summary>
-        /// 上报灾情信息的id值
+        /// 关联文件的其他rowId
         /// </summary>
-        public virtual Guid DisasterInfoId { get; set; }
+        public virtual Guid OtherRowId { get; set; }
 
         /// <summary>
         /// 文件存储的路径

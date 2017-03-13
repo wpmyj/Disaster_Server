@@ -23,12 +23,6 @@ namespace DisasterReport.DeviceService
         [HttpGet]
         Task<DeviceOutput> GetDeviceByReporterId(Guid id);
         /// <summary>
-        /// 设备绑定到指定的上报人员
-        /// </summary>
-        /// <param name="input"></param>
-        [HttpPost]
-        void BindReporter(DeviceBindInput input);
-        /// <summary>
         /// 分页得到终端设备
         /// </summary>
         /// <param name="pageIndex"></param>

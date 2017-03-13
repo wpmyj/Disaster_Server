@@ -41,7 +41,7 @@ namespace DisasterReport.ReporterService
                 AreaCode = input.AreaCode,
                 Name = input.Name,
                 Phone = input.Phone,
-                UserId = input.UserId,
+                User = existUser,
                 Age = input.Age,
                 Remark = input.Remark,
                 Type = input.Type
@@ -56,32 +56,7 @@ namespace DisasterReport.ReporterService
 
             return addReoirterObj.MapTo<ReporterOutput>();
         }
-
-        public void BindUserAccount(ReporterBindInput input)
-        {
-            // 优先考虑UserId
-            var existUser = _userTbRepo.FirstOrDefault(u => u.Id == input.UserId || u.UserCode == input.UserCode);
-            if(existUser == null)
-            {
-                throw new UserFriendlyException(string.Format("没有存在相应的账号"));
-            }
-
-            var existReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
-            if(existReporter == null)
-            {
-                throw new UserFriendlyException(string.Format("没有存在相应的上报人员"));
-            }
-
-            if(existReporter.UserId.ToString() == "")
-            {
-                throw new UserFriendlyException(string.Format("此上报人员已绑定账号"));
-            }
-
-            // 更新绑定账号
-            existReporter.UserId = existUser.Id;
-            _reporterInfoTbRepo.Update(existReporter);
-        }
-
+        
         public RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999)
         {
             if(type == 9)
@@ -108,9 +83,9 @@ namespace DisasterReport.ReporterService
             }
         }
 
-        public async Task<ReporterOutput> GetReporterById(ReporterUnBindInput input)
+        public async Task<ReporterOutput> GetReporterById(Guid id)
         {
-            var existReporter = await _reporterInfoTbRepo.FirstOrDefaultAsync(r => r.Id == input.ReporterId);
+            var existReporter = await _reporterInfoTbRepo.FirstOrDefaultAsync(r => r.Id == id);
             if(existReporter == null)
             {
                 throw new UserFriendlyException("没有此上报人员");
@@ -129,12 +104,7 @@ namespace DisasterReport.ReporterService
 
             return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
         }
-
-        public void UnBindUserAccoutn(ReporterUnBindInput input)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public async Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input)
         {
             // 先找到对应的用户记录Row
@@ -151,7 +121,7 @@ namespace DisasterReport.ReporterService
             existReporter.Address = input.Address;
 
             // 找到对应的用户账号
-            var existUser = await _userTbRepo.FirstOrDefaultAsync(u => u.Id == existReporter.UserId);
+            var existUser = await _userTbRepo.FirstOrDefaultAsync(u => u.Id == existReporter.User.Id);
             if(existUser == null)
             {
                 throw new UserFriendlyException("没有相应的账号");
@@ -163,7 +133,21 @@ namespace DisasterReport.ReporterService
             _userTbRepo.Update(existUser);
 
             var newReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
-            return newReporter.MapTo<ReporterOutput>();
+
+            return new ReporterOutput()
+            {
+                Id = existReporter.Id,
+                Address = existReporter.Address,
+                Age = existReporter.Age,
+                AreaCode = existReporter.AreaCode,
+                LastAddress = existReporter.LastAddress,
+                LastLat = existReporter.LastLat,
+                LastLng = existReporter.LastLng,
+                Name = existReporter.Name,
+                Phone = existReporter.Phone,
+                Photo = existReporter.Photo,
+                Remark = existReporter.Remark
+            };
         }
     }
 }
