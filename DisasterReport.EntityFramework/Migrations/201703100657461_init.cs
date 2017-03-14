@@ -92,9 +92,10 @@ namespace DisasterReport.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         AreaCode = c.String(unicode: false),
+                        AreaAddress = c.String(unicode: false),
                         DeviceCode = c.Int(nullable: false),
                         ReporterId = c.Guid(nullable: false),
-                        Type = c.Int(nullable: false),
+                        Type = c.String(unicode: false),
                         ProduceDate = c.DateTime(nullable: false, precision: 0),
                         ProduceAddress = c.String(unicode: false),
                     })
@@ -105,6 +106,7 @@ namespace DisasterReport.Migrations
                 c => new
                     {
                         Id = c.Guid(nullable: false),
+                        DisasterCode = c.String(unicode: false),
                         DeviceCode = c.String(unicode: false),
                         ReportDate = c.DateTime(nullable: false, precision: 0),
                         DisasterAddress = c.String(unicode: false),

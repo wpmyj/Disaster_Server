@@ -17,16 +17,19 @@ namespace DisasterReport.MessageGroupService
         private readonly IRepository<MessageGroupTb, Guid> _messageGroupRepo;
         private readonly IRepository<ReporterInfoTb, Guid> _reporterInfoRepo;
         private readonly IRepository<GroupMemberTb, Guid> _groupMemberRepo;
+        private readonly IRepository<DisasterInfoTb, Guid> _disasterInfoRepo;
 
         public MessageGroupAppService(
                 IRepository<MessageGroupTb, Guid> messageGroupRepo,
                 IRepository<ReporterInfoTb, Guid> reporterInfoRepo,
-                IRepository<GroupMemberTb, Guid> groupMemberRepo
+                IRepository<GroupMemberTb, Guid> groupMemberRepo,
+                IRepository<DisasterInfoTb, Guid> disasterInfoRepo
             )
         {
             _messageGroupRepo = messageGroupRepo;
             _reporterInfoRepo = reporterInfoRepo;
             _groupMemberRepo = groupMemberRepo;
+            _disasterInfoRepo = disasterInfoRepo;
         }
 
         public MessageGroupOutput AddGroupMember(GroupMemberAddInput input)
@@ -114,7 +117,8 @@ namespace DisasterReport.MessageGroupService
                 Member = beforeMembers.MapTo<List<ReporterMemberOutput>>(),
                 Photo = existMessageGroup.Photo,
                 Remark = existMessageGroup.Remark,
-                type = existMessageGroup.type
+                Type = existMessageGroup.type,
+                Disaster = existMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
             };
 
             return outResult;
@@ -129,23 +133,34 @@ namespace DisasterReport.MessageGroupService
                 throw new UserFriendlyException("没有对应的上报人员");
             }
 
+            var existDisaster = _disasterInfoRepo.FirstOrDefault(d => d.Id == input.DisasterId);
+            if(existDisaster == null)
+            {
+                throw new UserFriendlyException("没有相应的灾情");
+            }
+
+
+            // 把灾情状态设置为正在处理
+            existDisaster.Status = 1;
+            _disasterInfoRepo.InsertOrUpdate(existDisaster);
+
             var newMessageGroup = new MessageGroupTb()
             {
                 CreateTime = DateTime.Now,
                 GroupName = input.GroupName,
                 GroupTotalNum = 1,
                 Remark = input.Remark,
-                type = input.type
+                type = input.Type,
+                Disaster = existDisaster
             };
-
+            
             try
             {
                 List<ReporterInfoTb> _reporter = new List<ReporterInfoTb>();
                 _reporter.Add(existReporter);
 
                 newMessageGroup.Reporter = _reporter;
-
-
+                
                 var id = _messageGroupRepo.InsertOrUpdateAndGetId(newMessageGroup);
                 newMessageGroup.Id = id;
                 
@@ -171,7 +186,8 @@ namespace DisasterReport.MessageGroupService
                     Member = Members.MapTo<List<ReporterMemberOutput>>(),
                     Photo = newMessageGroup.Photo,
                     Remark = newMessageGroup.Remark,
-                    type = newMessageGroup.type
+                    Type = newMessageGroup.type,
+                    Disaster = newMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
                 };
 
                 return outResult;
@@ -182,34 +198,114 @@ namespace DisasterReport.MessageGroupService
             }
         }
 
-        public RuimapPageResultDto<MessageGroupOutput> GetPageMessageGroup(int pageIndex = 1, int pageSize = 9999)
+        public MessageGroupOutput GetMessageGroupById(Guid id, int pageIndex = 1, int pageSize = 9999)
         {
-            var count = _messageGroupRepo.Count();
-
-            var messageGroupResult = _messageGroupRepo.GetAll().OrderByDescending(m => m.CreateTime).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
-
-            List<MessageGroupOutput> outResult = new List<MessageGroupOutput>(); 
-            foreach (var messageGroup in messageGroupResult)
+            var existMessageGroup = _messageGroupRepo.FirstOrDefault(m => m.Id == id);
+            if(existMessageGroup == null)
             {
-                var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroup.Id).ToList();
+                throw new UserFriendlyException("没有此消息团队组");
+            }
 
-                outResult.Add(new MessageGroupOutput()
+            var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == existMessageGroup.Id).OrderBy(g => g.Type).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            var outResult = new MessageGroupOutput()
+            {
+                CreateTime = existMessageGroup.CreateTime,
+                GroupName = existMessageGroup.GroupName,
+                GroupTotalNum = existMessageGroup.GroupTotalNum,
+                Id = existMessageGroup.Id,
+                Member = Members.MapTo<List<ReporterMemberOutput>>(),
+                Photo = existMessageGroup.Photo,
+                Remark = existMessageGroup.Remark,
+                Type = existMessageGroup.type,
+                Disaster = existMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
+            };
+
+            return outResult;
+        }
+
+        public RuimapPageResultDto<ReporterGroupOutput> GetOtherNoGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999)
+        {
+            var existMessageGroup = _messageGroupRepo.FirstOrDefault(m => m.Id == messageGroupId);
+            if (existMessageGroup == null)
+            {
+                throw new UserFriendlyException("没有对应的消息组团队");
+            }
+
+            // 获取所有上报人员 type 为1
+            var reporterNotInThisGroup = _reporterInfoRepo.GetAll().Where(r => !r.MessageGroup.Any(m => m.Id == messageGroupId)).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            var count = _reporterInfoRepo.Count(r => r.MessageGroup.All(m => m.Id != messageGroupId));
+            int currPage = pageIndex;
+            int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            return new RuimapPageResultDto<ReporterGroupOutput>(count, currPage, totalPage, reporterNotInThisGroup.MapTo<List<ReporterGroupOutput>>());
+        }
+
+        public RuimapPageResultDto<ReporterMemberOutput> GetPageGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999)
+        {
+            var existMessageGroup = _messageGroupRepo.FirstOrDefault(m => m.Id == messageGroupId);
+
+            if(existMessageGroup == null)
+            {
+                throw new UserFriendlyException("没有此消息组团队");
+            }
+
+            var count = existMessageGroup.GroupTotalNum;
+
+            var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroupId).OrderBy(g => g.Type).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            List<ReporterMemberOutput> OutList = new List<ReporterMemberOutput>();
+
+            foreach(var memeber in Members)
+            {
+                OutList.Add(new ReporterMemberOutput()
                 {
-                    CreateTime = messageGroup.CreateTime,
-                    GroupName = messageGroup.GroupName,
-                    GroupTotalNum = messageGroup.GroupTotalNum,
-                    Id = messageGroup.Id,
-                    Member = Members.MapTo<List<ReporterMemberOutput>>(),
-                    Photo = messageGroup.Photo,
-                    Remark = messageGroup.Remark,
-                    type = messageGroup.type
+                    Type = memeber.Type,
+                    Reporter = memeber.Reporter.MapTo<ReporterGroupOutput>()
                 });
             }
 
             int currPage = pageIndex;
             int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 
-            return new RuimapPageResultDto<MessageGroupOutput>(count, currPage, totalPage, outResult);
+            return new RuimapPageResultDto<ReporterMemberOutput>(count, currPage, totalPage, OutList);
+        }
+
+        public RuimapPageResultDto<MessageGroupOutput> GetPageMessageGroup(int pageIndex = 1, int pageSize = 9999)
+        {
+            var count = _messageGroupRepo.Count();
+            try
+            {
+                var messageGroupResult = _messageGroupRepo.GetAll().OrderByDescending(m => m.CreateTime).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+                List<MessageGroupOutput> outResult = new List<MessageGroupOutput>(); 
+                foreach (var messageGroup in messageGroupResult)
+                {
+                    var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroup.Id).ToList();
+
+                    outResult.Add(new MessageGroupOutput()
+                    {
+                        CreateTime = messageGroup.CreateTime,
+                        GroupName = messageGroup.GroupName,
+                        GroupTotalNum = messageGroup.GroupTotalNum,
+                        Id = messageGroup.Id,
+                        Member = Members.MapTo<List<ReporterMemberOutput>>(),
+                        Photo = messageGroup.Photo,
+                        Remark = messageGroup.Remark,
+                        Type = messageGroup.type,
+                        Disaster = messageGroup.Disaster.MapTo<MessageDisasterOutput>()
+                    });
+                }
+
+                int currPage = pageIndex;
+                int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+                return new RuimapPageResultDto<MessageGroupOutput>(count, currPage, totalPage, outResult);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("错误:", e);
+            }
         }
     }
 }

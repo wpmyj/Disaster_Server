@@ -16,17 +16,21 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual string AreaCode { get; set; }
         /// <summary>
+        /// 设备所在地址
+        /// </summary>
+        public virtual string AreaAddress { get; set; }
+        /// <summary>
         /// 设备编号
         /// </summary>
         public virtual int DeviceCode { get; set; }
         /// <summary>
         /// 上报人员Id
         /// </summary>
-        public virtual Guid ReporterId { get; set; }
+        public virtual ReporterInfoTb Reporter { get; set; }
         /// <summary>
         /// 设备类型
         /// </summary>
-        public virtual int Type { get; set; }
+        public virtual string Type { get; set; }
         /// <summary>
         /// 设备生产日期
         /// </summary>

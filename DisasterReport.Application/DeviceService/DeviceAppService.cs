@@ -35,10 +35,21 @@ namespace DisasterReport.DeviceService
                 throw new UserFriendlyException("已存在此编号的终端设备");
             }
 
+            var existReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有此上报人员");
+            }
+
             var addDevice = new DeviceInfoTb()
             {
+                AreaAddress = input.AreaAddress,
                 AreaCode = input.AreaCode,
-                DeviceCode = input.DeviceCode
+                DeviceCode = input.DeviceCode,
+                ProduceAddress = input.ProduceAddress,
+                ProduceDate = input.ProduceDate,
+                Reporter = existReporter,
+                Type = input.Type
             };
 
             var id = await _deviceInfoTbRepo.InsertAndGetIdAsync(addDevice);
@@ -61,12 +72,12 @@ namespace DisasterReport.DeviceService
                 throw new UserFriendlyException("没有对应的设备");
             }
 
-            if(existDevice.ReporterId.ToString() != "")
+            if(existDevice.Reporter != null)
             {
                 throw new UserFriendlyException("此设备已经绑定其他上报人员");
             }
 
-            existDevice.ReporterId = existReporter.Id;
+            existDevice.Reporter = existReporter;
 
             _deviceInfoTbRepo.Update(existDevice);
         }
@@ -79,17 +90,22 @@ namespace DisasterReport.DeviceService
             {
                 throw new UserFriendlyException("没有此用户");
             }
-            var result = await _deviceInfoTbRepo.FirstOrDefaultAsync(d => d.ReporterId == id);
+            var result = await _deviceInfoTbRepo.FirstOrDefaultAsync(d => d.Reporter.Id == id);
             if(result != null)
             {
                 return new DeviceOutput()
                 {
+                    AreaAddress = result.AreaAddress,
                     AreaCode = result.AreaCode,
                     DeviceCode = result.DeviceCode,
                     Id = result.Id,
-                    Reporter = existReporter.MapTo<ReporterOutput>()
+                    Reporter = existReporter.MapTo<ReporterOutput>(),
+                    ProduceAddress = result.ProduceAddress,
+                    ProduceDate = result.ProduceDate,
+                    Type = result.Type
                 };
-            } else
+            }
+            else
             {
                 throw new UserFriendlyException("此用户没有绑定设备");
             }

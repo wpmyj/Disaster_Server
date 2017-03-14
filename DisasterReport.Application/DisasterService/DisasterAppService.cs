@@ -86,6 +86,7 @@ namespace DisasterAppService.DisasterService
             var disaster = input.MapTo<DisasterInfoTb>();
             disaster.Status = 0;    // 没有处理
             disaster.ReportDate = DateTime.Now;
+            disaster.DisasterCode = "[DC]-" + Guid.NewGuid();
 
             var existReporter = _reporterInfoRespository.FirstOrDefault(r => r.Id == input.ReporterId);
             if(existReporter == null)
