@@ -28,9 +28,10 @@ namespace DisasterReport.ReporterService
         /// <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
         /// <param name="pageIndex"></param>
         /// <param name="pageSize">默认9999</param>
+        /// <param name="hasDevice">默认9 全部 1绑定了设备 2 没有绑定</param>
         /// <returns></returns>
         [HttpGet]
-        RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999);
+        RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999, int hasDevice = 9);
         /// <summary>
         /// 根据人员id获取详情
         /// </summary>

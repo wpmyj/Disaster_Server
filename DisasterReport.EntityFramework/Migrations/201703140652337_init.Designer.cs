@@ -13,7 +13,7 @@ namespace DisasterReport.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703130220442_init"; }
+            get { return "201703140652337_init"; }
         }
         
         string IMigrationMetadata.Source

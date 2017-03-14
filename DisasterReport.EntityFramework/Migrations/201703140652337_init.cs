@@ -87,11 +87,10 @@ namespace DisasterReport.Migrations
                         Type = c.String(unicode: false),
                         ProduceDate = c.DateTime(nullable: false, precision: 0),
                         ProduceAddress = c.String(unicode: false),
-                        Reporter_Id = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.DR_ReporterInfoTb", t => t.Reporter_Id, cascadeDelete: true)
-                .Index(t => t.Reporter_Id);
+                .ForeignKey("dbo.DR_ReporterInfoTb", t => t.Id, cascadeDelete: true)
+                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.DR_ReporterInfoTb",
@@ -159,6 +158,7 @@ namespace DisasterReport.Migrations
                         DeviceCode = c.String(unicode: false),
                         ReportDate = c.DateTime(nullable: false, precision: 0),
                         DisasterAddress = c.String(unicode: false),
+                        AreaCode = c.String(unicode: false),
                         Lng = c.Double(nullable: false),
                         Lat = c.Double(nullable: false),
                         Remark = c.String(unicode: false),
@@ -745,7 +745,6 @@ namespace DisasterReport.Migrations
             DropForeignKey("dbo.DR_GroupMemberTb", "Reporter_Id", "dbo.DR_ReporterInfoTb");
             DropForeignKey("dbo.DR_GroupMemberTb", "MessageGroup_Id", "dbo.DR_MessageGroupTb");
             DropForeignKey("dbo.AbpFeatures", "EditionId", "dbo.AbpEditions");
-            DropForeignKey("dbo.DR_DeviceInfoTb", "Reporter_Id", "dbo.DR_ReporterInfoTb");
             DropForeignKey("dbo.DR_ReporterInfoTb", "User_Id", "dbo.dr_UserTb");
             DropForeignKey("dbo.DR_ReporterInfoTb", "MessageGroup_Id", "dbo.DR_MessageGroupTb");
             DropForeignKey("dbo.DR_MessageNoteTb", "MessageGroupTb_Id", "dbo.DR_MessageGroupTb");
@@ -757,6 +756,7 @@ namespace DisasterReport.Migrations
             DropForeignKey("dbo.MessageNoteTbReporterInfoTbs", "ReporterInfoTb_Id", "dbo.DR_ReporterInfoTb");
             DropForeignKey("dbo.MessageNoteTbReporterInfoTbs", "MessageNoteTb_Id", "dbo.DR_MessageNoteTb");
             DropForeignKey("dbo.DR_MessageNoteTb", "FromReporter_Id", "dbo.DR_ReporterInfoTb");
+            DropForeignKey("dbo.DR_DeviceInfoTb", "Id", "dbo.DR_ReporterInfoTb");
             DropIndex("dbo.MessageGroupTbDisasterInfoTbs", new[] { "DisasterInfoTb_Id" });
             DropIndex("dbo.MessageGroupTbDisasterInfoTbs", new[] { "MessageGroupTb_Id" });
             DropIndex("dbo.MessageNoteTbReporterInfoTbs", new[] { "ReporterInfoTb_Id" });
@@ -792,7 +792,7 @@ namespace DisasterReport.Migrations
             DropIndex("dbo.DR_MessageNoteTb", new[] { "FromReporter_Id" });
             DropIndex("dbo.DR_ReporterInfoTb", new[] { "User_Id" });
             DropIndex("dbo.DR_ReporterInfoTb", new[] { "MessageGroup_Id" });
-            DropIndex("dbo.DR_DeviceInfoTb", new[] { "Reporter_Id" });
+            DropIndex("dbo.DR_DeviceInfoTb", new[] { "Id" });
             DropIndex("dbo.AbpBackgroundJobs", new[] { "IsAbandoned", "NextTryTime" });
             DropTable("dbo.MessageGroupTbDisasterInfoTbs");
             DropTable("dbo.MessageNoteTbReporterInfoTbs");

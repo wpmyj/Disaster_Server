@@ -55,9 +55,8 @@ namespace DisasterReport.EntityFramework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<DeviceInfoTb>().HasRequired(d => d.Reporter);
-
+            
+            modelBuilder.Entity<ReporterInfoTb>().HasOptional(r => r.Device).WithRequired(d => d.Reporter).WillCascadeOnDelete(true);
             modelBuilder.Entity<ReporterInfoTb>().HasRequired(r => r.User);
 
             modelBuilder.Entity<MessageGroupTb>().HasMany(m => m.Reporter).WithOptional(r => r.MessageGroup).HasForeignKey(r => r.MessageGroup_Id).WillCascadeOnDelete(true);

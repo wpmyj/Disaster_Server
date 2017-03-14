@@ -60,6 +60,10 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual UserTb User { get; set; }
         /// <summary>
+        /// 所关联的设备
+        /// </summary>
+        public virtual DeviceInfoTb Device { get; set; }
+        /// <summary>
         /// 所关联的消息组ID
         /// </summary>
         public virtual Guid? MessageGroup_Id { get; set; }

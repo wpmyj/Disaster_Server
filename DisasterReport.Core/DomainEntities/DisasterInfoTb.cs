@@ -36,6 +36,10 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual String DisasterAddress { get; set; }
         /// <summary>
+        /// 上报地点的区划编码
+        /// </summary>
+        public virtual string AreaCode { get; set; }
+        /// <summary>
         /// 经度
         /// </summary>
         public virtual Double Lng { get; set; }
