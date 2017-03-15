@@ -288,5 +288,25 @@ namespace DisasterAppService.DisasterService
 
             return existDisaster.MapTo<ReportDisasterOutput>();
         }
+
+        public List<DisasterAreaTotalOutput> GetAreaTotal()
+        {
+            var result = _disasterInfoTbRepository.GetAll().GroupBy(d => d.AreaCode).ToList();
+            var outResult = new List<DisasterAreaTotalOutput>();
+            for(var i = 0; i < result.Count; i++)
+            {
+                var key = result[i].Key;
+                var count = _disasterInfoTbRepository.Count(d => d.AreaCode == key);
+                var existDisaster = _disasterInfoTbRepository.FirstOrDefault(d => d.AreaCode == key);
+                outResult.Add(new DisasterAreaTotalOutput()
+                {
+                    Count = count,
+                    Lat = existDisaster.Lat,
+                    Lng = existDisaster.Lng,
+                    Name = existDisaster.DisasterAddress
+                });
+            }
+            return outResult;
+        }
     }
 }

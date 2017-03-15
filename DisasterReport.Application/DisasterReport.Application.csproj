@@ -127,6 +127,7 @@
     <Compile Include="DisasterReportApplicationModule.cs" />
     <Compile Include="DisasterReportAppServiceBase.cs" />
     <Compile Include="DisasterService\DisasterAppService.cs" />
+    <Compile Include="DisasterService\Dto\DisasterAreaTotalOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindDetailOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindNetWorkOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindOutput.cs" />

@@ -87,5 +87,11 @@ namespace DisasterReport.DisasterService
         /// <returns></returns>
         [HttpPost]
         ReportDisasterOutput SetDisasterStatus(SetDisasterStatusInput input);
+        /// <summary>
+        /// 得到灾情的区域统计总数
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        List<DisasterAreaTotalOutput> GetAreaTotal();
     }
 }

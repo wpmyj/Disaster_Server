@@ -438,6 +438,12 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetAreaTotal">
+            <summary>
+            得到灾情的区域统计总数
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
             <summary>
             消息组Id

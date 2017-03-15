@@ -152,3 +152,4 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterRepor
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.Core\obj\Debug\DisasterReport.Core.csprojResolveAssemblyReference.cache
