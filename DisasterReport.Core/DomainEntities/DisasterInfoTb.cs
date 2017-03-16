@@ -52,7 +52,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual String Remark { get; set; }
         /// <summary>
-        /// 上报类型 1-移动网络 2-北斗短报文
+        /// 上报类型 1-移动网络 2-北斗短报文 3-微信
         /// </summary>
         public virtual int Type { get; set; }
         /// <summary>

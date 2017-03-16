@@ -21,6 +21,7 @@ namespace DisasterAppService.DisasterService
         private readonly IRepository<UploadsFileTb, Guid> _uploadsFileTbRespository;
         private readonly IRepository<ReporterInfoTb, Guid> _reporterInfoRespository;
         private readonly IRepository<DisasterKindTb, Guid> _disasterKindTbRespository;
+        private readonly IRepository<MessageGroupTb, Guid> _messageGroupRespository;
 
         public IEventBus EventBus { get; set; }
 
@@ -31,7 +32,8 @@ namespace DisasterAppService.DisasterService
                 IRepository<DisasterInfoTb, Guid> disasterInfoTbRepository,
                 IRepository<UploadsFileTb, Guid> uploadsFileTbRespository,
                 IRepository<ReporterInfoTb, Guid> reporterInfoRespository,
-                IRepository<DisasterKindTb, Guid> disasterKindTbRespository
+                IRepository<DisasterKindTb, Guid> disasterKindTbRespository,
+                IRepository<MessageGroupTb, Guid> messageGroupRespository
             )
         {
             EventBus = NullEventBus.Instance;
@@ -39,6 +41,7 @@ namespace DisasterAppService.DisasterService
             _uploadsFileTbRespository = uploadsFileTbRespository;
             _reporterInfoRespository = reporterInfoRespository;
             _disasterKindTbRespository = disasterKindTbRespository;
+            _messageGroupRespository = messageGroupRespository;
         }
 
         /// <summary>
@@ -270,6 +273,9 @@ namespace DisasterAppService.DisasterService
             outResult.RemainderCount = _disasterInfoTbRepository.Count(d => d.Status != 2);
             var tempCurrDate = DateTime.Today;
             outResult.TodayCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day);
+
+            outResult.RescueCount = _messageGroupRespository.Count();
+            outResult.ReporterCount = _reporterInfoRespository.Count(r => r.Type == 1);
 
             return outResult;
         }
