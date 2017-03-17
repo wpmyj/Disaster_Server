@@ -211,6 +211,16 @@
             今日总数
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.RescueCount">
+            <summary>
+            救援队总人数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.ReporterCount">
+            <summary>
+            上报人员总数
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Date">
             <summary>
             日期
@@ -956,7 +966,7 @@
             <param name="input">Role： 0-普通用户，1-管理员用户</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid})">
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.MessageGroupTb,System.Guid})">
             <summary>
             构造函数
             </summary>

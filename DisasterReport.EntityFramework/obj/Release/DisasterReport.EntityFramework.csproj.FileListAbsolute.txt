@@ -238,3 +238,5 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.adddisasterRescue.resources
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled.resources
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled2.resources

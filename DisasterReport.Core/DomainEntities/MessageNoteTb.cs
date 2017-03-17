@@ -35,5 +35,17 @@ namespace DisasterReport.DomainEntities
         /// 消息类型（1群消息 2@发送）
         /// </summary>
         public virtual int Type { get; set; }
+        /// <summary>
+        /// 主题
+        /// </summary>
+        public virtual string Topic { get; set; }
+        /// <summary>
+        /// 摘要
+        /// </summary>
+        public virtual string Summary { get; set; }
+        /// <summary>
+        /// 消息title
+        /// </summary>
+        public virtual string Title { get; set; }
     }
 }

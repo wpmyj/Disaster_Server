@@ -146,6 +146,14 @@
     <Compile Include="Migrations\201703150936202_add-disasterRescue.Designer.cs">
       <DependentUpon>201703150936202_add-disasterRescue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703170736355_add-messageNote-filed.cs" />
+    <Compile Include="Migrations\201703170736355_add-messageNote-filed.Designer.cs">
+      <DependentUpon>201703170736355_add-messageNote-filed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703170740268_add-messageNote-filed2.cs" />
+    <Compile Include="Migrations\201703170740268_add-messageNote-filed2.Designer.cs">
+      <DependentUpon>201703170740268_add-messageNote-filed2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="DisasterReportDataModule.cs" />
@@ -176,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703150936202_add-disasterRescue.resx">
       <DependentUpon>201703150936202_add-disasterRescue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703170736355_add-messageNote-filed.resx">
+      <DependentUpon>201703170736355_add-messageNote-filed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703170740268_add-messageNote-filed2.resx">
+      <DependentUpon>201703170740268_add-messageNote-filed2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

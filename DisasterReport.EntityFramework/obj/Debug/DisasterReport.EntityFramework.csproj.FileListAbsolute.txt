@@ -303,3 +303,5 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterRepor
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.init.resources
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Debug\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.adddisasterRescue.resources
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.addmessageNotefiled.resources
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Debug\DisasterReport.Migrations.addmessageNotefiled2.resources
