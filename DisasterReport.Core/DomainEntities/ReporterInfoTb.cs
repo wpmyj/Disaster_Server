@@ -36,10 +36,6 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual string Photo { get; set; }
         /// <summary>
-        /// 上报人员所关联的用户Id
-        /// </summary>
-        public virtual Guid UserId { get; set; }
-        /// <summary>
         /// 1）上报人员 2）后台管理人员  两类节点
         /// </summary>
         public virtual int Type { get; set; }
@@ -60,8 +56,25 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual double LastLat { get; set; }
         /// <summary>
+        /// 上报人员所关联的用户
+        /// </summary>
+        public virtual UserTb User { get; set; }
+        /// <summary>
+        /// 所关联的设备
+        /// </summary>
+        public virtual DeviceInfoTb Device { get; set; }
+        /// <summary>
+        /// 所关联的消息组ID
+        /// </summary>
+        public virtual Guid? MessageGroup_Id { get; set; }
+        /// <summary>
         /// 关联的消息组
         /// </summary>
-        public virtual ICollection<MessageGroupTb> MessageGroup { get; set; }
+        [ForeignKey("MessageGroup_Id")]
+        public virtual MessageGroupTb MessageGroup { get; set; }
+        /// <summary>
+        /// 所接收到的消息
+        /// </summary>
+        public virtual ICollection<MessageNoteTb> Message { get; set; }
     }
 }

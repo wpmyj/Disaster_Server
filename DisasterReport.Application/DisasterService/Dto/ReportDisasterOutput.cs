@@ -22,7 +22,7 @@ namespace DisasterReport.DisasterService.Dto
         /// </summary>
         public virtual DateTime ReportDate { get; set; }
         /// <summary>
-        /// 上报人员Id
+        /// 上报人员
         /// </summary>
         public virtual ReporterOutput Reporter { get; set; }
         /// <summary>

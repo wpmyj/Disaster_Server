@@ -16,9 +16,9 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual ReporterInfoTb FromReporter { get; set; }
         /// <summary>
-        /// 接收者
+        /// 接收者 null为默认群发 有则为@
         /// </summary>
-        public virtual ReporterInfoTb ToReporter { get; set; }
+        public virtual ICollection<ReporterInfoTb> ToReporter { get; set; }
         /// <summary>
         /// 发送的消息
         /// </summary>
@@ -32,7 +32,7 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual int Flag { get; set; }
         /// <summary>
-        /// 消息类型（私信 群消息）
+        /// 消息类型（1群消息 2@发送）
         /// </summary>
         public virtual int Type { get; set; }
     }

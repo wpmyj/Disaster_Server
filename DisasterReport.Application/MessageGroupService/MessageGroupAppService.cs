@@ -118,7 +118,7 @@ namespace DisasterReport.MessageGroupService
                 Photo = existMessageGroup.Photo,
                 Remark = existMessageGroup.Remark,
                 Type = existMessageGroup.type,
-                Disaster = existMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
+                Disaster = existMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
             };
 
             return outResult;
@@ -126,32 +126,21 @@ namespace DisasterReport.MessageGroupService
 
         public MessageGroupOutput AddMessageGroup(MessageGroupAddInput input)
         {
+            // 需要指定一个队长
             var existReporter = _reporterInfoRepo.FirstOrDefault(r => r.Id == input.ReporterId);
 
             if(existReporter == null)
             {
                 throw new UserFriendlyException("没有对应的上报人员");
             }
-
-            var existDisaster = _disasterInfoRepo.FirstOrDefault(d => d.Id == input.DisasterId);
-            if(existDisaster == null)
-            {
-                throw new UserFriendlyException("没有相应的灾情");
-            }
-
-
-            // 把灾情状态设置为正在处理
-            existDisaster.Status = 1;
-            _disasterInfoRepo.InsertOrUpdate(existDisaster);
-
+            
             var newMessageGroup = new MessageGroupTb()
             {
                 CreateTime = DateTime.Now,
                 GroupName = input.GroupName,
                 GroupTotalNum = 1,
                 Remark = input.Remark,
-                type = input.Type,
-                Disaster = existDisaster
+                type = input.Type
             };
             
             try
@@ -174,7 +163,9 @@ namespace DisasterReport.MessageGroupService
                 id = _groupMemberRepo.InsertAndGetId(newGroupMember);
                 newGroupMember.Id = id;
 
-                var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == newMessageGroup.Id).ToList();
+                var Members = new List<GroupMemberTb>();
+
+                // 把刚刚增加的成员添加进去
                 Members.Add(newGroupMember);
 
                 var outResult = new MessageGroupOutput()
@@ -187,7 +178,7 @@ namespace DisasterReport.MessageGroupService
                     Photo = newMessageGroup.Photo,
                     Remark = newMessageGroup.Remark,
                     Type = newMessageGroup.type,
-                    Disaster = newMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
+                    Disaster = newMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
                 };
 
                 return outResult;
@@ -218,7 +209,7 @@ namespace DisasterReport.MessageGroupService
                 Photo = existMessageGroup.Photo,
                 Remark = existMessageGroup.Remark,
                 Type = existMessageGroup.type,
-                Disaster = existMessageGroup.Disaster.MapTo<MessageDisasterOutput>()
+                Disaster = existMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
             };
 
             return outResult;
@@ -232,14 +223,19 @@ namespace DisasterReport.MessageGroupService
                 throw new UserFriendlyException("没有对应的消息组团队");
             }
 
-            // 获取所有上报人员 type 为1
-            var reporterNotInThisGroup = _reporterInfoRepo.GetAll().Where(r => !r.MessageGroup.Any(m => m.Id == messageGroupId)).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+            //// 获取所有上报人员 type 为1
+            //var reporterNotInThisGroup = _reporterInfoRepo.GetAll().Where(r => !r.MessageGroup.Any(m => m.Id == messageGroupId)).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
 
-            var count = _reporterInfoRepo.Count(r => r.MessageGroup.All(m => m.Id != messageGroupId));
+            //var count = _reporterInfoRepo.Count(r => r.MessageGroup.All(m => m.Id != messageGroupId));
+            //int currPage = pageIndex;
+            //int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
+
+            var count = _reporterInfoRepo.Count(r => r.MessageGroup == null && r.Type == 1);
+            var reporterNotHasGroup = _reporterInfoRepo.GetAll().Where(r => r.MessageGroup == null && r.Type == 1).OrderBy(r => r.Name).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
             int currPage = pageIndex;
             int totalPage = (int)Math.Ceiling(count / (pageSize * 1.0));
 
-            return new RuimapPageResultDto<ReporterGroupOutput>(count, currPage, totalPage, reporterNotInThisGroup.MapTo<List<ReporterGroupOutput>>());
+            return new RuimapPageResultDto<ReporterGroupOutput>(count, currPage, totalPage, reporterNotHasGroup.MapTo<List<ReporterGroupOutput>>());
         }
 
         public RuimapPageResultDto<ReporterMemberOutput> GetPageGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999)
@@ -293,7 +289,7 @@ namespace DisasterReport.MessageGroupService
                         Photo = messageGroup.Photo,
                         Remark = messageGroup.Remark,
                         Type = messageGroup.type,
-                        Disaster = messageGroup.Disaster.MapTo<MessageDisasterOutput>()
+                        Disaster = messageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
                     });
                 }
 

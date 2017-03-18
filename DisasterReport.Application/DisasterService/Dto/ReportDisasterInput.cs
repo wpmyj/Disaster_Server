@@ -21,6 +21,10 @@ namespace DisasterReport.DisasterService.Dto
         /// </summary>
         public virtual String DisasterKindCode { get; set; }
         /// <summary>
+        /// 区域编号
+        /// </summary>
+        public virtual string AreaCode { get; set; }
+        /// <summary>
         /// 灾情位置
         /// </summary>
         public virtual String DisasterAddress { get; set; }

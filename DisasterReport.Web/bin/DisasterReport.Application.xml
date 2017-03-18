@@ -41,6 +41,24 @@
             <param name="name"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.CityService.ICityAppService.GetPageCity(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据行政区域类型获取信息
+            </summary>
+            <param name="type">1 2 3 4 省 市 区 街道</param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认20</param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.CityService.ICityAppService.GetCityByPid(System.Int64,System.Int32,System.Int32)">
+            <summary>
+            根据父级行政区域获取信息
+            </summary>
+            <param name="pId"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize">默认20</param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.DeviceService.Dto.DeviceAddInput.AreaAddress">
             <summary>
             设备所在地址
@@ -123,12 +141,6 @@
             <param name="id">用户Id</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterReport.DeviceService.IDeviceAppService.BindReporter(DisasterReport.DeviceService.Dto.DeviceBindInput)">
-            <summary>
-            设备绑定到指定的上报人员
-            </summary>
-            <param name="input"></param>
-        </member>
         <member name="M:DisasterReport.DeviceService.IDeviceAppService.GetPageDevice(System.Int32,System.Int32)">
             <summary>
             分页得到终端设备
@@ -143,6 +155,11 @@
             </summary>
             <param name="input"></param>
             <returns></returns>
+        </member>
+        <member name="T:DisasterReport.DisasterReportAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindDetailOutput.KindName">
             <summary>
@@ -172,11 +189,6 @@
         <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.KindCode">
             <summary>
             灾情种类编码
-            </summary>
-        </member>
-        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Pid">
-            <summary>
-            灾情种类父级Id
             </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.DisasterCount">
@@ -229,6 +241,11 @@
             上报灾情类型编码
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.AreaCode">
+            <summary>
+            区域编号
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterInput.DisasterAddress">
             <summary>
             灾情位置
@@ -276,7 +293,7 @@
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.Reporter">
             <summary>
-            上报人员Id
+            上报人员
             </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.ReportDisasterOutput.DisasterKind">
@@ -324,9 +341,9 @@
             状态
             </summary>
         </member>
-        <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.DisasterInfoId">
+        <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.OtherRowId">
             <summary>
-            上报灾情信息的id值
+            关联文件的其他rowId
             </summary>
         </member>
         <member name="P:DisasterReport.DisasterService.Dto.UploadsFileTbOutput.Path">
@@ -421,11 +438,6 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="T:DisasterReport.DisasterReportAppServiceBase">
-            <summary>
-            Derive your application services from this class.
-            </summary>
-        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
             <summary>
             消息组Id
@@ -489,11 +501,6 @@
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.Type">
             <summary>
             1）救援队 2）个人团队  两类节点
-            </summary>
-        </member>
-        <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.DisasterId">
-            <summary>
-            所关联的灾情Id
             </summary>
         </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageGroupAddInput.ReporterId">
@@ -750,11 +757,6 @@
             最后一次上报的维度
             </summary>
         </member>
-        <member name="P:DisasterReport.ReporterService.Dto.ReporterOutput.UserId">
-            <summary>
-            上报人员所关联的用户Id
-            </summary>
-        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.ReporterId">
             <summary>
             人员Id
@@ -807,32 +809,21 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32,System.Int32)">
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetPageReporter(System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             分页得到上报人员
             </summary>
             <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
             <param name="pageIndex"></param>
             <param name="pageSize">默认9999</param>
+            <param name="hasDevice">默认9 全部 1绑定了设备 2 没有绑定</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.BindUserAccount(DisasterReport.ReporterService.Dto.ReporterBindInput)">
-            <summary>
-            上报人员绑定用户账号
-            </summary>
-            <param name="input"></param>
-        </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.UnBindUserAccoutn(DisasterReport.ReporterService.Dto.ReporterUnBindInput)">
-            <summary>
-            上报人员解除账号绑定
-            </summary>
-            <param name="input"></param>
-        </member>
-        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetReporterById(DisasterReport.ReporterService.Dto.ReporterUnBindInput)">
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.GetReporterById(System.Guid)">
             <summary>
             根据人员id获取详情
             </summary>
-            <param name="input"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:DisasterReport.ReporterService.IReporterAppService.UpdateReporter(DisasterReport.ReporterService.Dto.ReporterUpdateInput)">
@@ -934,6 +925,13 @@
         <member name="M:DisasterReport.UserAccount.IUserAccountAppService.Login(DisasterReport.UserAccount.Dto.UserAccountLoginInput)">
             <summary>
             用户登录验证
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.UserAccount.IUserAccountAppService.AdminLogin(DisasterReport.UserAccount.Dto.UserAccountLoginInput)">
+            <summary>
+            后台用户登录验证
             </summary>
             <param name="input"></param>
             <returns></returns>

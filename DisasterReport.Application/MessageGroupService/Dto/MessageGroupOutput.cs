@@ -40,7 +40,7 @@ namespace DisasterReport.MessageGroupService.Dto
         /// <summary>
         /// 所关联的灾情
         /// </summary>
-        public virtual MessageDisasterOutput Disaster { get; set; }
+        public virtual ICollection<MessageDisasterOutput> Disaster { get; set; }
         /// <summary>
         /// 关联的成员
         /// </summary>

@@ -375,3 +375,5 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterRepor
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.WebApi\obj\Debug\DisasterReport.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.WebApi\obj\Debug\DisasterReport.WebApi.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.WebApi\obj\Debug\DisasterReport.WebApi.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\bin\Debug\zh-Hans\Microsoft.Owin.resources.dll
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.WebApi\bin\Debug\zh-Hans\Microsoft.Owin.Security.resources.dll

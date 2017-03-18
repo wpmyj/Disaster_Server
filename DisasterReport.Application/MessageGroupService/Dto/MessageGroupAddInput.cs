@@ -21,10 +21,6 @@ namespace DisasterReport.MessageGroupService.Dto
         /// </summary>
         public virtual int Type { get; set; }
         /// <summary>
-        /// 所关联的灾情Id
-        /// </summary>
-        public virtual Guid DisasterId { get; set; }
-        /// <summary>
         /// 负责人Id
         /// </summary>
         public virtual Guid ReporterId { get; set; }

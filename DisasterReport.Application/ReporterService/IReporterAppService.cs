@@ -28,28 +28,17 @@ namespace DisasterReport.ReporterService
         /// <param name="type">默认9 所有类型 1-上报人员 2-后台管理者</param>
         /// <param name="pageIndex"></param>
         /// <param name="pageSize">默认9999</param>
+        /// <param name="hasDevice">默认9 全部 1绑定了设备 2 没有绑定</param>
         /// <returns></returns>
         [HttpGet]
-        RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999);
-        /// <summary>
-        /// 上报人员绑定用户账号
-        /// </summary>
-        /// <param name="input"></param>
-        [HttpPost]
-        void BindUserAccount(ReporterBindInput input);
-        /// <summary>
-        /// 上报人员解除账号绑定
-        /// </summary>
-        /// <param name="input"></param>
-        [HttpPost]
-        void UnBindUserAccoutn(ReporterUnBindInput input);
+        RuimapPageResultDto<ReporterOutput> GetPageReporter(int type = 9, int pageIndex = 1, int pageSize = 9999, int hasDevice = 9);
         /// <summary>
         /// 根据人员id获取详情
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        Task<ReporterOutput> GetReporterById(ReporterUnBindInput input);
+        Task<ReporterOutput> GetReporterById(Guid id);
         /// <summary>
         /// 修改人员信息
         /// </summary>

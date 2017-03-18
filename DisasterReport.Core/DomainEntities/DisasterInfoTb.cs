@@ -36,6 +36,10 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual String DisasterAddress { get; set; }
         /// <summary>
+        /// 上报地点的区划编码
+        /// </summary>
+        public virtual string AreaCode { get; set; }
+        /// <summary>
         /// 经度
         /// </summary>
         public virtual Double Lng { get; set; }
@@ -55,5 +59,9 @@ namespace DisasterReport.DomainEntities
         /// 灾情是否已处理 0-没有处理 1-正在处理 2-已处理
         /// </summary>
         public virtual int Status { get; set; }
+        /// <summary>
+        /// 哪些救援队响应了此灾情
+        /// </summary>
+        public virtual ICollection<MessageGroupTb> MessageGroup { get; set; }
     }
 }

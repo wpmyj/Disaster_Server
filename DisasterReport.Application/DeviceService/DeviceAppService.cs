@@ -57,31 +57,7 @@ namespace DisasterReport.DeviceService
 
             return addDevice.MapTo<DeviceOutput>();
         }
-
-        public void BindReporter(DeviceBindInput input)
-        {
-            var existReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
-            if(existReporter == null)
-            {
-                throw new UserFriendlyException("没有找到对应的上报人员");
-            }
-
-            var existDevice = _deviceInfoTbRepo.FirstOrDefault(d => d.DeviceCode == input.DeviceCode);
-            if(existDevice == null)
-            {
-                throw new UserFriendlyException("没有对应的设备");
-            }
-
-            if(existDevice.Reporter != null)
-            {
-                throw new UserFriendlyException("此设备已经绑定其他上报人员");
-            }
-
-            existDevice.Reporter = existReporter;
-
-            _deviceInfoTbRepo.Update(existDevice);
-        }
-
+        
         public async Task<DeviceOutput> GetDeviceByReporterId(Guid id)
         {
             // 判断所传ID是否是上报者的id

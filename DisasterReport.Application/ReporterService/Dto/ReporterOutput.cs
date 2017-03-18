@@ -56,9 +56,5 @@ namespace DisasterReport.ReporterService.Dto
         /// 最后一次上报的维度
         /// </summary>
         public virtual double LastLat { get; set; }
-        /// <summary>
-        /// 上报人员所关联的用户Id
-        /// </summary>
-        public virtual Guid UserId { get; set; }
     }
 }

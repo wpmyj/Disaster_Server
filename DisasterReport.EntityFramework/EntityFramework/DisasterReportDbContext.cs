@@ -48,7 +48,6 @@ namespace DisasterReport.EntityFramework
         public DbSet<DisasterKindTb> disasterKind { get; set; }
         public DbSet<UserTb> userInfo { get; set; }
         public DbSet<MessageNoteTb> messageNote { get; set; }
-        public DbSet<DevBindReporterTb> devbindReporter { get; set; }
         public DbSet<GroupMemberTb> groupMember { get; set; }
         public DbSet<CityCodeTb> cityCode { get; set; }
         public DbSet<CommunityCodeTb> commCode { get; set; }
@@ -56,7 +55,21 @@ namespace DisasterReport.EntityFramework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<MessageGroupTb>().HasMany(r => r.Reporter).WithMany(r => r.MessageGroup);
+            
+            modelBuilder.Entity<ReporterInfoTb>().HasOptional(r => r.Device).WithRequired(d => d.Reporter).WillCascadeOnDelete(true);
+            modelBuilder.Entity<ReporterInfoTb>().HasRequired(r => r.User);
+
+            modelBuilder.Entity<MessageGroupTb>().HasMany(m => m.Reporter).WithOptional(r => r.MessageGroup).HasForeignKey(r => r.MessageGroup_Id).WillCascadeOnDelete(true);
+            modelBuilder.Entity<MessageGroupTb>().HasMany(m => m.Disaster).WithMany(d => d.MessageGroup);
+            modelBuilder.Entity<MessageGroupTb>().HasMany(m => m.Message);
+
+            modelBuilder.Entity<DisasterInfoTb>().HasRequired(d => d.Reporter);
+            modelBuilder.Entity<DisasterInfoTb>().HasRequired(d => d.DisasterKind);
+
+            modelBuilder.Entity<DisasterKindTb>().HasOptional(d => d.Parent).WithMany().HasForeignKey(d => d.Pid).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MessageNoteTb>().HasRequired(m => m.FromReporter);
+            modelBuilder.Entity<MessageNoteTb>().HasMany(m => m.ToReporter).WithMany(r => r.Message);
         }
     }
 }
