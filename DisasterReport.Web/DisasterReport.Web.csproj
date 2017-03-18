@@ -587,10 +587,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignalR\CallReporterDealDisasterHub.cs" />
+    <Compile Include="SignalR\HubData\CallReporterDealDisasterHub.cs" />
+    <Compile Include="SignalR\HubData\PostReporterMessageHub.cs" />
     <Compile Include="SignalR\MessageHub.cs" />
-    <Compile Include="SignalR\ReporterLoginHub.cs" />
-    <Compile Include="SignalR\ReporterLoginInputHub.cs" />
+    <Compile Include="SignalR\HubData\ReporterLoginHub.cs" />
+    <Compile Include="SignalR\HubData\ReporterLoginInputHub.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

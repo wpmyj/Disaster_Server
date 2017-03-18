@@ -51,6 +51,7 @@ namespace DisasterReport.EntityFramework
         public DbSet<GroupMemberTb> groupMember { get; set; }
         public DbSet<CityCodeTb> cityCode { get; set; }
         public DbSet<CommunityCodeTb> commCode { get; set; }
+        public DbSet<DisasterRescueTb> disasterRescue { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

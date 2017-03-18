@@ -4,6 +4,7 @@ using Abp.Domain.Repositories;
 using Castle.Core.Logging;
 using DisasterReport.DisasterService.Dto;
 using DisasterReport.DomainEntities;
+using DisasterReport.Web.SignalR.HubData;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
 using System;
@@ -25,6 +26,7 @@ namespace DisasterReport.Web.SignalR
         private readonly IRepository<ReporterInfoTb, Guid> _reporterRepo;
         private readonly IRepository<DisasterKindTb, Guid> _disasterKindRepo;
         private readonly IRepository<MessageGroupTb, Guid> _messageGroupRepo;
+        private readonly IRepository<MessageNoteTb, Guid> _messageNoteRepo;
 
         /// <summary>
         /// 后端用户的connectionID与用户名对照表
@@ -38,7 +40,8 @@ namespace DisasterReport.Web.SignalR
                 IRepository<UploadsFileTb, Guid> uploadsFileRepo,
                 IRepository<ReporterInfoTb, Guid> reporterRepo,
                 IRepository<DisasterKindTb, Guid> disasterKindRspo,
-                IRepository<MessageGroupTb, Guid> messageGroupRepo
+                IRepository<MessageGroupTb, Guid> messageGroupRepo,
+                IRepository<MessageNoteTb, Guid> messageNoteRepo
             )
         {
             _disasterInfoRepo = disasterInfoRepo;
@@ -46,6 +49,7 @@ namespace DisasterReport.Web.SignalR
             _reporterRepo = reporterRepo;
             _disasterKindRepo = disasterKindRspo;
             _messageGroupRepo = messageGroupRepo;
+            _messageNoteRepo = messageNoteRepo;
 
             Logger = NullLogger.Instance;
         }
@@ -67,7 +71,8 @@ namespace DisasterReport.Web.SignalR
                
                 HubId = input.HubId,
                 Name = input.Name,
-                ReporterId = input.ReporterId
+                ReporterId = input.ReporterId,
+                Type = input.Type
             };
             this.SendToWebMessage(input.Name + "上线了");
         }
@@ -80,7 +85,8 @@ namespace DisasterReport.Web.SignalR
             {
                 HubId = input.HubId,
                 Name = input.Name,
-                ReporterId = input.ReporterId
+                ReporterId = input.ReporterId,
+                Type = input.Type
             };
         }
 
@@ -93,9 +99,36 @@ namespace DisasterReport.Web.SignalR
                 this.SendToAppMessage(new CallReporterDealDisasterHub() {
                     Address = existDisaster.DisasterAddress,
                     Id = existDisaster.Id,
-                    Remark = existDisaster.Remark
+                    Remark = existDisaster.Remark,
+                    Type = "号召响应"
                 });
             } catch (Exception e)
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// 消息通知给APP端
+        /// </summary>
+        /// <param name="messageNoteId"></param>
+        public void postReporter(Guid messageNoteId)
+        {
+            var existMessageNote = _messageNoteRepo.FirstOrDefault(m => m.Id == messageNoteId);
+            try
+            {
+                this.SendToAppMessage(new PostReporterMessageHub()
+                {
+                    Summary = existMessageNote.Summary,
+                    Date = existMessageNote.Date,
+                    Id = existMessageNote.Id,
+                    Flag = existMessageNote.Flag,
+                    Title = existMessageNote.Title,
+                    Topic = existMessageNote.Topic,
+                    Type = "消息通知"
+                });
+            }
+            catch (Exception e)
             {
 
             }
@@ -109,7 +142,8 @@ namespace DisasterReport.Web.SignalR
         /// <summary>
         /// 发送消息给Web端
         /// </summary>
-        private void SendToWebMessage(string msg)
+        /// <param name="msg"></param>
+        private void SendToWebMessage(Object msg)
         {
             List<string> connectIds = new List<string>();
             foreach(var con in _WebConnections)
@@ -120,7 +154,11 @@ namespace DisasterReport.Web.SignalR
             Clients.Clients(connectIds).sendToWebMessage(msg);
         }
 
-        private void SendToAppMessage(CallReporterDealDisasterHub msg)
+        /// <summary>
+        /// 发送消息给App端用户
+        /// </summary>
+        /// <param name="msg"></param>
+        private void SendToAppMessage(Object msg)
         {
             List<string> connectIds = new List<string>();
             foreach (var con in _ReporterConnections)

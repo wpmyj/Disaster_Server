@@ -28,12 +28,24 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual DateTime Date { get; set; }
         /// <summary>
-        /// 消息状态标志位（最新 已读 未读...）
+        /// 消息状态标志位 1 普通 2重要 3紧急
         /// </summary>
         public virtual int Flag { get; set; }
         /// <summary>
         /// 消息类型（1群消息 2@发送）
         /// </summary>
         public virtual int Type { get; set; }
+        /// <summary>
+        /// 主题
+        /// </summary>
+        public virtual string Topic { get; set; }
+        /// <summary>
+        /// 摘要
+        /// </summary>
+        public virtual string Summary { get; set; }
+        /// <summary>
+        /// 消息title
+        /// </summary>
+        public virtual string Title { get; set; }
     }
 }

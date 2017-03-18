@@ -107,6 +107,7 @@
     <Compile Include="Authorization\Roles\StaticRoleNames.cs" />
     <Compile Include="DomainEntities\DisasterInfoTb.cs" />
     <Compile Include="DomainEntities\DisasterKindTb.cs" />
+    <Compile Include="DomainEntities\DisasterRescueTb.cs" />
     <Compile Include="DomainEntities\GroupMemberTb.cs" />
     <Compile Include="DomainEntities\MessageGroupTb.cs" />
     <Compile Include="DomainEntities\MessageNoteTb.cs" />

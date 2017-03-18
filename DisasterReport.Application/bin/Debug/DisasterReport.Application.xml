@@ -211,6 +211,16 @@
             今日总数
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.RescueCount">
+            <summary>
+            救援队总人数
+            </summary>
+        </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.ReporterCount">
+            <summary>
+            上报人员总数
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterTrendOutput.Date">
             <summary>
             日期
@@ -438,6 +448,12 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetAreaTotal">
+            <summary>
+            得到灾情的区域统计总数
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
             <summary>
             消息组Id
@@ -660,6 +676,97 @@
             <param name="messageGroupId"></param>
             <param name="pageIndex"></param>
             <param name="pageSize">默认9999</param>
+            <returns></returns>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.FromReporterId">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.Text">
+            <summary>
+            发送的消息
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.Type">
+            <summary>
+            消息类型（1群发 2@发送）
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.Topic">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.Title">
+            <summary>
+            消息title
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.FromReporter">
+            <summary>
+            发送者
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Text">
+            <summary>
+            发送的消息
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Date">
+            <summary>
+            发送的时间
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Flag">
+            <summary>
+            消息状态标志位 1 普通 2重要 3紧急
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Type">
+            <summary>
+            消息类型（1群消息 2@发送）
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Topic">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Summary">
+            <summary>
+            摘要
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageNoteService.Dto.MessageNoteOutput.Title">
+            <summary>
+            消息title
+            </summary>
+        </member>
+        <member name="T:DisasterReport.MessageNoteService.IMessageNoteAppService">
+            <summary>
+            消息接口
+            </summary>
+        </member>
+        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.PostMessage(DisasterReport.MessageNoteService.Dto.AddMessageInput)">
+            <summary>
+            新增推送消息
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.GetPageMessageNote(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页得到消息列表
+            </summary>
+            <param name="title">消息title模糊搜索使用</param>
+            <param name="flag">默认 9（全部）1 普通 2重要 3紧急</param>
+            <param name="pageIndex">默认 1</param>
+            <param name="pageSize">默认 9999</param>
             <returns></returns>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
@@ -950,7 +1057,7 @@
             <param name="input">Role： 0-普通用户，1-管理员用户</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid})">
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.MessageGroupTb,System.Guid})">
             <summary>
             构造函数
             </summary>

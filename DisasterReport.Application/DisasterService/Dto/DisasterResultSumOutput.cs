@@ -24,5 +24,13 @@ namespace DisasterReport.DisasterService.Dto
         /// 今日总数
         /// </summary>
         public virtual int TodayCount { get; set; }
+        /// <summary>
+        /// 救援队总人数
+        /// </summary>
+        public virtual int RescueCount { get; set; }
+        /// <summary>
+        /// 上报人员总数
+        /// </summary>
+        public virtual int ReporterCount { get; set; }
     }
 }

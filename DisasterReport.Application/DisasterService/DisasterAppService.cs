@@ -21,6 +21,7 @@ namespace DisasterAppService.DisasterService
         private readonly IRepository<UploadsFileTb, Guid> _uploadsFileTbRespository;
         private readonly IRepository<ReporterInfoTb, Guid> _reporterInfoRespository;
         private readonly IRepository<DisasterKindTb, Guid> _disasterKindTbRespository;
+        private readonly IRepository<MessageGroupTb, Guid> _messageGroupRespository;
 
         public IEventBus EventBus { get; set; }
 
@@ -31,7 +32,8 @@ namespace DisasterAppService.DisasterService
                 IRepository<DisasterInfoTb, Guid> disasterInfoTbRepository,
                 IRepository<UploadsFileTb, Guid> uploadsFileTbRespository,
                 IRepository<ReporterInfoTb, Guid> reporterInfoRespository,
-                IRepository<DisasterKindTb, Guid> disasterKindTbRespository
+                IRepository<DisasterKindTb, Guid> disasterKindTbRespository,
+                IRepository<MessageGroupTb, Guid> messageGroupRespository
             )
         {
             EventBus = NullEventBus.Instance;
@@ -39,6 +41,7 @@ namespace DisasterAppService.DisasterService
             _uploadsFileTbRespository = uploadsFileTbRespository;
             _reporterInfoRespository = reporterInfoRespository;
             _disasterKindTbRespository = disasterKindTbRespository;
+            _messageGroupRespository = messageGroupRespository;
         }
 
         /// <summary>
@@ -271,6 +274,9 @@ namespace DisasterAppService.DisasterService
             var tempCurrDate = DateTime.Today;
             outResult.TodayCount = _disasterInfoTbRepository.Count(d => d.ReportDate.Year == tempCurrDate.Year && d.ReportDate.Month == tempCurrDate.Month && d.ReportDate.Day == tempCurrDate.Day);
 
+            outResult.RescueCount = _messageGroupRespository.Count();
+            outResult.ReporterCount = _reporterInfoRespository.Count(r => r.Type == 1);
+
             return outResult;
         }
 
@@ -287,6 +293,26 @@ namespace DisasterAppService.DisasterService
             _disasterInfoTbRepository.InsertOrUpdate(existDisaster);
 
             return existDisaster.MapTo<ReportDisasterOutput>();
+        }
+
+        public List<DisasterAreaTotalOutput> GetAreaTotal()
+        {
+            var result = _disasterInfoTbRepository.GetAll().GroupBy(d => d.AreaCode).ToList();
+            var outResult = new List<DisasterAreaTotalOutput>();
+            for(var i = 0; i < result.Count; i++)
+            {
+                var key = result[i].Key;
+                var count = _disasterInfoTbRepository.Count(d => d.AreaCode == key);
+                var existDisaster = _disasterInfoTbRepository.FirstOrDefault(d => d.AreaCode == key);
+                outResult.Add(new DisasterAreaTotalOutput()
+                {
+                    Count = count,
+                    Lat = existDisaster.Lat,
+                    Lng = existDisaster.Lng,
+                    Name = existDisaster.DisasterAddress
+                });
+            }
+            return outResult;
         }
     }
 }

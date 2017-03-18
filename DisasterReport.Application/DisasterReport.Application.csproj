@@ -127,6 +127,7 @@
     <Compile Include="DisasterReportApplicationModule.cs" />
     <Compile Include="DisasterReportAppServiceBase.cs" />
     <Compile Include="DisasterService\DisasterAppService.cs" />
+    <Compile Include="DisasterService\Dto\DisasterAreaTotalOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindDetailOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindNetWorkOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindOutput.cs" />
@@ -146,6 +147,10 @@
     <Compile Include="MessageGroupService\Dto\ReporterMemberOutput.cs" />
     <Compile Include="MessageGroupService\IMessageGroupAppService.cs" />
     <Compile Include="MessageGroupService\MessageGroupAppService.cs" />
+    <Compile Include="MessageNoteService\Dto\AddMessageInput.cs" />
+    <Compile Include="MessageNoteService\Dto\MessageNoteOutput.cs" />
+    <Compile Include="MessageNoteService\IMessageNoteAppService.cs" />
+    <Compile Include="MessageNoteService\MessageNoteAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReporterService\Dto\ReporterAddInput.cs" />
     <Compile Include="ReporterService\Dto\ReporterOutput.cs" />
