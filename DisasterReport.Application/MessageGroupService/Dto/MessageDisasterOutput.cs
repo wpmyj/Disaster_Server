@@ -1,5 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using DisasterReport.DisasterService.Dto;
 using DisasterReport.DomainEntities;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace DisasterReport.MessageGroupService.Dto
         /// <summary>
         /// 上报灾情类型
         /// </summary>
-        public virtual DisasterKindTb DisasterKind { get; set; }
+        public virtual DisasterKindOutput DisasterKind { get; set; }
         /// <summary>
         /// 灾情位置
         /// </summary>

@@ -64,8 +64,8 @@ namespace DisasterReport.Web.SignalR
         {
             // 每次登陆id会发生变化
             // 保存该用户信息
-            Logger.Debug("Server: " + Context.ConnectionId);
-            Logger.Debug("Client: " + Context.ConnectionId);
+            //Logger.Debug("Server: " + Context.ConnectionId);
+            //Logger.Debug("Client: " + Context.ConnectionId);
             _ReporterConnections[input.ReporterId] = new ReporterLoginHub()
             {
                
@@ -74,7 +74,7 @@ namespace DisasterReport.Web.SignalR
                 ReporterId = input.ReporterId,
                 Type = input.Type
             };
-            this.SendToWebMessage(input.Name + "上线了");
+            this.SendToWebMessage(_ReporterConnections[input.ReporterId]);
         }
 
         // Web用户上线
@@ -90,7 +90,7 @@ namespace DisasterReport.Web.SignalR
             };
         }
 
-        // 号召上报人员处理此灾情
+        // Web端号召上报人员处理此灾情
         public void CallReporter(Guid disasterId)
         {
             var existDisaster = _disasterInfoRepo.FirstOrDefault(d => d.Id == disasterId);
@@ -103,6 +103,25 @@ namespace DisasterReport.Web.SignalR
                     Type = "号召响应"
                 });
             } catch (Exception e)
+            {
+
+            }
+        }
+
+        public void ResponseDisaster(ResponseDisasterInputHub input)
+        {
+            var existReporter = _reporterRepo.FirstOrDefault(r => r.Id == input.ReporterId);
+            var existDisaster = _disasterInfoRepo.FirstOrDefault(d => d.Id == input.DisasterId);
+            try
+            {
+                this.SendToWebMessage(new ResponseDisasterOutputHub()
+                {
+                    GroupName = existReporter.MessageGroup.GroupName,
+                    DisasterKindName = existDisaster.DisasterKind.Name,
+                    Name = existReporter.Name,
+                    Type = "responseDisaster"
+                });
+            }catch(Exception e)
             {
 
             }

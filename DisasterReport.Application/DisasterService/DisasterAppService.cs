@@ -22,6 +22,7 @@ namespace DisasterAppService.DisasterService
         private readonly IRepository<ReporterInfoTb, Guid> _reporterInfoRespository;
         private readonly IRepository<DisasterKindTb, Guid> _disasterKindTbRespository;
         private readonly IRepository<MessageGroupTb, Guid> _messageGroupRespository;
+        private readonly IRepository<DisasterRescueTb, Guid> _disasterRescueRepo;
 
         public IEventBus EventBus { get; set; }
 
@@ -33,7 +34,8 @@ namespace DisasterAppService.DisasterService
                 IRepository<UploadsFileTb, Guid> uploadsFileTbRespository,
                 IRepository<ReporterInfoTb, Guid> reporterInfoRespository,
                 IRepository<DisasterKindTb, Guid> disasterKindTbRespository,
-                IRepository<MessageGroupTb, Guid> messageGroupRespository
+                IRepository<MessageGroupTb, Guid> messageGroupRespository,
+                IRepository<DisasterRescueTb, Guid> disasterRescueRepo
             )
         {
             EventBus = NullEventBus.Instance;
@@ -42,6 +44,7 @@ namespace DisasterAppService.DisasterService
             _reporterInfoRespository = reporterInfoRespository;
             _disasterKindTbRespository = disasterKindTbRespository;
             _messageGroupRespository = messageGroupRespository;
+            _disasterRescueRepo = disasterRescueRepo;
         }
 
         /// <summary>
@@ -313,6 +316,69 @@ namespace DisasterAppService.DisasterService
                 });
             }
             return outResult;
+        }
+
+        public List<DisasterKindOutput> GetDisasterKind()
+        {
+            var existKind = _disasterKindTbRespository.GetAll().Where(d => d.Pid.ToString() != "0").ToList();
+
+            return existKind.MapTo<List<DisasterKindOutput>>();
+        }
+
+        public DisasterKindOutput UpdateDisasterKindIcon(DisasterKindUpdateInput input)
+        {
+            var existKind = _disasterKindTbRespository.FirstOrDefault(d => d.Id == input.Id);
+            if(existKind == null)
+            {
+                throw new UserFriendlyException("没有此灾情种类");
+            }
+
+            existKind.Photo = input.Photo;
+            _disasterKindTbRespository.InsertOrUpdate(existKind);
+            return existKind.MapTo<DisasterKindOutput>();
+        }
+
+        public void ResponseDisaster(ResponseDisasterInput input)
+        {
+            var existReporter = _reporterInfoRespository.FirstOrDefault(r => r.Id == input.ReporterId);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有此上报人员");
+            }
+            var existDisaster = _disasterInfoTbRepository.FirstOrDefault(d => d.Id == input.DisasterId);
+            if(existDisaster == null)
+            {
+                throw new UserFriendlyException("没有此灾情");
+            }
+
+            // 查询此上报人员是否之前加入过了
+            var existAdd = _disasterRescueRepo.FirstOrDefault(d => d.Disaster.Id == input.DisasterId && d.Reporter.Id == input.ReporterId);
+            if(existAdd == null)
+            {
+                DisasterRescueTb newItem = new DisasterRescueTb();
+                newItem.Reporter = existReporter;
+                newItem.Disaster = existDisaster;
+                newItem.StartTime = DateTime.Now;
+
+                // 保存
+                _disasterRescueRepo.Insert(newItem);
+            
+                // 更新
+                existDisaster.Status = 1;   // 变为正在处理
+                _disasterInfoTbRepository.InsertOrUpdate(existDisaster);
+
+                // 查询出此上报人员属于哪一个队伍
+                // 将队伍与灾情也关联起来
+                // 找出之前存在的灾情
+                var messageGroup = existReporter.MessageGroup;
+                // 如果没有关联此灾情 则增加
+                var existbool = messageGroup.Disaster.Any(m => m.Id == input.DisasterId);
+                if(existbool == false)
+                {
+                    messageGroup.Disaster.Add(existDisaster);
+                    _messageGroupRespository.InsertOrUpdate(messageGroup);
+                }
+            }
         }
     }
 }

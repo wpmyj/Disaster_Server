@@ -16,5 +16,9 @@ namespace DisasterReport.DisasterService.Dto
         /// 灾情种类编码
         /// </summary>
         public virtual String KindCode { get; set; }
+        /// <summary>
+        /// 灾情图标
+        /// </summary>
+        public virtual string Photo { get; set; }
     }
 }

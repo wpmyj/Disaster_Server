@@ -34,7 +34,7 @@ namespace DisasterReport.DomainEntities
         /// <summary>
         /// 1 抢救队 2维护队 3输送队
         /// </summary>
-        public virtual int type { get; set; }
+        public virtual int Type { get; set; }
         /// <summary>
         /// 关联的Reporter
         /// </summary>

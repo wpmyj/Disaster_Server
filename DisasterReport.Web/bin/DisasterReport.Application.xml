@@ -191,6 +191,11 @@
             灾情种类编码
             </summary>
         </member>
+        <member name="P:DisasterReport.DisasterService.Dto.DisasterKindOutput.Photo">
+            <summary>
+            灾情图标
+            </summary>
+        </member>
         <member name="P:DisasterReport.DisasterService.Dto.DisasterResultSumOutput.DisasterCount">
             <summary>
             灾情总数
@@ -454,6 +459,25 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.GetDisasterKind">
+            <summary>
+            得到子级灾情种类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.UpdateDisasterKindIcon(DisasterReport.DisasterService.Dto.DisasterKindUpdateInput)">
+            <summary>
+            修改灾情种类图标
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.ResponseDisaster(DisasterReport.DisasterService.Dto.ResponseDisasterInput)">
+            <summary>
+            响应灾情救援
+            </summary>
+            <param name="input"></param>
+        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
             <summary>
             消息组Id
@@ -678,6 +702,13 @@
             <param name="pageSize">默认9999</param>
             <returns></returns>
         </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.GetMessageGroupDisaster(System.Guid)">
+            <summary>
+            得到消息组的灾情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="P:DisasterReport.MessageNoteService.Dto.AddMessageInput.FromReporterId">
             <summary>
             发送者
@@ -759,15 +790,29 @@
             </summary>
             <param name="input"></param>
         </member>
-        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.GetPageMessageNote(System.String,System.Int32,System.Int32,System.Int32)">
+        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.GetPageMessageNote(System.String,System.Int32,System.String,System.Int32,System.Int32)">
             <summary>
             分页得到消息列表
             </summary>
             <param name="title">消息title模糊搜索使用</param>
             <param name="flag">默认 9（全部）1 普通 2重要 3紧急</param>
+            <param name="reporterId">默认 全部</param>
             <param name="pageIndex">默认 1</param>
             <param name="pageSize">默认 9999</param>
             <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.GetMessageNoteById(System.Guid)">
+            <summary>
+            通过Id获取当前的消息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageNoteService.IMessageNoteAppService.DeleteReporterMessageNote(DisasterReport.MessageNoteService.Dto.DeleteReporterMessageNoteInput)">
+            <summary>
+            删除上报人员所接收的消息推送
+            </summary>
+            <param name="input"></param>
         </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterAddInput.Name">
             <summary>
@@ -1057,7 +1102,7 @@
             <param name="input">Role： 0-普通用户，1-管理员用户</param>
             <returns></returns>
         </member>
-        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.MessageGroupTb,System.Guid})">
+        <member name="M:DisasterAppService.DisasterService.DisasterAppService.#ctor(Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.UploadsFileTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.ReporterInfoTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterKindTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.MessageGroupTb,System.Guid},Abp.Domain.Repositories.IRepository{DisasterReport.DomainEntities.DisasterRescueTb,System.Guid})">
             <summary>
             构造函数
             </summary>

@@ -9,6 +9,7 @@ using DisasterReport.DomainEntities;
 using Abp.UI;
 using Abp.AutoMapper;
 using DisasterReport.DtoTemplate;
+using DisasterReport.DisasterService.Dto;
 
 namespace DisasterReport.MessageGroupService
 {
@@ -117,7 +118,7 @@ namespace DisasterReport.MessageGroupService
                 Member = beforeMembers.MapTo<List<ReporterMemberOutput>>(),
                 Photo = existMessageGroup.Photo,
                 Remark = existMessageGroup.Remark,
-                Type = existMessageGroup.type,
+                Type = existMessageGroup.Type,
                 Disaster = existMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
             };
 
@@ -140,7 +141,7 @@ namespace DisasterReport.MessageGroupService
                 GroupName = input.GroupName,
                 GroupTotalNum = 1,
                 Remark = input.Remark,
-                type = input.Type
+                Type = input.Type
             };
             
             try
@@ -177,7 +178,7 @@ namespace DisasterReport.MessageGroupService
                     Member = Members.MapTo<List<ReporterMemberOutput>>(),
                     Photo = newMessageGroup.Photo,
                     Remark = newMessageGroup.Remark,
-                    Type = newMessageGroup.type,
+                    Type = newMessageGroup.Type,
                     Disaster = newMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
                 };
 
@@ -208,10 +209,37 @@ namespace DisasterReport.MessageGroupService
                 Member = Members.MapTo<List<ReporterMemberOutput>>(),
                 Photo = existMessageGroup.Photo,
                 Remark = existMessageGroup.Remark,
-                Type = existMessageGroup.type,
+                Type = existMessageGroup.Type,
                 Disaster = existMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
             };
 
+            return outResult;
+        }
+
+        public List<MessageDisasterOutput> GetMessageGroupDisaster(Guid id)
+        {
+            var existMessage = _messageGroupRepo.FirstOrDefault(m => m.Id == id);
+            List<MessageDisasterOutput> outResult = new List<MessageDisasterOutput>();
+            if (existMessage == null)
+            {
+                throw new UserFriendlyException("没有此消息组");
+            }
+            var disaster = existMessage.Disaster.ToList();
+            for (var i = 0; i < disaster.Count; i++)
+            {
+                outResult.Add(new MessageDisasterOutput()
+                {
+                    DisasterAddress = disaster[i].DisasterAddress,
+                    Status = disaster[i].Status,
+                    DisasterCode = disaster[i].DisasterCode,
+                    DisasterKind = disaster[i].DisasterKind.MapTo<DisasterKindOutput>(),
+                    Id = disaster[i].Id,
+                    Lat = disaster[i].Lat,
+                    Lng = disaster[i].Lng,
+                    Remark = disaster[i].Remark,
+                    ReportDate = disaster[i].ReportDate
+                });
+            }
             return outResult;
         }
 
@@ -278,7 +306,6 @@ namespace DisasterReport.MessageGroupService
                 foreach (var messageGroup in messageGroupResult)
                 {
                     var Members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroup.Id).ToList();
-
                     outResult.Add(new MessageGroupOutput()
                     {
                         CreateTime = messageGroup.CreateTime,
@@ -288,7 +315,7 @@ namespace DisasterReport.MessageGroupService
                         Member = Members.MapTo<List<ReporterMemberOutput>>(),
                         Photo = messageGroup.Photo,
                         Remark = messageGroup.Remark,
-                        Type = messageGroup.type,
+                        Type = messageGroup.Type,
                         Disaster = messageGroup.Disaster.MapTo<List<MessageDisasterOutput>>()
                     });
                 }

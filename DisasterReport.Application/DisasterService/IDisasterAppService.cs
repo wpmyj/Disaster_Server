@@ -93,5 +93,24 @@ namespace DisasterReport.DisasterService
         /// <returns></returns>
         [HttpGet]
         List<DisasterAreaTotalOutput> GetAreaTotal();
+        /// <summary>
+        /// 得到子级灾情种类
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        List<DisasterKindOutput> GetDisasterKind();
+        /// <summary>
+        /// 修改灾情种类图标
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        DisasterKindOutput UpdateDisasterKindIcon(DisasterKindUpdateInput input);
+        /// <summary>
+        /// 响应灾情救援
+        /// </summary>
+        /// <param name="input"></param>
+        [HttpPost]
+        void ResponseDisaster(ResponseDisasterInput input);
     }
 }

@@ -63,5 +63,12 @@ namespace DisasterReport.MessageGroupService
         /// <returns></returns>
         [HttpGet]
         RuimapPageResultDto<ReporterGroupOutput> GetOtherNoGroupMember(Guid messageGroupId, int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 得到消息组的灾情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        List<MessageDisasterOutput> GetMessageGroupDisaster(Guid id);
     }
 }

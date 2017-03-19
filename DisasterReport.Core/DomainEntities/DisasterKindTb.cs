@@ -20,6 +20,10 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual String KindCode { get; set; }
         /// <summary>
+        /// 灾情图标
+        /// </summary>
+        public virtual string Photo { get; set; }
+        /// <summary>
         /// 灾情种类父级Id
         /// </summary>
         public virtual Guid? Pid { get; set; }

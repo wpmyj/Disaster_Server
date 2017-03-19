@@ -131,10 +131,12 @@
     <Compile Include="DisasterService\Dto\DisasterKindDetailOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindNetWorkOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterKindOutput.cs" />
+    <Compile Include="DisasterService\Dto\DisasterKindUpdateInput.cs" />
     <Compile Include="DisasterService\Dto\DisasterResultSumOutput.cs" />
     <Compile Include="DisasterService\Dto\DisasterTrendOutput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterInput.cs" />
     <Compile Include="DisasterService\Dto\ReportDisasterOutput.cs" />
+    <Compile Include="DisasterService\Dto\ResponseDisasterInput.cs" />
     <Compile Include="DisasterService\Dto\SetDisasterStatusInput.cs" />
     <Compile Include="DisasterService\Dto\UploadsFileTbOutput.cs" />
     <Compile Include="DisasterService\Event\DisasterReportEventData.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="MessageGroupService\IMessageGroupAppService.cs" />
     <Compile Include="MessageGroupService\MessageGroupAppService.cs" />
     <Compile Include="MessageNoteService\Dto\AddMessageInput.cs" />
+    <Compile Include="MessageNoteService\Dto\DeleteReporterMessageNoteInput.cs" />
     <Compile Include="MessageNoteService\Dto\MessageNoteOutput.cs" />
     <Compile Include="MessageNoteService\IMessageNoteAppService.cs" />
     <Compile Include="MessageNoteService\MessageNoteAppService.cs" />

@@ -589,6 +589,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignalR\HubData\CallReporterDealDisasterHub.cs" />
     <Compile Include="SignalR\HubData\PostReporterMessageHub.cs" />
+    <Compile Include="SignalR\HubData\ResponseDisasterInputHub.cs" />
+    <Compile Include="SignalR\HubData\ResponseDisasterOutputHub.cs" />
     <Compile Include="SignalR\MessageHub.cs" />
     <Compile Include="SignalR\HubData\ReporterLoginHub.cs" />
     <Compile Include="SignalR\HubData\ReporterLoginInputHub.cs" />

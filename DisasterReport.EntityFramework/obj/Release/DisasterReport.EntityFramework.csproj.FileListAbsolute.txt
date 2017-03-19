@@ -292,9 +292,6 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterRepor
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\bin\Release\System.Collections.Immutable.xml
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csprojResolveAssemblyReference.cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init.resources
-C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.adddisasterRescue.resources
-C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled.resources
-C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled2.resources
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb

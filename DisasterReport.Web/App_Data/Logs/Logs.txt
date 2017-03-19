@@ -3063,3 +3063,851 @@ DEBUG 2017-03-18 22:06:07,852 [239  ] Abp.Modules.AbpModuleManager             -
 DEBUG 2017-03-18 22:06:07,854 [239  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2017-03-18 22:06:07,855 [239  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2017-03-18 22:06:07,855 [239  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-18 22:12:59,155 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-18 22:12:59,172 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-18 22:12:59,176 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,178 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,179 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,180 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,181 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:12:59,184 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-18 22:12:59,355 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-18 22:12:59,355 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-18 22:12:59,355 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-18 22:12:59,355 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-18 22:12:59,590 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-18 22:13:00,391 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-18 22:13:00,398 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-18 22:13:00,399 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-18 22:13:00,401 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-18 22:13:00,402 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-18 22:13:00,441 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-18 22:13:00,483 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-18 22:13:00,483 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-18 22:13:00,487 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-18 22:13:01,254 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-18 22:13:01,255 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-18 22:13:01,256 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-18 22:13:01,256 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-18 22:13:01,257 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-18 22:13:01,258 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-18 22:13:01,259 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-18 22:34:57,421 [115  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-18 22:34:57,422 [115  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-18 22:34:57,423 [115  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-18 22:34:57,423 [115  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 10:29:06,593 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 10:29:06,609 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:06,625 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 10:29:06,841 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:29:06,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:29:06,841 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:29:06,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:29:07,095 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:29:08,213 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 10:29:08,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 10:29:08,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 10:29:08,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 10:29:08,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 10:29:08,266 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 10:29:08,313 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 10:29:09,110 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 10:29:09,111 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 10:29:09,111 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 10:29:09,112 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 10:29:09,113 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 10:29:09,113 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 10:29:09,114 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 10:50:02,998 [168  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 10:50:03,000 [168  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 10:50:03,001 [168  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 10:50:03,001 [168  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 10:54:33,052 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 10:54:33,069 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 10:54:33,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:33,080 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 10:54:33,243 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:54:33,243 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:54:33,243 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:54:33,243 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 10:54:33,472 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 10:54:34,256 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 10:54:34,263 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 10:54:34,264 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 10:54:34,266 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 10:54:34,267 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 10:54:34,304 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 10:54:34,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 10:54:34,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 10:54:34,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 10:54:34,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 10:54:35,062 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 10:54:35,063 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 10:54:35,064 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 10:54:35,065 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 10:54:35,066 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 10:54:35,066 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 10:54:35,067 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+ERROR 2017-03-19 11:19:25,720 [173  ] nHandling.AbpApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DisasterReport.Api.Controllers.FileUploadController.<UploadFile>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+ERROR 2017-03-19 11:20:16,647 [155  ] nHandling.AbpApiExceptionFilterAttribute - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DisasterReport.Api.Controllers.FileUploadController.<UploadFile>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2017-03-19 11:48:31,418 [188  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 11:48:31,420 [188  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 11:48:31,420 [188  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 11:48:31,420 [188  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 11:58:33,697 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 11:58:33,723 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 11:58:33,727 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:33,735 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 11:58:33,913 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 11:58:33,913 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 11:58:33,913 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 11:58:33,913 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 11:58:34,128 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 11:58:34,503 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 11:58:34,511 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 11:58:34,512 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 11:58:34,514 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 11:58:34,515 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 11:58:34,552 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 11:58:34,594 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 11:58:34,594 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 11:58:34,597 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 11:58:34,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 11:58:34,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 11:58:34,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 11:58:34,598 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 11:58:35,330 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 11:58:35,330 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 11:58:35,331 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 11:58:35,332 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 11:58:35,332 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 11:58:35,333 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 11:58:35,334 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 12:33:34,247 [274  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 12:33:34,248 [274  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 12:33:34,249 [274  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 12:33:34,249 [274  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 13:00:15,858 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 13:00:15,872 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 13:00:15,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:15,884 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 13:00:16,032 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 13:00:16,032 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 13:00:16,032 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 13:00:16,032 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 13:00:16,217 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 13:00:16,494 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 13:00:16,497 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 13:00:16,498 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 13:00:16,500 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 13:00:16,501 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 13:00:16,534 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 13:00:16,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 13:00:17,172 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 13:00:17,173 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 13:00:17,174 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 13:00:17,175 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 13:00:17,176 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 13:00:17,176 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 13:00:17,177 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+ERROR 2017-03-19 14:56:08,733 [255  ] nHandling.AbpApiExceptionFilterAttribute - Count must have a non-negative value.
+Parameter name: count
+System.ArgumentException: Count must have a non-negative value.
+Parameter name: count
+   at System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Skip(DbExpressionBinding input, IEnumerable`1 sortOrder, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DisasterAppService.DisasterService.DisasterAppService.GetPageDisaster(Int32 pageIndex, Int32 pageSize, Int32 type, Int32 status)
+   at Castle.Proxies.Invocations.IDisasterAppService_GetPageDisaster.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DisasterAppServiceProxy.GetPageDisaster(Int32 pageIndex, Int32 pageSize, Int32 type, Int32 status)
+--- End of stack trace from previous location where exception was thrown ---
+   at Abp.Extensions.ExceptionExtensions.ReThrow(Exception exception)
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetPageDisaster(Int32 pageIndex, Int32 pageSize, Int32 type, Int32 status)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2017-03-19 15:13:41,984 [346  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 15:13:41,986 [346  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:13:41,986 [346  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:13:41,986 [346  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 15:13:45,126 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 15:13:45,145 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 15:13:45,150 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,153 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,154 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,155 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,157 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,157 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,157 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,161 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 15:13:45,324 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:13:45,324 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:13:45,324 [1    ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:13:45,324 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:13:45,538 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:13:45,826 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 15:13:45,828 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 15:13:45,831 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 15:13:45,834 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 15:13:45,836 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 15:13:45,874 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:13:45,891 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 15:13:45,891 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 15:13:45,891 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 15:13:45,891 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 15:13:45,891 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 15:13:45,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 15:13:46,572 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 15:13:46,573 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 15:13:46,574 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 15:13:46,575 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 15:13:46,575 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 15:13:46,576 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 15:13:46,577 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 15:57:43,857 [354  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 15:57:43,858 [354  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:57:43,859 [354  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:57:43,859 [354  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 15:57:50,927 [231  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 15:57:50,943 [231  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 15:57:50,947 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,950 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,950 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,950 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,950 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,951 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,951 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,951 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,951 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,952 [231  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:50,955 [231  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 15:57:51,121 [231  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:57:51,121 [231  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:57:51,121 [231  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:57:51,121 [231  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:57:51,353 [231  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:57:52,051 [231  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 15:57:52,057 [231  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 15:57:52,058 [231  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 15:57:52,059 [231  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 15:57:52,060 [231  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 15:57:52,096 [231  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:57:52,132 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 15:57:52,132 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 15:57:52,135 [231  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 15:57:52,859 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 15:57:52,860 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 15:57:52,861 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 15:57:52,861 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 15:57:52,862 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 15:57:52,863 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 15:57:52,864 [231  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 15:58:29,914 [185  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 15:58:29,915 [185  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:58:29,916 [185  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:58:29,916 [185  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 15:58:34,311 [210  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 15:58:34,327 [210  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 15:58:34,331 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,334 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,335 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,335 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,335 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,335 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,336 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,337 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,337 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:34,340 [210  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 15:58:34,502 [210  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:58:34,502 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:58:34,502 [210  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:58:34,502 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 15:58:34,743 [210  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 15:58:35,404 [210  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 15:58:35,410 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 15:58:35,412 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 15:58:35,413 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 15:58:35,414 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 15:58:35,452 [210  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 15:58:35,485 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 15:58:35,485 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 15:58:35,488 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 15:58:35,489 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 15:58:35,489 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 15:58:35,489 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 15:58:36,240 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 15:58:36,241 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 15:58:36,241 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 15:58:36,242 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 15:58:36,243 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 15:58:36,244 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 15:58:36,244 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 16:05:23,513 [259  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 16:05:23,514 [259  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 16:05:23,515 [259  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 16:05:23,515 [259  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 16:05:28,064 [210  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 16:05:28,079 [210  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 16:05:28,083 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,086 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,086 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,086 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,086 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,087 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,088 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,088 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,088 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,088 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:28,091 [210  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 16:05:28,264 [210  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 16:05:28,264 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 16:05:28,264 [210  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 16:05:28,264 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 16:05:28,489 [210  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 16:05:29,138 [210  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 16:05:29,146 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 16:05:29,147 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 16:05:29,149 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 16:05:29,149 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 16:05:29,190 [210  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 16:05:29,229 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 16:05:29,229 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 16:05:29,232 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 16:05:29,232 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 16:05:29,232 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 16:05:29,232 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 16:05:29,232 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 16:05:29,233 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 16:05:29,958 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 16:05:29,959 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 16:05:29,960 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 16:05:29,961 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 16:05:29,961 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 16:05:29,962 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 16:05:29,963 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 17:30:04,051 [153  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 17:30:04,053 [153  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 17:30:04,054 [153  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 17:30:04,054 [153  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 17:30:09,508 [222  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 17:30:09,525 [222  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 17:30:09,529 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,531 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,532 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,532 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,532 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,532 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,533 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,534 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,534 [222  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:09,538 [222  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 17:30:09,697 [222  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 17:30:09,698 [222  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 17:30:09,698 [222  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 17:30:09,698 [222  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 17:30:09,919 [222  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 17:30:10,568 [222  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 17:30:10,573 [222  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 17:30:10,574 [222  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 17:30:10,575 [222  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 17:30:10,576 [222  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 17:30:10,611 [222  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 17:30:10,646 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 17:30:10,646 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 17:30:10,648 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 17:30:10,648 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 17:30:10,649 [222  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 17:30:11,358 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 17:30:11,359 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 17:30:11,360 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 17:30:11,361 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 17:30:11,362 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 17:30:11,362 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 17:30:11,363 [222  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 17:52:20,998 [206  ] DisasterReport.Web.SignalR.MessageHub    - Server: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:52:20,998 [206  ] DisasterReport.Web.SignalR.MessageHub    - Client: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:55:10,721 [302  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:55:35,822 [303  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:57:06,954 [316  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:57:29,135 [317  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 17:58:50,408 [299  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 421e654b-6dfb-418e-b01f-6a75f7bc69bd
+DEBUG 2017-03-19 19:39:35,649 [107  ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 19:39:35,651 [107  ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 19:39:35,652 [107  ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 19:39:35,652 [107  ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 19:39:40,409 [210  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 19:39:40,428 [210  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 19:39:40,433 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,435 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,435 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,436 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,436 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,436 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,436 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,437 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,438 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,438 [210  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:40,441 [210  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 19:39:40,605 [210  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 19:39:40,605 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 19:39:40,605 [210  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 19:39:40,605 [210  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 19:39:40,838 [210  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 19:39:41,525 [210  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 19:39:41,533 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 19:39:41,536 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 19:39:41,539 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 19:39:41,542 [210  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 19:39:41,582 [210  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 19:39:41,619 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 19:39:41,619 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 19:39:41,621 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 19:39:41,622 [210  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 19:39:42,400 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 19:39:42,401 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 19:39:42,401 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 19:39:42,403 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 19:39:42,404 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 19:39:42,405 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 19:39:42,406 [210  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
+DEBUG 2017-03-19 19:47:48,886 [125  ] DisasterReport.Web.SignalR.MessageHub    - Server: c6dc9d89-08bc-4154-a49f-0e1d67a0b779
+DEBUG 2017-03-19 19:47:48,886 [125  ] DisasterReport.Web.SignalR.MessageHub    - Client: c6dc9d89-08bc-4154-a49f-0e1d67a0b779
+DEBUG 2017-03-19 19:51:59,216 [253  ] DisasterReport.Web.SignalR.MessageHub    - Server: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 19:51:59,216 [253  ] DisasterReport.Web.SignalR.MessageHub    - Client: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 19:53:06,784 [252  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 19:54:34,351 [260  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 19:55:07,654 [252  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 19:55:25,992 [175  ] DisasterReport.Web.SignalR.MessageHub    - 最终: 9230bc59-1f8c-41dc-9f04-9e1f0a3c9ba0
+DEBUG 2017-03-19 20:20:00,059 [84   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-03-19 20:20:00,061 [84   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 20:20:00,062 [84   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 20:20:00,062 [84   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-03-19 20:20:02,162 [213  ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-03-19 20:20:02,187 [213  ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2017-03-19 20:20:02,193 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Web.DisasterReportWebModule, DisasterReport.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,196 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportDataModule, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,196 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,196 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,196 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,197 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,197 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportCoreModule, DisasterReport.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,197 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.DisasterReportApplicationModule, DisasterReport.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,197 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,197 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: DisasterReport.Api.DisasterReportWebApiModule, DisasterReport.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,198 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,198 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,198 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,198 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,198 [213  ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.3.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:02,201 [213  ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2017-03-19 20:20:02,376 [213  ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 20:20:02,376 [213  ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 20:20:02,376 [213  ] o.Configuration.LanguageManagementConfig - Converted DisasterReport (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 20:20:02,376 [213  ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-03-19 20:20:02,614 [213  ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DisasterReport.EntityFramework.DisasterReportDbContext, DisasterReport.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-03-19 20:20:03,005 [213  ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-03-19 20:20:03,013 [213  ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-03-19 20:20:03,015 [213  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-03-19 20:20:03,017 [213  ] Abp.Localization.LocalizationManager     - Initialized localization source: DisasterReport
+DEBUG 2017-03-19 20:20:03,020 [213  ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-03-19 20:20:03,058 [213  ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-03-19 20:20:03,095 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - Found 15 classes define auto mapping attributes
+DEBUG 2017-03-19 20:20:03,095 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserAccountOutput
+DEBUG 2017-03-19 20:20:03,099 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.UserAccount.Dto.UserTbOutputDto
+DEBUG 2017-03-19 20:20:03,099 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.ReporterService.Dto.ReporterOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageNoteService.Dto.MessageNoteOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageDisasterOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.MessageGroupOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterGroupOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.MessageGroupService.Dto.ReporterMemberOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.DisasterKindOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterInput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.ReportDisasterOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DisasterService.Dto.UploadsFileTbOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.DeviceService.Dto.DeviceOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CityOutput
+DEBUG 2017-03-19 20:20:03,100 [213  ] Abp.AutoMapper.AbpAutoMapperModule       - DisasterReport.CityService.Dto.CommunityOutput
+DEBUG 2017-03-19 20:20:03,870 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.UserAccount.IUserAccountAppService' with service name 'app/userAccount'.
+DEBUG 2017-03-19 20:20:03,871 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.ReporterService.IReporterAppService' with service name 'app/reporter'.
+DEBUG 2017-03-19 20:20:03,872 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageNoteService.IMessageNoteAppService' with service name 'app/messageNote'.
+DEBUG 2017-03-19 20:20:03,873 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.MessageGroupService.IMessageGroupAppService' with service name 'app/messageGroup'.
+DEBUG 2017-03-19 20:20:03,874 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DisasterService.IDisasterAppService' with service name 'app/disaster'.
+DEBUG 2017-03-19 20:20:03,875 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.DeviceService.IDeviceAppService' with service name 'app/device'.
+DEBUG 2017-03-19 20:20:03,876 [213  ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DisasterReport.CityService.ICityAppService' with service name 'app/city'.
