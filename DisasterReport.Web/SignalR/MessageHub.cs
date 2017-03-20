@@ -19,7 +19,7 @@ namespace DisasterReport.Web.SignalR
         /// <summary>
         /// 上报用户的connectionID与用户名对照表
         /// </summary>
-        private readonly static Dictionary<Guid, ReporterLoginHub> _ReporterConnections = new Dictionary<Guid, ReporterLoginHub>();
+        public readonly static Dictionary<Guid, ReporterLoginHub> _ReporterConnections = new Dictionary<Guid, ReporterLoginHub>();
 
         private readonly IRepository<DisasterInfoTb, Guid> _disasterInfoRepo;
         private readonly IRepository<UploadsFileTb, Guid> _uploadsFileRepo;
@@ -31,7 +31,7 @@ namespace DisasterReport.Web.SignalR
         /// <summary>
         /// 后端用户的connectionID与用户名对照表
         /// </summary>
-        private readonly static Dictionary<Guid, ReporterLoginHub> _WebConnections = new Dictionary<Guid, ReporterLoginHub>();
+        public readonly static Dictionary<Guid, ReporterLoginHub> _WebConnections = new Dictionary<Guid, ReporterLoginHub>();
 
         public ILogger Logger { get; set; }
 
@@ -107,26 +107,7 @@ namespace DisasterReport.Web.SignalR
 
             }
         }
-
-        public void ResponseDisaster(ResponseDisasterInputHub input)
-        {
-            var existReporter = _reporterRepo.FirstOrDefault(r => r.Id == input.ReporterId);
-            var existDisaster = _disasterInfoRepo.FirstOrDefault(d => d.Id == input.DisasterId);
-            try
-            {
-                this.SendToWebMessage(new ResponseDisasterOutputHub()
-                {
-                    GroupName = existReporter.MessageGroup.GroupName,
-                    DisasterKindName = existDisaster.DisasterKind.Name,
-                    Name = existReporter.Name,
-                    Type = "responseDisaster"
-                });
-            }catch(Exception e)
-            {
-
-            }
-        }
-
+        
         /// <summary>
         /// 消息通知给APP端
         /// </summary>
@@ -169,7 +150,6 @@ namespace DisasterReport.Web.SignalR
             {
                 connectIds.Add(con.Value.HubId);
             }
-
             Clients.Clients(connectIds).sendToWebMessage(msg);
         }
 

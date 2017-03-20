@@ -27,10 +27,5 @@ namespace DisasterReport.DomainEntities
         /// 灾情种类父级Id
         /// </summary>
         public virtual Guid? Pid { get; set; }
-        /// <summary>
-        /// 父级
-        /// </summary>
-        [ForeignKey("Pid")]
-        public virtual DisasterKindTb Parent { get; set; }
     }
 }

@@ -237,9 +237,6 @@ C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.adddisasterRescue.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled.resources
-C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.addmessageNotefiled2.resources
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll.config
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\bin\Release\DisasterReport.EntityFramework.pdb

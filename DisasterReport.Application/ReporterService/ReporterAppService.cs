@@ -203,5 +203,18 @@ namespace DisasterReport.ReporterService
                 Remark = existReporter.Remark
             };
         }
+
+        public void UpdateReporterLastPos(UpdateReporterLastPosInput input)
+        {
+            var existReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.Id);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有此上报人员");
+            }
+            existReporter.LastLng = input.Lng;
+            existReporter.LastLat = input.Lat;
+            existReporter.LastAddress = input.Address;
+            _reporterInfoTbRepo.Update(existReporter);
+        }
     }
 }

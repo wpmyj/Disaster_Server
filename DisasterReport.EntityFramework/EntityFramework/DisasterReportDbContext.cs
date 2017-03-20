@@ -67,8 +67,6 @@ namespace DisasterReport.EntityFramework
             modelBuilder.Entity<DisasterInfoTb>().HasRequired(d => d.Reporter);
             modelBuilder.Entity<DisasterInfoTb>().HasRequired(d => d.DisasterKind);
 
-            modelBuilder.Entity<DisasterKindTb>().HasOptional(d => d.Parent).WithMany().HasForeignKey(d => d.Pid).WillCascadeOnDelete(true);
-
             modelBuilder.Entity<MessageNoteTb>().HasRequired(m => m.FromReporter);
             modelBuilder.Entity<MessageNoteTb>().HasMany(m => m.ToReporter).WithMany(r => r.Message);
         }

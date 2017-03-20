@@ -325,17 +325,21 @@ namespace DisasterAppService.DisasterService
             return existKind.MapTo<List<DisasterKindOutput>>();
         }
 
-        public DisasterKindOutput UpdateDisasterKindIcon(DisasterKindUpdateInput input)
+        public void UpdateDisasterKindIcon(DisasterKindUpdateInput input)
         {
             var existKind = _disasterKindTbRespository.FirstOrDefault(d => d.Id == input.Id);
             if(existKind == null)
             {
                 throw new UserFriendlyException("没有此灾情种类");
             }
-
-            existKind.Photo = input.Photo;
-            _disasterKindTbRespository.InsertOrUpdate(existKind);
-            return existKind.MapTo<DisasterKindOutput>();
+            try
+            {
+                existKind.Photo = input.Photo;
+                _disasterKindTbRespository.Update(existKind);
+            } catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
         public void ResponseDisaster(ResponseDisasterInput input)
@@ -378,6 +382,26 @@ namespace DisasterAppService.DisasterService
                     messageGroup.Disaster.Add(existDisaster);
                     _messageGroupRespository.InsertOrUpdate(messageGroup);
                 }
+
+                // 只有之前没有加入行动的才可以触发通知
+                // 触发通知
+                EventBus.Trigger(new ResponseDisasterEventData()
+                {
+                    ReporterId = existReporter.Id,
+                    GroupName = existReporter.MessageGroup.GroupName,
+                    Name = existReporter.Name,
+                    DisasterKindName = existDisaster.DisasterKind.Name,
+                    Type = "responseDisaster"
+                });
+            }
+        }
+
+        public void HasJoinDisasterRescue(HasJoinDisasterRescueInput input)
+        {
+            var hasJoin = _disasterRescueRepo.FirstOrDefault(d => d.Disaster.Id == input.DisasterId && d.Reporter.Id == input.ReporterId);
+            if(hasJoin != null)
+            {
+                throw new UserFriendlyException("已经在此灾情救援行动中");
             }
         }
     }

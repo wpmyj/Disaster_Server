@@ -54,5 +54,11 @@ namespace DisasterReport.ReporterService
         /// <returns></returns>
         [HttpGet]
         RuimapPageResultDto<ReporterOutput> GetReporterByNameOrPhone(string nameOrPhone, int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 更新上报人员位置
+        /// </summary>
+        /// <param name="input"></param>
+        [HttpPost]
+        void UpdateReporterLastPos(UpdateReporterLastPosInput input);
     }
 }

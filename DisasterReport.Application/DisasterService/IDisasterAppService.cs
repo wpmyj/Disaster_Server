@@ -105,12 +105,18 @@ namespace DisasterReport.DisasterService
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
-        DisasterKindOutput UpdateDisasterKindIcon(DisasterKindUpdateInput input);
+        void UpdateDisasterKindIcon(DisasterKindUpdateInput input);
         /// <summary>
         /// 响应灾情救援
         /// </summary>
         /// <param name="input"></param>
         [HttpPost]
         void ResponseDisaster(ResponseDisasterInput input);
+        /// <summary>
+        /// 判断是否已经加入过此灾情救援行动中
+        /// </summary>
+        /// <param name="input"></param>
+        [HttpPost]
+        void HasJoinDisasterRescue(HasJoinDisasterRescueInput input);
     }
 }

@@ -40,11 +40,18 @@ namespace DisasterReport.MessageGroupService
         /// 通过团队id获取详情
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="pageIndex">所取成员当前页</param>
-        /// <param name="pageSize">所取成员当前个数 默认9999</param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
         /// <returns></returns>
         [HttpGet]
         MessageGroupOutput GetMessageGroupById(Guid id, int pageIndex = 1, int pageSize = 9999);
+        /// <summary>
+        /// 获取上报人所属团队信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        MessageGroupOutput GetMessageGroupByReporterId(Guid id);
         /// <summary>
         /// 分页获取消息组成员
         /// </summary>

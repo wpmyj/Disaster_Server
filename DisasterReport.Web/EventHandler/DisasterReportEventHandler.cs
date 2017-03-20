@@ -12,12 +12,20 @@ using System.Web.Http;
 
 namespace DisasterReport.Web.EventHandler
 {
-    public class DisasterReportEventHandler : IEventHandler<DisasterReportEventData>, ITransientDependency
+    public class DisasterReportEventHandler : IEventHandler<DisasterReportEventData>,
+        IEventHandler<ResponseDisasterEventData>,
+        ITransientDependency
     {
         public void HandleEvent(DisasterReportEventData eventData)
         {
             var msgHub = GlobalHost.ConnectionManager.GetHubContext<MessageHub>();
             msgHub.Clients.All.postMessage(new SignalrMessageBody() { Type = "disasterReport", Content = eventData });
+        }
+
+        public void HandleEvent(ResponseDisasterEventData eventData)
+        {
+            var msgHub = GlobalHost.ConnectionManager.GetHubContext<MessageHub>();
+            msgHub.Clients.All.reponseDisaster(eventData);
         }
     }
 }

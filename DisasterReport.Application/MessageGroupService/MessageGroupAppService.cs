@@ -216,6 +216,37 @@ namespace DisasterReport.MessageGroupService
             return outResult;
         }
 
+        public MessageGroupOutput GetMessageGroupByReporterId(Guid id)
+        {
+            var existReporter = _reporterInfoRepo.FirstOrDefault(r => r.Id == id);
+            if(existReporter == null)
+            {
+                throw new UserFriendlyException("没有此人员");
+            }
+            var messageGroupId = existReporter.MessageGroup_Id;
+            var members = _groupMemberRepo.GetAll().Where(g => g.MessageGroup.Id == messageGroupId).ToList();
+            if (members == null)
+            {
+                throw new UserFriendlyException("此人员没有队伍");
+            }
+            var existMessageGroup = _messageGroupRepo.FirstOrDefault(m => m.Id == messageGroupId);
+
+            var outResult = new MessageGroupOutput()
+            {
+                CreateTime = existMessageGroup.CreateTime,
+                Disaster = existMessageGroup.Disaster.MapTo<List<MessageDisasterOutput>>(),
+                GroupName = existMessageGroup.GroupName,
+                GroupTotalNum = existMessageGroup.GroupTotalNum,
+                Id = existMessageGroup.Id,
+                Member = members.MapTo<List<ReporterMemberOutput>>(),
+                Photo = existMessageGroup.Photo,
+                Remark = existMessageGroup.Remark,
+                Type = existMessageGroup.Type,
+            };
+
+            return outResult;
+        }
+
         public List<MessageDisasterOutput> GetMessageGroupDisaster(Guid id)
         {
             var existMessage = _messageGroupRepo.FirstOrDefault(m => m.Id == id);
