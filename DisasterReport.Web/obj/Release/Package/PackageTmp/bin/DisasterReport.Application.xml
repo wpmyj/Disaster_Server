@@ -478,6 +478,12 @@
             </summary>
             <param name="input"></param>
         </member>
+        <member name="M:DisasterReport.DisasterService.IDisasterAppService.HasJoinDisasterRescue(DisasterReport.DisasterService.Dto.HasJoinDisasterRescueInput)">
+            <summary>
+            判断是否已经加入过此灾情救援行动中
+            </summary>
+            <param name="input"></param>
+        </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.MessageGroupId">
             <summary>
             消息组Id
@@ -486,6 +492,16 @@
         <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemberAddInput.ReporterId">
             <summary>
             上报人员Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemeberDeleteInput.MessageGroupId">
+            <summary>
+            消息组Id
+            </summary>
+        </member>
+        <member name="P:DisasterReport.MessageGroupService.Dto.GroupMemeberDeleteInput.ReporterId">
+            <summary>
+            上报人员Id数组
             </summary>
         </member>
         <member name="P:DisasterReport.MessageGroupService.Dto.MessageDisasterOutput.DisasterCode">
@@ -663,6 +679,13 @@
         <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.AddGroupMember(DisasterReport.MessageGroupService.Dto.GroupMemberAddInput)">
             <summary>
             给团队添加成员
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DisasterReport.MessageGroupService.IMessageGroupAppService.DeleteGroupMember(DisasterReport.MessageGroupService.Dto.GroupMemeberDeleteInput)">
+            <summary>
+            删除团队成员
             </summary>
             <param name="input"></param>
             <returns></returns>
@@ -1000,6 +1023,12 @@
             <param name="pageIndex"></param>
             <param name="pageSize"></param>
             <returns></returns>
+        </member>
+        <member name="M:DisasterReport.ReporterService.IReporterAppService.UpdateReporterLastPos(DisasterReport.ReporterService.Dto.UpdateReporterLastPosInput)">
+            <summary>
+            更新上报人员位置
+            </summary>
+            <param name="input"></param>
         </member>
         <member name="P:DisasterReport.UserAccount.Dto.UserAccountAddUserInput.UserCode">
             <summary>

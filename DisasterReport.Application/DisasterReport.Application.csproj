@@ -144,6 +144,7 @@
     <Compile Include="DisasterService\Event\ResponseDisasterEventData.cs" />
     <Compile Include="DisasterService\IDisasterAppService.cs" />
     <Compile Include="MessageGroupService\Dto\GroupMemberAddInput.cs" />
+    <Compile Include="MessageGroupService\Dto\GroupMemeberDeleteInput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageDisasterOutput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageGroupAddInput.cs" />
     <Compile Include="MessageGroupService\Dto\MessageGroupOutput.cs" />

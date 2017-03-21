@@ -29,6 +29,13 @@ namespace DisasterReport.MessageGroupService
         /// <returns></returns>
         MessageGroupOutput AddGroupMember(GroupMemberAddInput input);
         /// <summary>
+        /// 删除团队成员
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        MessageGroupOutput DeleteGroupMember(GroupMemeberDeleteInput input);
+        /// <summary>
         /// 分页得到团队
         /// </summary>
         /// <param name="pageIndex"></param>

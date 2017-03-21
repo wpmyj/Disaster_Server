@@ -64,14 +64,13 @@ namespace DisasterReport.DomainEntities
         /// </summary>
         public virtual DeviceInfoTb Device { get; set; }
         /// <summary>
-        /// 所关联的消息组ID
-        /// </summary>
-        public virtual Guid? MessageGroup_Id { get; set; }
-        /// <summary>
         /// 关联的消息组
         /// </summary>
-        [ForeignKey("MessageGroup_Id")]
         public virtual MessageGroupTb MessageGroup { get; set; }
+        /// <summary>
+        /// 是否有组
+        /// </summary>
+        public virtual bool HasGroup { get; set; }
         /// <summary>
         /// 所接收到的消息
         /// </summary>

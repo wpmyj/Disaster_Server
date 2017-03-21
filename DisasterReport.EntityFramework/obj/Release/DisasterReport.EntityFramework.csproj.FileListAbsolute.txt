@@ -292,3 +292,4 @@ C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterRepor
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.csproj.GenerateResource.Cache
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.dll
 C:\Users\zxy\Documents\Visual Studio 2017\Projects\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.EntityFramework.pdb
+C:\Users\zxt\Documents\GitHub\Disaster_Server\DisasterReport.EntityFramework\obj\Release\DisasterReport.Migrations.init1.resources
