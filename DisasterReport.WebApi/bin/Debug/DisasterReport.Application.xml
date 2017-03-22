@@ -969,11 +969,6 @@
             所在地址
             </summary>
         </member>
-        <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Type">
-            <summary>
-            1）上报人员 2）后台管理人员  两类节点
-            </summary>
-        </member>
         <member name="P:DisasterReport.ReporterService.Dto.ReporterUpdateInput.Password">
             <summary>
             所关联的用户密码

@@ -98,35 +98,59 @@ namespace DisasterReport.UserAccount
 
         public async Task<UserAccountOutput> GetUserAccountById(Guid id)
         {
-            var existUser = _userRepo.FirstOrDefault(id);
-            if(existUser == null)
+            var existUser = _userRepo.FirstOrDefault(u => u.Id == id);
+            ReporterInfoTb existReporter = null;
+            if (existUser == null)
             {
-                throw new UserFriendlyException("没有此用户账号信息");
-            }
-            var bindReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.User.Id == existUser.Id);
-
-            if(bindReporter == null)
-            {
-                return new UserAccountOutput()
+                existReporter = _reporterInfoRepo.FirstOrDefault(r => r.Id == id);
+                if(existReporter == null)
                 {
+                    throw new UserFriendlyException("没有此用户账号信息");
+                }
+            }
+            if(existReporter == null)
+            {
+                var bindReporter = await _reporterInfoRepo.FirstOrDefaultAsync(r => r.User.Id == existUser.Id);
+                if(bindReporter == null)
+                {
+                    return new UserAccountOutput()
+                    {
+                        User = existUser.MapTo<UserTbOutputDto>()
+                    };
+                }
+                var result = new UserAccountOutput()
+                {
+                    Address = bindReporter.Address,
+                    AreaCode = bindReporter.AreaCode,
+                    Id = bindReporter.Id,
+                    Name = bindReporter.Name,
+                    Phone = bindReporter.Phone,
+                    Photo = bindReporter.Photo,
+                    Age = bindReporter.Age,
+                    Remark = bindReporter.Remark,
+                    Type = bindReporter.Type,
                     User = existUser.MapTo<UserTbOutputDto>()
                 };
-            }
-            var result = new UserAccountOutput()
-            {
-                Address = bindReporter.Address,
-                AreaCode = bindReporter.AreaCode,
-                Id = bindReporter.Id,
-                Name = bindReporter.Name,
-                Phone = bindReporter.Phone,
-                Photo = bindReporter.Photo,
-                Age = bindReporter.Age,
-                Remark = bindReporter.Remark,
-                Type = bindReporter.Type,
-                User = existUser.MapTo<UserTbOutputDto>()
-            };
 
-            return result;
+                return result;
+            }
+            else
+            {
+                var result = new UserAccountOutput()
+                {
+                    Address = existReporter.Address,
+                    AreaCode = existReporter.AreaCode,
+                    Id = existReporter.Id,
+                    Name = existReporter.Name,
+                    Phone = existReporter.Phone,
+                    Photo = existReporter.Photo,
+                    Age = existReporter.Age,
+                    Remark = existReporter.Remark,
+                    Type = existReporter.Type,
+                    User = existReporter.User.MapTo<UserTbOutputDto>()
+                };
+                return result;
+            }
         }
 
         public async Task<UserAccountOutput> Login(UserAccountLoginInput input)

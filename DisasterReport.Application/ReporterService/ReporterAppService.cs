@@ -159,10 +159,10 @@ namespace DisasterReport.ReporterService
             return new RuimapPageResultDto<ReporterOutput>(count, currPage, totalPage, result.MapTo<List<ReporterOutput>>());
         }
         
-        public async Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input)
+        public ReporterOutput UpdateReporter(ReporterUpdateInput input)
         {
             // 先找到对应的用户记录Row
-            var existReporter = await _reporterInfoTbRepo.FirstOrDefaultAsync(r => r.Id == input.ReporterId);
+            var existReporter =  _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
             if(existReporter == null)
             {
                 throw new UserFriendlyException("没有相应的人员");
@@ -170,23 +170,22 @@ namespace DisasterReport.ReporterService
             existReporter.Name = input.Name;
             existReporter.Phone = input.Phone;
             existReporter.Photo = input.Photo;
-            existReporter.Type = input.Type;
             existReporter.Age = input.Age;
             existReporter.Address = input.Address;
+            _reporterInfoTbRepo.Update(existReporter);
 
             // 找到对应的用户账号
-            var existUser = await _userTbRepo.FirstOrDefaultAsync(u => u.Id == existReporter.User.Id);
-            if(existUser == null)
+            var existUser = _userTbRepo.FirstOrDefault(u => u.Id == existReporter.User.Id);
+            if (existUser == null)
             {
                 throw new UserFriendlyException("没有相应的账号");
             }
-
-            existUser.Password = input.Password;
-
-            _reporterInfoTbRepo.Update(existReporter);
-            _userTbRepo.Update(existUser);
-
-            var newReporter = _reporterInfoTbRepo.FirstOrDefault(r => r.Id == input.ReporterId);
+            if (input.Password != "")
+            {
+                existUser.Password = input.Password;
+                _userTbRepo.Update(existUser);
+            }
+            
 
             return new ReporterOutput()
             {

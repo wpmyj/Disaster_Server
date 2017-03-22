@@ -515,5 +515,19 @@ namespace DisasterReport.MessageGroupService
                 throw new Exception("错误:", e);
             }
         }
+
+        public void UpdateMessageGroupIcon(UpdateMessageGroupIconInput input)
+        {
+            var existMessageGroup = _messageGroupRepo.FirstOrDefault(m => m.Id == input.MessageGroupId);
+
+            if(existMessageGroup == null)
+            {
+                throw new UserFriendlyException("没有此队伍");
+            }
+
+            existMessageGroup.Photo = input.Photo;
+
+            _messageGroupRepo.Update(existMessageGroup);
+        }
     }
 }

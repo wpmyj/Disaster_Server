@@ -33,10 +33,6 @@ namespace DisasterReport.ReporterService.Dto
         /// </summary>
         public virtual String Address { get; set; }
         /// <summary>
-        /// 1）上报人员 2）后台管理人员  两类节点
-        /// </summary>
-        public virtual int Type { get; set; }
-        /// <summary>
         /// 所关联的用户密码
         /// </summary>
         public virtual string Password { get; set; }

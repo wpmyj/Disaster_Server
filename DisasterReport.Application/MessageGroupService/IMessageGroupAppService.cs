@@ -84,5 +84,11 @@ namespace DisasterReport.MessageGroupService
         /// <returns></returns>
         [HttpGet]
         List<MessageDisasterOutput> GetMessageGroupDisaster(Guid id);
+        /// <summary>
+        /// 修改队伍图标
+        /// </summary>
+        /// <param name="input"></param>
+        [HttpPost]
+        void UpdateMessageGroupIcon(UpdateMessageGroupIconInput input);
     }
 }

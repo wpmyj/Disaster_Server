@@ -44,7 +44,7 @@ namespace DisasterReport.ReporterService
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<ReporterOutput> UpdateReporter(ReporterUpdateInput input);
+        ReporterOutput UpdateReporter(ReporterUpdateInput input);
         /// <summary>
         /// 上报人员按姓名、手机模糊查找
         /// </summary>

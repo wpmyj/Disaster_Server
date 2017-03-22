@@ -150,6 +150,7 @@
     <Compile Include="MessageGroupService\Dto\MessageGroupOutput.cs" />
     <Compile Include="MessageGroupService\Dto\ReporterGroupOutput.cs" />
     <Compile Include="MessageGroupService\Dto\ReporterMemberOutput.cs" />
+    <Compile Include="MessageGroupService\Dto\UpdateMessageGroupIconInput.cs" />
     <Compile Include="MessageGroupService\IMessageGroupAppService.cs" />
     <Compile Include="MessageGroupService\MessageGroupAppService.cs" />
     <Compile Include="MessageNoteService\Dto\AddMessageInput.cs" />
