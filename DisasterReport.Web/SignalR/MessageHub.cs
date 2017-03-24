@@ -140,6 +140,16 @@ namespace DisasterReport.Web.SignalR
         }
 
         /// <summary>
+        /// APP用户聊天发送
+        /// </summary>
+        /// <param name="input"></param>
+        public void ChatMessage(ChatMessageInputHub input)
+        {
+            // 找到对应的上报人员
+            Clients.Client(_ReporterConnections[input.ToerId].HubId).SendChatMessage(input);
+        }
+
+        /// <summary>
         /// 发送消息给Web端
         /// </summary>
         /// <param name="msg"></param>
